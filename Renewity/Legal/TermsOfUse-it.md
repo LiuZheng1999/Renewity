@@ -3,7 +3,7 @@
 **Data di efficacia: 20 agosto 2026**
 
 Una copia web identica al testo in-app è su GitHub Pages:  
-**https://maoxia-xiang.github.io/Renewity/terms/**
+**https://liuzheng1999.github.io/Renewity/terms/**
 
 Benvenuto in Renewity (l’«App»). Questi termini sono un accordo tra te e lo sviluppatore dell’App («noi») su download, installazione e uso. Leggili con attenzione. Scaricando, installando, accedendo o usando l’App confermi di averli letti, compresi e accettati.
 

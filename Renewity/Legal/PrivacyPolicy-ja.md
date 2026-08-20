@@ -3,7 +3,7 @@
 **施行日：2026年8月20日**
 
 アプリ内と同じ文面のウェブ版：  
-**https://maoxia-xiang.github.io/Renewity/privacy/**
+**https://liuzheng1999.github.io/Renewity/privacy/**
 
 Renewity（以下「本アプリ」）は本アプリの開発者（以下「当社」）が提供します。本ポリシーは、本アプリがお客様に関する情報をどのように扱うかを説明します。
 

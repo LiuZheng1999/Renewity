@@ -3,7 +3,7 @@
 **시행일: 2026년 8월 20일**
 
 앱과 동일한 웹 버전은 GitHub Pages에 게시됩니다:  
-**https://maoxia-xiang.github.io/Renewity/privacy/**
+**https://liuzheng1999.github.io/Renewity/privacy/**
 
 Renewity(이하 「본 앱」)는 본 앱 개발자(이하 「당사」)가 제공합니다. 본 방침은 본 앱이 사용자에 관한 정보를 어떻게 다루는지 설명합니다.
 

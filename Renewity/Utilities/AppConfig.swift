@@ -7,7 +7,7 @@ enum AppConfig {
     static let appStoreID = ""
     static let freeSubscriptionLimit = 6
     /// GitHub Pages 站点（仓库 Settings → Pages → Deploy from branch，文件夹选 `docs`）。
-    static let legalWebsiteURL = URL(string: "https://maoxia-xiang.github.io/Renewity")!
+    static let legalWebsiteURL = URL(string: "https://liuzheng1999.github.io/Renewity")!
 
     static var privacyPolicyWebURL: URL {
         legalWebsiteURL.appendingPathComponent("privacy/")

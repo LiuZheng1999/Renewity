@@ -3,7 +3,7 @@
 **生效日期：2026 年 8 月 20 日**
 
 網頁版與應用內文本一致，發布於 GitHub Pages：  
-**https://maoxia-xiang.github.io/Renewity/terms/**
+**https://liuzheng1999.github.io/Renewity/terms/**
 
 歡迎使用「Renewity」（下稱「本應用程式」）。本條款是你與本應用程式開發者（下稱「我們」）之間，就你下載、安裝和使用本應用程式所訂立的法律協議。請在使用前仔細閱讀。你下載、安裝、造訪或使用本應用程式，即表示你已閱讀、理解並同意受本條款約束。
 

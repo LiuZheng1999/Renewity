@@ -24,7 +24,7 @@ LANGS = [
     ("pt-BR", "Português (Brasil)", "Privacidade", "Termos de uso"),
 ]
 
-WEBSITE = "https://maoxia-xiang.github.io/Renewity"
+WEBSITE = "https://liuzheng1999.github.io/Renewity"
 
 DATE_REPLACEMENTS = [
     ("2026 年 8 月 14 日", "2026 年 8 月 20 日"),
@@ -421,7 +421,7 @@ location.replace('./' + code + '.html');
 4. Branch 选 `main`，文件夹选 `/docs`，保存。
 5. 几分钟后打开：`{WEBSITE}/`
 
-如果 GitHub 用户名不是 `maoxia-xiang`，或仓库名不是 `Renewity`，请同时改：
+如果 GitHub 用户名不是 `LiuZheng1999`，或仓库名不是 `Renewity`，请同时改：
 
 - `Renewity/Utilities/AppConfig.swift` 里的 `legalWebsiteURL`
 - `Renewity/Legal/` 下各语言文档中的网址

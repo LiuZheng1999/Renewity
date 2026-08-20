@@ -3,7 +3,7 @@
 **Data de vigência: 20 de agosto de 2026**
 
 Uma cópia web igual ao texto do app está no GitHub Pages:  
-**https://maoxia-xiang.github.io/Renewity/privacy/**
+**https://liuzheng1999.github.io/Renewity/privacy/**
 
 O Renewity (o «App») é fornecido pelo desenvolvedor do App («nós»). Esta política explica como o App trata informações sobre você.
 

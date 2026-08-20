@@ -7,7 +7,7 @@
 本应用的设计原则是：**订阅记账数据默认只保存在你的设备上**；我们不运营用于登录的自建服务器，也不通过本应用收集用于广告或分析画像的个人信息。
 
 网页版与应用内文本一致，发布于 GitHub Pages：  
-**https://maoxia-xiang.github.io/Renewity/privacy/**
+**https://liuzheng1999.github.io/Renewity/privacy/**
 
 如有疑问，请发送邮件至 **philiptrip1975@gmail.com**。
 
@@ -139,6 +139,6 @@ Pro 的月度、年度或终身购买通过 StoreKit / App Store 完成。Apple 
 
 **philiptrip1975@gmail.com**
 
-网页：https://maoxia-xiang.github.io/Renewity/privacy/
+网页：https://liuzheng1999.github.io/Renewity/privacy/
 
 请在邮件中注明「隐私政策」。

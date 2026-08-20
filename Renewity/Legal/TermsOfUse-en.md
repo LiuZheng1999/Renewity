@@ -5,7 +5,7 @@
 Welcome to Renewity (the “App”). These Terms of Use (the “Terms”) are an agreement between you and the developer of the App (“we”, “us”, or “our”) governing your download, installation, and use of the App. Please read them carefully. By downloading, installing, accessing, or using the App, you confirm that you have read, understood, and agree to be bound by these Terms.
 
 A web copy matching the in-app text is published on GitHub Pages:  
-**https://maoxia-xiang.github.io/Renewity/terms/**
+**https://liuzheng1999.github.io/Renewity/terms/**
 
 If you do not agree, do not use the App and delete it from your device.
 
@@ -120,6 +120,6 @@ These Terms are interpreted in light of the mandatory consumer-protection laws o
 
 Questions about these Terms: **philiptrip1975@gmail.com**
 
-Web: https://maoxia-xiang.github.io/Renewity/terms/
+Web: https://liuzheng1999.github.io/Renewity/terms/
 
 Please include “Terms of Use” in the subject line.

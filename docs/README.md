@@ -8,9 +8,9 @@
 2. 打开仓库 **Settings → Pages**。
 3. Build and deployment 选 **Deploy from a branch**。
 4. Branch 选 `main`，文件夹选 `/docs`，保存。
-5. 几分钟后打开：`https://maoxia-xiang.github.io/Renewity/`
+5. 几分钟后打开：`https://liuzheng1999.github.io/Renewity/`
 
-如果 GitHub 用户名不是 `maoxia-xiang`，或仓库名不是 `Renewity`，请同时改：
+如果 GitHub 用户名不是 `LiuZheng1999`，或仓库名不是 `Renewity`，请同时改：
 
 - `Renewity/Utilities/AppConfig.swift` 里的 `legalWebsiteURL`
 - `Renewity/Legal/` 下各语言文档中的网址

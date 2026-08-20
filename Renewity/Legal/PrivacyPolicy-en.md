@@ -7,7 +7,7 @@ Renewity (the “App”) is provided by the developer of the App (“we”, “u
 The App is designed so that **subscription records stay on your device by default**. We do not run a sign-in server for the App, and we do not collect personal information through the App for advertising or profiling.
 
 A web copy matching the in-app text is published on GitHub Pages:  
-**https://maoxia-xiang.github.io/Renewity/privacy/**
+**https://liuzheng1999.github.io/Renewity/privacy/**
 
 Questions: **philiptrip1975@gmail.com**
 
@@ -137,6 +137,6 @@ We may update this policy. The new version will appear in the App and on the Git
 
 Privacy requests: **philiptrip1975@gmail.com**
 
-Web: https://maoxia-xiang.github.io/Renewity/privacy/
+Web: https://liuzheng1999.github.io/Renewity/privacy/
 
 Please include “Privacy Policy” in the subject line.

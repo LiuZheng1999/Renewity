@@ -3,7 +3,7 @@
 **生效日期：2026 年 8 月 20 日**
 
 網頁版與應用內文本一致，發布於 GitHub Pages：  
-**https://maoxia-xiang.github.io/Renewity/privacy/**
+**https://liuzheng1999.github.io/Renewity/privacy/**
 
 「Renewity」（下稱「本應用程式」）由本應用程式開發者（下稱「我們」）提供。我們重視你的隱私。本政策說明本應用程式如何處理與你有關的資訊。
 

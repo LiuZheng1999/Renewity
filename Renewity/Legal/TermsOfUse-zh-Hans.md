@@ -5,7 +5,7 @@
 欢迎使用「Renewity」（下称「本应用」）。本协议是你与本应用开发者（下称「我们」）之间就你下载、安装和使用本应用所订立的法律协议。请在使用前仔细阅读。你下载、安装、访问或使用本应用，即表示你已阅读、理解并同意受本协议约束。
 
 网页版与应用内文本一致，发布于 GitHub Pages：  
-**https://maoxia-xiang.github.io/Renewity/terms/**
+**https://liuzheng1999.github.io/Renewity/terms/**
 
 如你不同意本协议，请立即停止使用，并从设备中删除本应用。
 
@@ -122,6 +122,6 @@ Renewity 是一款订阅开支记录与提醒工具，帮助你在设备上整�
 
 **philiptrip1975@gmail.com**
 
-网页：https://maoxia-xiang.github.io/Renewity/terms/
+网页：https://liuzheng1999.github.io/Renewity/terms/
 
 邮件请注明「用户协议」。

@@ -3,7 +3,7 @@
 **시행일: 2026년 8월 20일**
 
 앱과 동일한 웹 버전은 GitHub Pages에 게시됩니다:  
-**https://maoxia-xiang.github.io/Renewity/terms/**
+**https://liuzheng1999.github.io/Renewity/terms/**
 
 Renewity(이하 「본 앱」)에 오신 것을 환영합니다. 본 약관은 본 앱 개발자(이하 「당사」)와 사용자 간에 다운로드, 설치 및 이용에 관한 계약입니다. 이용 전에 주의 깊게 읽어 주세요. 본 앱을 다운로드·설치·접근·이용하면 본 약관을 읽고 이해했으며 이에 동의한 것으로 봅니다.
 

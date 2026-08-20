@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Renewity</title>
+<style>
+:root { color-scheme: light dark; --bg: #f6f4f1; --card: #fff; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --accent: #0f766e; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1c1917; --card: #292524; --ink: #fafaf9; --muted: #a8a29e; --line: #44403c; --accent: #5eead4; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+header, main, footer { max-width: 760px; margin: 0 auto; padding: 24px 20px; }
+header { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: baseline; justify-content: space-between; }
+a { color: var(--accent); }
+.brand { font-weight: 700; text-decoration: none; color: inherit; font-size: 20px; }
+nav { display: flex; flex-wrap: wrap; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px 36px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin-top: 1.6em; }
+h3 { font-size: 17px; margin-top: 1.2em; }
+.muted { color: var(--muted); }
+.langs { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+.langs a { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; color: inherit; font-size: 13px; }
+.langs a[aria-current="page"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+ul { padding-left: 1.2em; }
+code { font-size: 0.92em; }
+.grid { display: grid; gap: 16px; }
+@media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+.tile { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; }
+.tile strong { display: block; margin-bottom: 6px; }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+
+</head>
+<body>
+
+<header>
+  <a class="brand" href="../">Renewity</a>
+  <nav>
+    <a href="../privacy/">Privacy</a>
+    <a href="../terms/">Terms of Use</a>
+  </nav>
+</header>
+<main>
+  <div class="card">
+    <div class="langs"><a href="./zh-Hans.html">简体中文</a><a href="./zh-Hant.html">繁體中文</a><a href="./en.html" aria-current="page">English</a><a href="./ja.html">日本語</a><a href="./ko.html">한국어</a><a href="./de.html">Deutsch</a><a href="./fr.html">Français</a><a href="./es.html">Español</a><a href="./it.html">Italiano</a><a href="./pt-BR.html">Português (Brasil)</a></div>
+    <h1>Privacy Policy</h1>
+<p><strong>Effective date: August 20, 2026</strong></p>
+<p>Renewity (the “App”) is provided by the developer of the App (“we”, “us”, or “our”). This policy explains how the App handles information about you.</p>
+<p>The App is designed so that <strong>subscription records stay on your device by default</strong>. We do not run a sign-in server for the App, and we do not collect personal information through the App for advertising or profiling.</p>
+<p>A web copy matching the in-app text is published on GitHub Pages:<br>
+<strong><a href="https://maoxia-xiang.github.io/Renewity/privacy/" rel="noopener">https://maoxia-xiang.github.io/Renewity/privacy/</a></strong></p>
+<p>Questions: <strong>philiptrip1975@gmail.com</strong></p>
+<h2>1. What we do not collect through the App</h2>
+<p>Except as described below, we do not ask you to create an account with us, and we do not upload the following to servers we control:</p>
+<ul>
+<li>your name or email address (unless you email us);</li>
+<li>the subscription names, amounts, dates, categories, payment methods, and notes you enter;</li>
+<li>advertising identifiers or analytics SDK data used to track you across other apps or websites.</li>
+</ul>
+<p>The App <strong>does not include third-party ad SDKs, does not use App Tracking Transparency for cross-app tracking, and does not use analytics tools to build a marketing profile</strong>. The App includes Apple’s required Privacy Manifest and declares that it does not track you.</p>
+<h2>2. Information stored on your device</h2>
+<p>Subscriptions, categories, payment methods, notes, icon choices, display currency, billing currency, appearance, notification settings, App Lock, and similar preferences are stored <strong>on device</strong> using Apple’s SwiftData / UserDefaults / system storage.</p>
+<p>This information is used to:</p>
+<ul>
+<li>show and manage subscriptions in the App;</li>
+<li>estimate monthly and yearly spend and category totals using reference exchange rates;</li>
+<li>schedule several upcoming local notifications for renewal and trial reminders, based on the lead times you choose;</li>
+<li>provide a spending summary to home-screen widgets.</li>
+</ul>
+<p>Uninstalling the App typically deletes data that exists only on the device and has not been saved somewhere you chose (such as the Files app or iCloud Drive).</p>
+<h2>3. App Group and widgets</h2>
+<p>The App and its widgets share the App Group <code>group.Maoxia-Xiang.Renewity</code> (app bundle ID: <code>Maoxia-Xiang.Renewity</code>). The App writes a display snapshot into that container so widgets can show monthly spend and upcoming renewals. The snapshot stays on your device and is not sent to us for that purpose.</p>
+<h2>4. Optional iCloud backup (Pro)</h2>
+<p>The App <strong>does not live-sync the SwiftData store with CloudKit</strong>. If you have Pro and turn on iCloud backup, the App writes a backup of subscriptions, custom categories, and custom payment methods to <strong>your</strong> iCloud Drive (container <code>iCloud.Maoxia-Xiang.Renewity</code>).</p>
+<ul>
+<li>The file includes the records you created so you can restore them on another device.</li>
+<li>It is stored under your Apple Account and handled by Apple under Apple’s iCloud policies.</li>
+<li>We cannot sign in to your Apple Account to read that backup.</li>
+<li>You can turn off automatic backup in the App or manage iCloud Drive in system settings.</li>
+</ul>
+<p>You may also export a JSON backup to Files, a computer, or another location you choose. You are responsible for copies you export.</p>
+<h2>5. Notifications</h2>
+<p>Renewal and trial reminders use <strong>local notifications</strong>. Notification content is created on device from information you already stored locally (such as a name and amount). It is <strong>not</strong> uploaded to our servers in order to send the reminder.</p>
+<p>The system limits how many pending local notifications an app may hold. The App schedules several future reminders in advance and refreshes that queue when you open the App. If you do not open the App for a long time, later reminders may stop until the App runs again. Delivery also depends on notification permission, Low Power Mode, Focus, and similar system settings.</p>
+<h2>6. Face ID, Touch ID, and passcode</h2>
+<p>If you enable App Lock, the App uses LocalAuthentication so that returning to the App requires you to authenticate. Biometric templates are stored by the operating system in the device’s secure area. <strong>We do not collect or upload Face ID or fingerprint data.</strong> If authentication fails, the App stays locked.</p>
+<p>The system shows a purpose string: to unlock Renewity and protect your subscription data.</p>
+<h2>7. Purchases and Apple Account</h2>
+<p>Monthly, yearly, or lifetime Pro purchases go through StoreKit / the App Store. Apple processes payment and receipts. We may learn on device whether you have an active purchase (so Pro features can unlock). We <strong>do not</strong> receive your full card number or Apple Account password.</p>
+<p>Refunds and cancellation of auto-renewing subscriptions follow Apple’s rules.</p>
+<h2>8. Network requests when you use certain features</h2>
+<p>The App may use the internet in the situations below. Your device talks to the relevant service <strong>directly</strong>, not to a user database we operate. Those providers may process technical logs (which can include IP address, time, and device/technical data) under their own policies.</p>
+<h3>8.1 Exchange-rate estimates</h3>
+<p>Overview totals, category totals, and widgets may convert amounts from each subscription’s billing currency into your display currency using reference rates. The App may request USD-based rates from a public API (currently <code>open.er-api.com</code>). That figure is an estimate only, not an offer to exchange currency.</p>
+<h3>8.2 Service search and icons</h3>
+<p>When you search in “Choose a service”, the App may query:</p>
+<ul>
+<li>Apple’s App Store / iTunes Search API;</li>
+<li>public company-domain lookup services (such as Clearbit-related endpoints);</li>
+<li>third-party CDNs that serve public site icons (such as icon.horse, unavatar.io, or favicone.com, depending on what the App requests at the time).</li>
+</ul>
+<p><strong>The keywords or domain names you type</strong> may be sent to those services. Do not enter passwords, card numbers, or other sensitive personal data in the search field.</p>
+<p>A third-party app or website appearing in results is not a review, endorsement, or affiliation. You decide whether to add it.</p>
+<h3>8.3 iCloud</h3>
+<p>When cloud backup is on, Apple syncs the file under Apple’s Privacy Policy.</p>
+<h2>9. Information you send us</h2>
+<p>If you use the in-app email links (bug report, support, feedback, or feature request), your message goes to <strong>philiptrip1975@gmail.com</strong>. You may include device or version details you choose to add. We use this only to respond and handle your request, and we delete it when it is no longer needed unless the law requires us to keep it.</p>
+<h2>10. Analytics, advertising, and tracking</h2>
+<ul>
+<li>The App does not include third-party ads.</li>
+<li>The App does not use analytics SDKs to build a marketing profile from your subscription data.</li>
+<li>The App does not track you across other companies’ apps and does not request the “Allow Tracking” permission.</li>
+</ul>
+<p>The operating system may send diagnostics or App Store statistics to Apple if you allow that. That is part of Apple’s products and is governed by Apple’s policies, not additional collection by us.</p>
+<h2>11. Children</h2>
+<p>The App is a personal finance recorder and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have received such information in error, contact us and we will delete what is within our control.</p>
+<h2>12. Retention, export, and deletion</h2>
+<ul>
+<li><strong>On-device data:</strong> deleted when you delete it in the App or uninstall (apart from ordinary system caches).</li>
+<li><strong>iCloud backup:</strong> kept with your Apple Account until you overwrite it in the App, delete it in iCloud Drive, or turn off the relevant iCloud features.</li>
+<li><strong>Exported JSON:</strong> retained wherever you saved it.</li>
+</ul>
+<p>You can manage data by deleting subscriptions or custom categories, restoring a backup, exporting and then uninstalling, or deleting the iCloud backup file.</p>
+<h2>13. Security</h2>
+<p>We use safeguards that match this product: on-device storage by default, optional App Lock, and Apple’s purchase and iCloud channels for paid features and backup. No electronic or cloud storage is perfectly secure. Use a device passcode and protect your Apple Account.</p>
+<h2>14. Your rights</h2>
+<p>Depending on where you live (for example if GDPR, CCPA, or similar laws apply), you may have rights to access, correct, delete, export, restrict, or object to processing of personal information about you.</p>
+<p>Because records mainly live on your device or in your iCloud, you can usually exercise these rights in the App or system settings. For email you sent to support, email us and we will respond within the time the law requires.</p>
+<h2>15. International processing</h2>
+<p>Exchange-rate, search, and icon requests may be handled in other countries. Apple processes purchases and iCloud under its policies. If you are in the EEA, the UK, or another region with cross-border rules, using those optional online features means you understand that related data may be processed accordingly.</p>
+<h2>16. Changes</h2>
+<p>We may update this policy. The new version will appear in the App and on the GitHub Pages site above, with a revised effective date. If a change materially affects your rights, we will provide a reasonable notice in the App. Continued use after the change means you are aware of the updated policy.</p>
+<h2>17. Contact</h2>
+<p>Privacy requests: <strong>philiptrip1975@gmail.com</strong></p>
+<p>Web: <a href="https://maoxia-xiang.github.io/Renewity/privacy/" rel="noopener">https://maoxia-xiang.github.io/Renewity/privacy/</a></p>
+<p>Please include “Privacy Policy” in the subject line.</p>
+  </div>
+</main>
+<footer>Renewity legal documents · GitHub Pages</footer>
+
+</body>
+</html>

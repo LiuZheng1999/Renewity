@@ -325,7 +325,7 @@ struct PaywallView: View {
 
         text += AttributedString(String(localized: "和"))
 
-        var terms = AttributedString(String(localized: "用户协议"))
+        var terms = AttributedString(String(localized: "使用条款"))
         terms.link = URL(string: "renewity://terms")
         terms.underlineStyle = .single
         text += terms
@@ -474,7 +474,7 @@ private struct PurchasePlanOptionRow: View {
     private var planSubtitle: String {
         switch plan {
         case .lifetime:
-            String(localized: "一次买断")
+            String(localized: "一次性购买")
         case .monthly:
             product.displayPrice + String(localized: "paywall.price.perMonth", defaultValue: "/月")
         case .yearly:
@@ -497,7 +497,7 @@ private struct YearlyTrialBadge: View {
     private let grid = Color(red: 0.52, green: 0.38, blue: 0.78).opacity(0.42)
 
     var body: some View {
-        Text("7天免费试用")
+        Text("7 天免费试用")
             .font(.system(size: 10, weight: .bold))
             .foregroundStyle(Color.white)
             .padding(.horizontal, 8)
@@ -511,7 +511,7 @@ private struct YearlyTrialBadge: View {
                     }
             }
             .fixedSize()
-            .accessibilityLabel("7天免费试用")
+            .accessibilityLabel("7 天免费试用")
     }
 }
 

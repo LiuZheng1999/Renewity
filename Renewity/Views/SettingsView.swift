@@ -35,7 +35,7 @@ struct SettingsView: View {
                     NavigationLink {
                         CurrencySettingsView()
                     } label: {
-                        rowLabel("币种", systemImage: "yensign.circle")
+                        rowLabel("货币", systemImage: "yensign.circle")
                     }
                     NavigationLink {
                         CategoryManageView()
@@ -61,7 +61,7 @@ struct SettingsView: View {
                 }
 
                 Section("法律") {
-                    legalLink("用户协议", systemImage: "doc.plaintext", url: AppConfig.termsOfUseWebURL)
+                    legalLink("使用条款", systemImage: "doc.plaintext", url: AppConfig.termsOfUseWebURL)
                     legalLink("隐私政策", systemImage: "doc.text", url: AppConfig.privacyPolicyWebURL)
                 }
 

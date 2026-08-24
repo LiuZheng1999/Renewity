@@ -9,7 +9,7 @@ struct PrivacySecurityView: View {
     var body: some View {
         List {
             Section {
-                Toggle("锁定 App", isOn: $appLockEnabled)
+                Toggle("App 锁定", isOn: $appLockEnabled)
             } footer: {
                 Text("离开 App 后再回来时，需要面容 ID、触控 ID 或设备密码才能查看订阅数据。")
             }
@@ -97,7 +97,7 @@ struct AppLockView: View {
             Image(systemName: "lock.fill")
                 .font(.system(size: 44))
                 .foregroundStyle(Color.accentColor)
-            Text("Renewity已锁定")
+            Text("Renewity 已锁定")
                 .font(.title2.bold())
             Text("使用面容 ID、触控 ID 或设备密码继续。")
                 .font(.subheadline)

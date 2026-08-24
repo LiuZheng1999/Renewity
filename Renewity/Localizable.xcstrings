@@ -1,136 +1,6 @@
 {
   "sourceLanguage" : "zh-Hans",
   "strings" : {
-    "总览和分类合计会按参考汇率换算到此货币，仅供参考，不会改写各笔订阅记下的金额。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "总览和分类合计会按参考汇率换算到此货币，仅供参考，不会改写各笔订阅记下的金额。"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Übersicht und Kategorie-Summen rechnen mit Referenzkursen in diese Währung um. Die erfassten Beträge bleiben unverändert."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Overview and category totals convert into this currency using reference rates. Amounts you recorded for each subscription stay unchanged."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El resumen y los totales por categoría se convierten con tipos de referencia. Los importes guardados no cambian."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’aperçu et les totaux par catégorie sont convertis avec des taux de référence. Les montants saisis ne changent pas."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Panoramica e totali per categoria sono convertiti con tassi di riferimento. Gli importi registrati non cambiano."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "概要とカテゴリ合計はこの参考レートで換算されます。各サブスクに記録した金額は変わりません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "개요와 분류 합계는 참고 환율로 이 통화로 환산됩니다. 각 구독에 기록한 금액은 바뀌지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visão geral e totais por categoria são convertidos com taxas de referência. Os valores registrados não mudam."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "總覽和分類合計會按參考匯率換算到此貨幣，僅供參考，不會改寫各筆訂閱記下的金額。"
-          }
-        }
-      }
-    },
-    "总览和分类合计按默认货币换算。轻点概览卡片可切换到第二种货币。选择货币需要 Renewity Pro。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "总览和分类合计按默认货币换算。轻点概览卡片可切换到第二种货币。选择货币需要 Renewity Pro。"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Übersicht und Kategorie-Summen rechnen in die Standardwährung um. Tippe auf die Übersicht, um zur zweiten Währung zu wechseln. Währungswahl erfordert Renewity Pro."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Overview and category totals convert using the default currency. Tap the overview card to switch to the second currency. Choosing a currency requires Renewity Pro."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El resumen y los totales por categoría se convierten a la moneda predeterminada. Toca la tarjeta de resumen para cambiar a la segunda moneda. Elegir moneda requiere Renewity Pro."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’aperçu et les totaux par catégorie sont convertis dans la devise par défaut. Touchez la carte d’aperçu pour passer à la seconde devise. Choisir une devise nécessite Renewity Pro."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Panoramica e totali per categoria sono convertiti nella valuta predefinita. Tocca la scheda panoramica per passare alla seconda valuta. Scegliere una valuta richiede Renewity Pro."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "概要とカテゴリ合計はデフォルト通貨で換算されます。概要カードをタップすると第二通貨に切り替えられます。通貨の選択には Renewity Pro が必要です。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "개요와 분류 합계는 기본 통화로 환산됩니다. 개요 카드를 눌러 두 번째 통화로 바꿀 수 있습니다. 통화 선택에는 Renewity Pro가 필요합니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Visão geral e totais por categoria são convertidos na moeda padrão. Toque no cartão de visão geral para mudar para a segunda moeda. Escolher uma moeda exige Renewity Pro."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "總覽和分類合計按預設貨幣換算。輕點概覽卡片可切換到第二種貨幣。選擇貨幣需要 Renewity Pro。"
-          }
-        }
-      }
-    },
     "" : {
 
     },
@@ -195,71 +65,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "「%@」將於 %lld 天後付款 %@"
-          }
-        }
-      }
-    },
-    "「%@」将于 %lld 天后扣费 %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "„%@“ wird in %lld Tagen um %@ abgebucht"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” will be charged in %lld days for %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "«%@» se cargará en %lld días por %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "« %@ » sera prélevé dans %lld jours pour %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” verrà addebitato tra %lld giorni per %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」は %lld 日後に %@ が請求されます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」이(가) %lld일 후 %@에 결제됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” será cobrado em %lld dias por %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」将于 %lld 天后扣费 %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」將於 %lld 天後扣費 %@"
           }
         }
       }
@@ -329,65 +134,6 @@
         }
       }
     },
-    "「%@」将于 %lld 天后结束试用，随后扣费 %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Test von „%@“ endet in %lld Tagen, danach werden %@ abgebucht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The trial for “%@” ends in %lld days, then you’ll be charged %@."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prueba de «%@» termina en %lld días y luego se cobrarán %@."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’essai de « %@ » se termine dans %lld jours, puis %@ seront prélevés."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prova di “%@” termina tra %lld giorni, poi verranno addebitati %@."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」の無料期間は %lld 日後に終了し、その後 %@ が請求されます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」 체험이 %lld일 후 끝나고 이후 %@이(가) 결제됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O teste de “%@” termina em %lld dias e depois serão cobrados %@."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」將於 %lld 天後結束試用，隨後扣費 %@"
-          }
-        }
-      }
-    },
     "「%@」将于 %lld 天后续订 %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -449,65 +195,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "「%@」將於 %lld 天後續訂 %@"
-          }
-        }
-      }
-    },
-    "「%@」将于 %lld 天后续费 %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "„%@“ verlängert sich in %lld Tagen um %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” renews in %lld days for %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "«%@» se renueva en %lld días por %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "« %@ » se renouvelle dans %lld jours pour %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” si rinnova tra %lld giorni per %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」は %lld 日後に %@ で更新されます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」이(가) %lld일 후 %@에 갱신됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” será renovado em %lld dias por %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」將於 %lld 天後續費 %@"
           }
         }
       }
@@ -577,71 +264,6 @@
         }
       }
     },
-    "「%@」将于明天扣费 %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "„%@“ wird morgen um %@ abgebucht"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” will be charged tomorrow for %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "«%@» se cargará mañana por %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "« %@ » sera prélevé demain pour %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” verrà addebitato domani per %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」は明日 %@ が請求されます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」이(가) 내일 %@에 결제됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "“%@” será cobrado amanhã por %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」将于明天扣费 %@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」將於明天扣費 %@"
-          }
-        }
-      }
-    },
     "「%@」将于明天结束试用，随后付款 %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -703,65 +325,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "「%@」將於明天結束試用，隨後付款 %@"
-          }
-        }
-      }
-    },
-    "「%@」将于明天结束试用，随后扣费 %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Test von „%@“ endet morgen, danach werden %@ abgebucht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The trial for “%@” ends tomorrow, then you’ll be charged %@."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prueba de «%@» termina mañana y luego se cobrarán %@."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’essai de « %@ » se termine demain, puis %@ seront prélevés."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prova di “%@” termina domani, poi verranno addebitati %@."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」の無料期間は明日終了し、その後 %@ が請求されます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」 체험이 내일 끝나고 이후 %@이(가) 결제됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O teste de “%@” termina amanhã e depois serão cobrados %@."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」將於明天結束試用，隨後扣費 %@"
           }
         }
       }
@@ -831,71 +394,67 @@
         }
       }
     },
-    "「%@」将于明天续费 %@" : {
+    "%@ · %lld 笔" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "„%@“ verlängert sich morgen um %@"
+            "value" : "%@ · %lld"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "“%@” renews tomorrow for %@"
+            "value" : "%@ · %lld"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "«%@» se renueva mañana por %@"
+            "value" : "%@ · %lld"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "« %@ » se renouvelle demain pour %@"
+            "value" : "%@ · %lld"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "“%@” si rinnova domani per %@"
+            "value" : "%@ · %lld"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "「%@」は明日 %@ で更新されます"
+            "value" : "%@ · %lld件"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "「%@」이(가) 내일 %@에 갱신됩니다"
+            "value" : "%@ · %lld건"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "“%@” renova amanhã por %@"
+            "value" : "%@ · %lld"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$lld 笔"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "「%@」將於明天續訂 %@"
-          }
-        }
-      }
-    },
-    "%@ · %lld 笔" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$lld 笔"
+            "value" : "%@ · %lld 筆"
           }
         }
       }
@@ -1458,71 +1017,6 @@
         }
       }
     },
-    "%lld 天后扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbuchung in %lld Tagen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charges in %lld days"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cargo en %lld días"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prélèvement dans %lld j"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Addebito tra %lld giorni"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 日後に請求"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld일 후 결제"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobrança em %lld dias"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 天后扣费"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 天後扣費"
-          }
-        }
-      }
-    },
     "%lld 天后续订" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1578,65 +1072,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld 天后续订"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld 天後續訂"
-          }
-        }
-      }
-    },
-    "%lld 天后续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlängert in %lld Tagen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renews in %lld days"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se renueva en %lld días"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renouvelle dans %lld j"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si rinnova tra %lld giorni"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld日後に更新"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld일 후 갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renova em %lld dias"
           }
         },
         "zh-Hant" : {
@@ -1757,6 +1192,12 @@
             "value" : "%lld"
           }
         },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 笔"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1765,8 +1206,70 @@
         }
       }
     },
-    "7天免费试用" : {
-
+    "7 天免费试用" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 Tage kostenlos testen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7-day free trial"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prueba gratis de 7 días"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essai gratuit de 7 jours"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prova gratuita di 7 giorni"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7日間の無料トライアル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7일 무료 체험"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teste grátis de 7 dias"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 天免费试用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 天免費試用"
+          }
+        }
+      }
     },
     "American Express" : {
       "extractionState" : "manual",
@@ -1834,7 +1337,134 @@
       }
     },
     "App Store 未返回套餐。请确认产品已创建，本地调试请在 Scheme 中选用 Products.storekit。" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der App Store lieferte keine Produkte. Prüfe, ob sie existieren; lokal Products.storekit im Scheme wählen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store returned no products. Confirm they exist; for local testing, select Products.storekit in the scheme."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store no devolvió productos. Confirma que existen; en local, elige Products.storekit en el scheme."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’App Store n’a renvoyé aucun produit. Vérifiez qu’ils existent ; en local, choisissez Products.storekit dans le scheme."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’App Store non ha restituito prodotti. Verifica che esistano; in locale seleziona Products.storekit nello scheme."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store から商品が返りませんでした。作成済みか確認し、ローカルでは Scheme で Products.storekit を選んでください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store에서 상품이 반환되지 않았습니다. 제품이 있는지 확인하고, 로컬 디버깅은 Scheme에서 Products.storekit을 선택하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A App Store não devolveu produtos. Confirme que existem; no teste local, escolha Products.storekit no scheme."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store 未返回套餐。请确认产品已创建，本地调试请在 Scheme 中选用 Products.storekit。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store 未返回方案。請確認產品已建立，本機偵錯請在 Scheme 中選用 Products.storekit。"
+          }
+        }
+      }
+    },
+    "App 锁定" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App sperren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lock the App"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloquear la app"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verrouiller l’app"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blocca l’app"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appをロック"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱 잠금"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloquear o app"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 锁定"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鎖定 App"
+          }
+        }
+      }
     },
     "app.versionWithBuild" : {
       "extractionState" : "manual",
@@ -2156,7 +1786,69 @@
       }
     },
     "https://" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://"
+          }
+        }
+      }
     },
     "iCloud 不可用，请在系统设置中登录 Apple 账户并打开 iCloud Drive。" : {
       "extractionState" : "manual",
@@ -2395,10 +2087,134 @@
       }
     },
     "Instagram" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instagram"
+          }
+        }
+      }
     },
     "iPhone 与 iPad 同步，还可备份到 iCloud 云盘" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone und iPad synchronisieren und in iCloud Drive sichern"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sync iPhone and iPad, and back up to iCloud Drive"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincroniza iPhone e iPad y copia en iCloud Drive"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchroniser iPhone et iPad, et sauvegarder sur iCloud Drive"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronizza iPhone e iPad e fai backup su iCloud Drive"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone と iPad を同期し、iCloud Drive にもバックアップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone과 iPad를 동기화하고 iCloud Drive에 백업"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sincronize iPhone e iPad e faça backup no iCloud Drive"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone 与 iPad 同步，还可备份到 iCloud 云盘"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone 與 iPad 同步，還可備份到 iCloud 雲碟"
+          }
+        }
+      }
     },
     "Mastercard" : {
       "extractionState" : "manual",
@@ -2904,8 +2720,135 @@
         }
       }
     },
+    "Renewity 已锁定" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity ist gesperrt"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity is locked"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity está bloqueada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity est verrouillée"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity è bloccata"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity はロックされています"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity가 잠겨 있습니다"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity está bloqueado"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity 已锁定"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity已鎖定"
+          }
+        }
+      }
+    },
     "Renewity 高级会员" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity Premium"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity Pro"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity Premium"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity Premium"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity Premium"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity プレミアム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity 프리미엄"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity Premium"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity 高级会员"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renewity 高級會員"
+          }
+        }
+      }
     },
     "Renewity备份" : {
       "extractionState" : "manual",
@@ -2962,65 +2905,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Renewity備份"
-          }
-        }
-      }
-    },
-    "Renewity已锁定" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity ist gesperrt"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity is locked"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity está bloqueada"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity est verrouillée"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity è bloccata"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity はロックされています"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity가 잠겨 있습니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity está bloqueado"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewity已鎖定"
           }
         }
       }
@@ -3150,128 +3034,66 @@
       }
     },
     "X" : {
-
-    },
-    "一次买断" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einmalkauf"
+            "value" : "X"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "One-time purchase"
+            "value" : "X"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pago único"
+            "value" : "X"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Achat unique"
+            "value" : "X"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Acquisto una tantum"
+            "value" : "X"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "買い切り"
+            "value" : "X"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "평생 구매"
+            "value" : "X"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Compra única"
+            "value" : "X"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一次买断"
+            "value" : "X"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一次買斷"
-          }
-        }
-      }
-    },
-    "一次买断，永久解锁" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einmal kaufen, dauerhaft freischalten"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pay once, unlock forever"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pago único, desbloqueo permanente"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Achat unique, déblocage à vie"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paghi una volta, sblocchi per sempre"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一度の購入で永久にアンロック"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "한 번 구매로 평생 잠금 해제"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pague uma vez, desbloqueie para sempre"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一次買斷，永久解鎖"
+            "value" : "X"
           }
         }
       }
@@ -3467,6 +3289,71 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "一次性訂閱不計入這些指標。日曆上仍會顯示圓點，但不會加入金額。"
+          }
+        }
+      }
+    },
+    "一次性购买" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einmalkauf"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One-time purchase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pago único"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achat unique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acquisto una tantum"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "買い切り"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "평생 구매"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compra única"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一次性购买"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一次買斷"
           }
         }
       }
@@ -3855,65 +3742,6 @@
         }
       }
     },
-    "下次扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nächste Abbuchung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Next charge"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Próximo cargo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prochaine facturation"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prossimo addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "次回請求"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "다음 결제"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Próxima cobrança"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下次扣款"
-          }
-        }
-      }
-    },
     "不收集" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3969,71 +3797,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "不收集"
-          }
-        }
-      }
-    },
-    "不续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ohne Verlängerung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "One-time"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin renovación"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sans renouvellement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Senza rinnovo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新しない"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "갱신 안 함"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sem renovação"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不续费"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不續訂"
           }
         }
       }
@@ -4223,65 +3986,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "兩週內到期"
-          }
-        }
-      }
-    },
-    "两周内续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In 2 Wochen fällig"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Due in 2 weeks"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En 2 semanas"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sous 2 semaines"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entro 2 settimane"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2週間以内に更新"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2주 내 갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Em 2 semanas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "兩週內續訂"
           }
         }
       }
@@ -5136,71 +4840,6 @@
         }
       }
     },
-    "今天扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbuchung heute"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charges today"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cargo hoy"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prélèvement aujourd’hui"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Addebito oggi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今日請求"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오늘 결제"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobrança hoje"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今天扣费"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今天扣費"
-          }
-        }
-      }
-    },
     "今天续订" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -5256,65 +4895,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天续订"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今天續訂"
-          }
-        }
-      }
-    },
-    "今天续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlängert heute"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renews today"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se renueva hoy"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renouvelle aujourd’hui"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si rinnova oggi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今日更新"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오늘 갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renova hoje"
           }
         },
         "zh-Hant" : {
@@ -5439,71 +5019,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "從 iCloud 還原"
-          }
-        }
-      }
-    },
-    "从今天起到今年 12 月 31 日，这些续费订阅实际还会扣几次，把这几次的金额加起来。年内已经扣过、不会再扣的不计入。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Von heute bis zum 31. Dezember werden die noch anstehenden Abbuchungen dieser Abos addiert. Abbuchungen, die in diesem Jahr bereits erfolgt sind und nicht erneut anfallen, zählen nicht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "From today through December 31, add up each remaining charge for these recurring subscriptions. Charges that already happened this year and will not occur again this year are excluded."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desde hoy hasta el 31 de diciembre se suman los cobros que aún ocurrirán de estas suscripciones. Los que ya ocurrieron este año y no volverán a ocurrir no se incluyen."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du jour jusqu’au 31 décembre, additionnez les prélèvements encore prévus pour ces abonnements. Ceux déjà effectués cette année et qui ne se reproduiront pas cette année sont exclus."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Da oggi al 31 dicembre si sommano gli addebiti ancora previsti per questi abbonamenti. Quelli già avvenuti quest’anno e che non si ripeteranno entro l’anno sono esclusi."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今日から今年の12月31日までに、これらの継続課金が実際に発生する回数の金額を合計します。年内にすでに引き落とされ、今年中に再課金されない分は含みません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오늘부터 올해 12월 31일까지 이 갱신 구독이 실제로 더 청구되는 횟수의 금액을 합산합니다. 올해 이미 청구되어 더 이상 청구되지 않는 건은 포함하지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De hoje até 31 de dezembro, some cada cobrança restante dessas assinaturas. Cobranças que já ocorreram neste ano e não vão se repetir ficam de fora."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "从今天起到今年 12 月 31 日，这些续费订阅实际还会扣几次，把这几次的金额加起来。年内已经扣过、不会再扣的不计入。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "從今天起到今年 12 月 31 日，這些續費訂閱實際還會扣幾次，把這幾次的金額加起來。年內已經扣過、不會再扣的不計入。"
           }
         }
       }
@@ -6012,6 +5527,136 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "付款貨幣"
+          }
+        }
+      }
+    },
+    "使用条款" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de uso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d’utilisation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termini di utilizzo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用規約"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이용 약관"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termos de uso"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用条款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用者條款"
+          }
+        }
+      }
+    },
+    "使用条款（网页）" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen (Web)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use (web)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de uso (web)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d’utilisation (web)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termini di utilizzo (web)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用規約（Web）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이용약관(웹)"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termos de uso (web)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用条款（网页）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用者條款（網頁）"
           }
         }
       }
@@ -7173,65 +6818,6 @@
         }
       }
     },
-    "最近扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Letzte Abbuchung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Last charge"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Último cargo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dernier prélèvement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ultimo addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "前回の請求"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "최근 결제"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Última cobrança"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最近扣款"
-          }
-        }
-      }
-    },
     "分享反馈" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -7835,10 +7421,134 @@
       }
     },
     "删除分类" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Category"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar categoría"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la catégorie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elimina categoria"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテゴリを削除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "분류 삭제"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apagar categoria"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除分类"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除分類"
+          }
+        }
+      }
     },
     "删除后，该分类下的订阅会改到剩余分类。" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abos dieser Kategorie werden einer verbleibenden Kategorie zugeordnet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subscriptions in this category will move to another remaining category."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las suscripciones de esta categoría pasarán a otra categoría restante."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les abonnements de cette catégorie seront déplacés vers une catégorie restante."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gli abbonamenti di questa categoria passeranno a una categoria rimanente."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除後、このカテゴリのサブスクは残りのカテゴリに移ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제하면 이 분류의 구독은 남은 분류로 옮겨집니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As assinaturas desta categoria irão para outra categoria restante."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除后，该分类下的订阅会改到剩余分类。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除後，該分類下的訂閱會改到剩餘分類。"
+          }
+        }
+      }
     },
     "删除后无法恢复。" : {
       "extractionState" : "manual",
@@ -7900,7 +7610,69 @@
       }
     },
     "删除后无法恢复。该分类下的订阅会改到剩余分类。" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das kann nicht rückgängig gemacht werden. Abos werden einer verbleibenden Kategorie zugeordnet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This can’t be undone. Subscriptions in this category will move to another remaining category."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se puede deshacer. Las suscripciones pasarán a otra categoría restante."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Action irréversible. Les abonnements seront déplacés vers une catégorie restante."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Operazione irreversibile. Gli abbonamenti passeranno a una categoria rimanente."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除は取り消せません。このカテゴリのサブスクは残りのカテゴリに移ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제하면 되돌릴 수 없습니다. 이 분류의 구독은 남은 분류로 옮겨집니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Isso não pode ser desfeito. As assinaturas irão para outra categoria restante."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除后无法恢复。该分类下的订阅会改到剩余分类。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除後無法恢復。該分類下的訂閱會改到剩餘分類。"
+          }
+        }
+      }
     },
     "删除提醒" : {
       "extractionState" : "manual",
@@ -8511,7 +8283,69 @@
       }
     },
     "即将到来" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demnächst"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upcoming"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À venir"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In arrivo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예정"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Em breve"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将到来"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即將到來"
+          }
+        }
+      }
     },
     "即将续订" : {
       "extractionState" : "manual",
@@ -8568,65 +8402,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "即将续订"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "即將續訂"
-          }
-        }
-      }
-    },
-    "即将续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demnächst"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Upcoming"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Próximos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À venir"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In arrivo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新予定"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "곧 갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Em breve"
           }
         },
         "zh-Hant" : {
@@ -8755,71 +8530,6 @@
         }
       }
     },
-    "只扣一次，之后不再自动续费。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wird einmal abgebucht und verlängert sich danach nicht automatisch."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charged once, then it won’t auto-renew."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se cobra una sola vez y no se renueva automáticamente."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prélevé une seule fois, sans renouvellement automatique ensuite."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Addebitato una sola volta, senza rinnovo automatico."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1回だけ請求され、その後は自動更新されません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "한 번만 청구되며 이후 자동 갱신되지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobra uma vez e não renova automaticamente."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "只扣一次，之后不再自动续费。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "只扣一次，之後不再自動續訂。"
-          }
-        }
-      }
-    },
     "可以换成网站域名再搜，或直接添加自定义订阅。" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8938,8 +8648,70 @@
         }
       }
     },
-    "各币种月支出" : {
-
+    "各货币月支出" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatsausgaben nach Währung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monthly spend by currency"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gasto mensual por moneda"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépenses mensuelles par devise"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spesa mensile per valuta"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通貨別の月額支出"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "통화별 월 지출"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gasto mensal por moeda"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各货币月支出"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各貨幣月支出"
+          }
+        }
+      }
     },
     "名称" : {
       "extractionState" : "manual",
@@ -9484,183 +9256,6 @@
         }
       }
     },
-    "在手腕上查看即将续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anstehende Verlängerungen am Handgelenk"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "See upcoming renewals on your wrist"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver renovaciones en la muñeca"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voir les renouvellements au poignet"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vedi i rinnovi al polso"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手首で更新予定を確認"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "손목에서 예정된 갱신 확인"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver renovações no pulso"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在手腕上查看即將續訂"
-          }
-        }
-      }
-    },
-    "在扣费前一天收到通知，避免忘了取消，也不用再翻邮件找账单。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einen Tag vor der Abbuchung erinnert, damit du nicht vergisst zu kündigen."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Get a notification the day before you’re charged, so you don’t miss a cancellation or hunt through email."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recibe un aviso el día antes del cargo para no olvidar cancelar."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recevez une notif la veille du prélèvement pour ne pas rater une résiliation."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ricevi un avviso il giorno prima dell’addebito, così non dimentichi di disdire."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求の前日に通知するので、解約し忘れやメール探しを防げます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제 하루 전에 알림을 받아 해지를 놓치지 않고, 메일에서 청구서를 찾지 않아도 됩니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Receba um aviso no dia anterior à cobrança para não esquecer de cancelar."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在扣款前一天收到通知，避免忘了取消，也不用再翻郵件找帳單。"
-          }
-        }
-      }
-    },
-    "在订阅扣费前一天发送本地通知。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sendet einen Tag vor der Abbuchung eine lokale Mitteilung."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sends a local notification the day before a charge."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envía una notificación local el día antes del cargo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoie une notification locale la veille du prélèvement."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invia una notifica locale il giorno prima dell’addebito."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求の前日にローカル通知を送ります。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "구독 결제 하루 전에 로컬 알림을 보냅니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envia uma notificação local no dia anterior à cobrança."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在訂閱扣款前一天傳送本機通知。"
-          }
-        }
-      }
-    },
     "基本信息" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -9721,7 +9316,69 @@
       }
     },
     "填写该服务的账号或订阅管理链接。点详情页的「管理订阅」会打开这个地址。" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib Konto- oder Verwaltungs-URL des Dienstes ein. „Abo verwalten“ auf der Detailseite öffnet diese Adresse."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the account or subscription management URL for this service. Opening Manage Subscription on the detail page uses this address."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce la cuenta o el enlace de gestión. «Gestionar suscripción» en el detalle abre esta dirección."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saisissez le compte ou l’URL de gestion. « Gérer l’abonnement » sur la fiche ouvre cette adresse."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci account o URL di gestione. «Gestisci abbonamento» nella scheda apre questo indirizzo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このサービスのアカウントまたは管理用 URL を入力します。詳細ページの「サブスクを管理」で開きます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 서비스의 계정 또는 구독 관리 링크를 입력하세요. 상세 화면의 「구독 관리」에서 이 주소가 열립니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informe a conta ou o link de gerenciamento. «Gerenciar assinatura» nos detalhes abre este endereço."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "填写该服务的账号或订阅管理链接。点详情页的「管理订阅」会打开这个地址。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "填寫該服務的帳號或訂閱管理連結。點詳情頁的「管理訂閱」會打開這個地址。"
+          }
+        }
+      }
     },
     "备份保存在你的 iCloud Drive 中，换机登录同一 Apple 账户即可恢复。" : {
       "extractionState" : "manual",
@@ -10266,71 +9923,6 @@
         }
       }
     },
-    "如果每笔正在续费的订阅都按今天的价格再付满一年，就是年均支出。各周期会先折成月费，再乘以 12。已暂停、试用尚未开始扣费的不计入。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jahresausgaben, wenn jedes laufende Abo ein Jahr lang zum heutigen Preis weiterläuft. Jeder Zyklus wird in einen Monatsbetrag umgerechnet und mit 12 multipliziert. Pausierte Abos und Testphasen ohne erste Abbuchung zählen nicht."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annualized spend if every recurring subscription continues for a full year at today’s price. Each cycle is converted to a monthly amount, then multiplied by 12. Paused subscriptions and trials that have not started billing are excluded."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gasto anualizado si cada suscripción recurrente continúa un año al precio de hoy. Cada ciclo se convierte a un importe mensual y se multiplica por 12. No se incluyen las pausadas ni las pruebas que aún no han cobrado."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dépense annualisée si chaque abonnement récurrent continue un an au prix d’aujourd’hui. Chaque cycle est converti en montant mensuel, puis multiplié par 12. Les abonnements en pause et les essais sans premier prélèvement sont exclus."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spesa annualizzata se ogni abbonamento ricorrente continua per un anno al prezzo odierno. Ogni ciclo è convertito in importo mensile e moltiplicato per 12. Sono esclusi quelli in pausa e le prove senza il primo addebito."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "継続課金中の各サブスクが今日の価格のまま1年間続くと仮定した年換算支出です。各周期を月額に換算して12倍します。一時停止中と、まだ課金が始まっていない無料期間は含みません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "계속 갱신 중인 구독이 오늘 가격으로 1년 동안 유지된다고 가정한 연환산 지출입니다. 각 주기를 월 요금으로 환산한 뒤 12를 곱합니다. 일시중지된 구독과 아직 결제가 시작되지 않은 체험은 포함하지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gasto anualizado se cada assinatura recorrente continuar por um ano no preço de hoje. Cada ciclo vira um valor mensal e é multiplicado por 12. Pausadas e testes que ainda não cobraram ficam de fora."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如果每笔正在续费的订阅都按今天的价格再付满一年，就是年均支出。各周期会先折成月费，再乘以 12。已暂停、试用尚未开始扣费的不计入。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如果每筆正在續費的訂閱都按今天的價格再付滿一年，就是年均支出。各週期會先折成月費，再乘以 12。已暫停、試用尚未開始扣費的不計入。"
-          }
-        }
-      }
-    },
     "如果每笔自动续订的订阅都按今天的价格再付满一年，就是年均支出。各周期会先换成每月金额，再乘以 12。已暂停、试用中还没首次付款的不计入。" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -10805,65 +10397,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "匯出到檔案"
-          }
-        }
-      }
-    },
-    "将根据最近一次扣费日和计费周期，自动推算下次扣费为 %@。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aus letztem Abbuchungsdatum und Zyklus ergibt sich die nächste Abbuchung am %@."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The next charge is calculated from the last charge date and billing cycle as %@."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Según el último cargo y el ciclo, el próximo cargo es el %@."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "D’après la dernière date et la périodicité, le prochain prélèvement est le %@."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In base all’ultimo addebito e al ciclo, il prossimo è il %@."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "前回の請求日とサイクルから、次回請求は %@ と計算されます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "최근 결제일과 주기를 기준으로 다음 결제는 %@입니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Com base na última cobrança e no ciclo, a próxima é em %@."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "將根據最近一次扣款日和計費週期，自動推算下次扣款為 %@。"
           }
         }
       }
@@ -11785,130 +11318,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已解鎖全部功能"
-          }
-        }
-      }
-    },
-    "币种" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Währung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Currency"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moneda"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Devise"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valuta"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "通貨"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "통화"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moeda"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "币种"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "幣種"
-          }
-        }
-      }
-    },
-    "常用服务的参考价为美国区标价，可按自己的实际扣费修改。金额按所选货币显示，不会自动换算汇率。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Referenzpreise sind US-Listenpreise. Passe sie an deine echte Abbuchung an. Beträge werden in der gewählten Währung gezeigt, ohne automatische Umrechnung."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reference prices are US list prices. Change them to match what you’re actually charged. Amounts are shown in the selected currency and are not converted automatically."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Los precios de referencia son de EE. UU. Ajústalos a tu cargo real. Los importes se muestran en la divisa elegida, sin conversión automática."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les prix de référence sont ceux des États-Unis. Adaptez-les à votre prélèvement. Les montants s’affichent dans la devise choisie, sans conversion auto."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "I prezzi di riferimento sono quelli USA. Modificali in base all’addebito reale. Gli importi restano nella valuta scelta, senza conversione automatica."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "参考価格は米国の表示価格です。実際の請求額に合わせて変更してください。金額は選択した通貨のまま表示され、自動換算されません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "참고 가격은 미국 표시가입니다. 실제 결제 금액으로 바꾸세요. 금액은 선택한 통화로 표시되며 자동 환산되지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Os preços de referência são dos EUA. Ajuste para o que você realmente paga. Os valores aparecem na moeda escolhida, sem conversão automática."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "常用服務的參考價為美國區標價，可改成你的實際扣款。金額依所選貨幣顯示，不會自動換算匯率。"
           }
         }
       }
@@ -13005,136 +12414,6 @@
         }
       }
     },
-    "当前显示月份里，从今天（含今天）到月底还会发生的循环扣费之和。查看过去的月份时为 0；查看未来的月份时与总计相同。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch anstehende wiederkehrende Abbuchungen vom heutigen Tag bis Monatsende im angezeigten Monat. Für vergangene Monate 0, für zukünftige Monate identisch mit der Gesamtsumme."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recurring charges still due from today through the end of the month currently shown. This is 0 for past months, and matches the total for future months."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobros recurrentes que quedan desde hoy (incluido) hasta fin de mes en el mes mostrado. Es 0 en meses pasados y coincide con el total en meses futuros."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prélèvements récurrents encore dus d’aujourd’hui (inclus) à la fin du mois affiché. Vaut 0 pour un mois passé, et égale le total pour un mois futur."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Addebiti ricorrenti ancora in programma da oggi (incluso) a fine mese nel mese visualizzato. È 0 per i mesi passati e coincide con il totale per i mesi futuri."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "表示中の月のうち、今日以降（当日を含む）月末までに発生する継続課金の合計です。過去の月は0、未来の月は合計と同じです。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "현재 표시 중인 달에서 오늘(오늘 포함)부터 말일까지 남은 반복 청구 합계입니다. 지난달은 0이고, 다음 달은 합계와 같습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobranças recorrentes que ainda ocorrem de hoje (inclusive) até o fim do mês exibido. É 0 em meses passados e igual ao total em meses futuros."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "当前显示月份里，从今天（含今天）到月底还会发生的循环扣费之和。查看过去的月份时为 0；查看未来的月份时与总计相同。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目前顯示月份裡，從今天（含今天）到月底還會發生的循環扣費之和。查看過去的月份時為 0；查看未來的月份時與總計相同。"
-          }
-        }
-      }
-    },
-    "当前显示月份里，所有循环扣费的金额之和，包括本月已经过去的日子。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Summe aller wiederkehrenden Abbuchungen im angezeigten Monat, einschließlich bereits vergangener Tage."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The sum of all recurring charges in the month currently shown, including days that have already passed."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suma de todos los cobros recurrentes del mes mostrado, incluidos los días ya transcurridos."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Somme de tous les prélèvements récurrents du mois affiché, y compris les jours déjà passés."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Somma di tutti gli addebiti ricorrenti del mese visualizzato, compresi i giorni già trascorsi."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "表示中の月における継続課金の合計です。すでに過ぎた日も含みます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "현재 표시 중인 달의 모든 반복 청구 합계이며, 이미 지난 날짜도 포함합니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Soma de todas as cobranças recorrentes do mês exibido, incluindo os dias que já passaram."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "当前显示月份里，所有循环扣费的金额之和，包括本月已经过去的日子。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "目前顯示月份裡，所有循環扣費的金額之和，包括本月已經過去的日子。"
-          }
-        }
-      }
-    },
     "当前查看的月份里，从今天（含今天）到月底还会发生的自动续订金额之和。查看过去的月份时为 0；查看未来的月份时与总计相同。" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -13266,75 +12545,264 @@
       }
     },
     "当前没有计入月支出的订阅" : {
-
-    },
-    "循环续费" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wiederkehrend"
+            "value" : "Derzeit zählen keine Abos zur Monatsausgabe"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Recurring"
+            "value" : "No subscriptions currently count toward monthly spend"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Periódico"
+            "value" : "Ninguna suscripción cuenta ahora en el gasto mensual"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Récurrent"
+            "value" : "Aucun abonnement n’entre actuellement dans les dépenses mensuelles"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ricorrente"
+            "value" : "Nessun abbonamento rientra al momento nella spesa mensile"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "定期更新"
+            "value" : "月額支出に含まれるサブスクはありません"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "반복 갱신"
+            "value" : "월 지출에 포함되는 구독이 없습니다"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Recorrente"
+            "value" : "Nenhuma assinatura entra no gasto mensal no momento"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "循环续费"
+            "value" : "当前没有计入月支出的订阅"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "循環續訂"
+            "value" : "目前沒有計入月支出的訂閱"
+          }
+        }
+      }
+    },
+    "总览和分类合计会按参考汇率换算到此货币，仅供参考，不会改写各笔订阅记下的金额。" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersicht und Kategorie-Summen rechnen mit Referenzkursen in diese Währung um. Die erfassten Beträge bleiben unverändert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overview and category totals convert into this currency using reference rates. Amounts you recorded for each subscription stay unchanged."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El resumen y los totales por categoría se convierten con tipos de referencia. Los importes guardados no cambian."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’aperçu et les totaux par catégorie sont convertis avec des taux de référence. Les montants saisis ne changent pas."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panoramica e totali per categoria sono convertiti con tassi di riferimento. Gli importi registrati non cambiano."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "概要とカテゴリ合計はこの参考レートで換算されます。各サブスクに記録した金額は変わりません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개요와 분류 합계는 참고 환율로 이 통화로 환산됩니다. 각 구독에 기록한 금액은 바뀌지 않습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visão geral e totais por categoria são convertidos com taxas de referência. Os valores registrados não mudam."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总览和分类合计会按参考汇率换算到此货币，仅供参考，不会改写各笔订阅记下的金额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "總覽和分類合計會按參考匯率換算到此貨幣，僅供參考，不會改寫各筆訂閱記下的金額。"
+          }
+        }
+      }
+    },
+    "总览和分类合计按默认货币换算。轻点概览卡片可切换到第二种货币。选择货币需要 Renewity Pro。" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersicht und Kategorie-Summen rechnen in die Standardwährung um. Tippe auf die Übersicht, um zur zweiten Währung zu wechseln. Währungswahl erfordert Renewity Pro."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overview and category totals convert using the default currency. Tap the overview card to switch to the second currency. Choosing a currency requires Renewity Pro."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El resumen y los totales por categoría se convierten a la moneda predeterminada. Toca la tarjeta de resumen para cambiar a la segunda moneda. Elegir moneda requiere Renewity Pro."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’aperçu et les totaux par catégorie sont convertis dans la devise par défaut. Touchez la carte d’aperçu pour passer à la seconde devise. Choisir une devise nécessite Renewity Pro."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panoramica e totali per categoria sono convertiti nella valuta predefinita. Tocca la scheda panoramica per passare alla seconda valuta. Scegliere una valuta richiede Renewity Pro."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "概要とカテゴリ合計はデフォルト通貨で換算されます。概要カードをタップすると第二通貨に切り替えられます。通貨の選択には Renewity Pro が必要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개요와 분류 합계는 기본 통화로 환산됩니다. 개요 카드를 눌러 두 번째 통화로 바꿀 수 있습니다. 통화 선택에는 Renewity Pro가 필요합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visão geral e totais por categoria são convertidos na moeda padrão. Toque no cartão de visão geral para mudar para a segunda moeda. Escolher uma moeda exige Renewity Pro."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总览和分类合计按默认货币换算。轻点概览卡片可切换到第二种货币。选择货币需要 Renewity Pro。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "總覽和分類合計按預設貨幣換算。輕點概覽卡片可切換到第二種貨幣。選擇貨幣需要 Renewity Pro。"
           }
         }
       }
     },
     "总计" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Summe"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Totale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合計"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "합계"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总计"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "總計"
+          }
+        }
+      }
     },
     "恢复" : {
       "extractionState" : "manual",
@@ -13934,195 +13402,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "打開系統設定"
-          }
-        }
-      }
-    },
-    "扣费提醒" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbuchungserinnerung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charge reminder"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aviso de cargo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappel de prélèvement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Promemoria addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求リマインダー"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제 알림"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lembrete de cobrança"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "扣费提醒"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "扣費提醒"
-          }
-        }
-      }
-    },
-    "扣费日期" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbuchungsdatum"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charge date"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fecha de cargo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Date de prélèvement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data di addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求日"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제일"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data da cobrança"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "扣款日期"
-          }
-        }
-      }
-    },
-    "扣费货币" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrechnungswährung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Billing currency"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moneda de cobro"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Devise de facturation"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Valuta di addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求通貨"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제 통화"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moeda de cobrança"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "扣费货币"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "扣費貨幣"
           }
         }
       }
@@ -14847,65 +14126,6 @@
         }
       }
     },
-    "按每个订阅的续费和试用设置发送本地通知。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sendet lokale Mitteilungen gemäß den Verlängerungs- und Testeinstellungen jedes Abos."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sends local notifications based on each subscription’s renewal and trial settings."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envía notificaciones locales según la renovación y la prueba de cada suscripción."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envoie des notifications locales selon les rappels de renouvellement et d’essai de chaque abonnement."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invia notifiche locali in base ai rinnovi e alle prove di ogni abbonamento."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "各サブスクの更新と無料期間の設定に従ってローカル通知を送ります。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "구독별 갱신 및 체험 설정에 따라 로컬 알림을 보냅니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Envia notificações locais conforme a renovação e o teste de cada assinatura."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "依每個訂閱的續費和試用設定傳送本機通知。"
-          }
-        }
-      }
-    },
     "按每个订阅设置的时间发送本地通知。" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -14965,7 +14185,7 @@
         }
       }
     },
-    "按每笔订阅的付款币种，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。" : {
+    "按每笔订阅的付款货币，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
@@ -15019,7 +14239,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "按每笔订阅的付款币种，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。"
+            "value" : "按每笔订阅的付款货币，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。"
           }
         },
         "zh-Hant" : {
@@ -15751,7 +14971,69 @@
       }
     },
     "搜索已有订阅" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abos durchsuchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search subscriptions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar suscripciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher des abonnements"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerca abbonamenti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登録済みのサブスクを検索"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기존 구독 검색"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar assinaturas"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索已有订阅"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜尋現有訂閱"
+          }
+        }
+      }
     },
     "搜索订阅" : {
       "extractionState" : "manual",
@@ -16239,71 +15521,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "改預設貨幣、付款貨幣，並把合計換算到其他貨幣"
-          }
-        }
-      }
-    },
-    "改默认货币、扣费货币，并把合计换算到其他货币" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anzeige- und Abrechnungswährung ändern und Summen umrechnen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Change display and billing currencies, and convert totals"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cambiar moneda de visualización y cobro, y convertir totales"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Changer les devises d’affichage et de facturation, et convertir les totaux"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cambia valuta di visualizzazione e addebito e converti i totali"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "表示通貨・請求通貨を変更し、合計を換算"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "기본 통화와 결제 통화를 바꾸고 합계를 환산"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alterar moedas de exibição e cobrança e converter totais"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "改默认货币、扣费货币，并把合计换算到其他货币"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "改預設貨幣、扣費貨幣，並把合計換算到其他貨幣"
           }
         }
       }
@@ -17590,7 +16807,69 @@
       }
     },
     "日期类型" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datumstyp"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date type"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo de fecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type de date"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo di data"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付の種類"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날짜 유형"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo de data"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期类型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期類型"
+          }
+        }
+      }
     },
     "明天" : {
       "extractionState" : "manual",
@@ -17781,71 +17060,6 @@
         }
       }
     },
-    "明天扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbuchung morgen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charges tomorrow"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cargo mañana"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prélèvement demain"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Addebito domani"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "明日請求"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "내일 결제"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobrança amanhã"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "明天扣费"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "明天扣費"
-          }
-        }
-      }
-    },
     "明天续订" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -17901,65 +17115,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "明天续订"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "明天續訂"
-          }
-        }
-      }
-    },
-    "明天续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlängert morgen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renews tomorrow"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se renueva mañana"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renouvelle demain"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si rinnova domani"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "明日更新"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "내일 갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renova amanhã"
           }
         },
         "zh-Hant" : {
@@ -18149,71 +17304,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "暫停"
-          }
-        }
-      }
-    },
-    "暂停后不再按期扣费，也不会发送提醒。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Im Pause-Status gibt es keine fällige Abbuchung und keine Erinnerungen."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "While paused, it won’t count as a charge and reminders won’t be sent."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En pausa no se cuenta un cobro ni se envían recordatorios."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En pause, aucun prélèvement ni rappel n’est prévu."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In pausa non risultano addebiti e non partono promemoria."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一時停止中は請求もリマインダーも行われません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "일시 중지하면 정기 결제가 잡히지 않고 알림도 보내지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Em pausa, não há cobrança prevista nem lembretes."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "暂停后不再按期扣费，也不会发送提醒。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "暫停後不再按期扣費，也不會發送提醒。"
           }
         }
       }
@@ -19192,65 +18282,6 @@
         }
       }
     },
-    "未来两周没有扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nichts fällig in den nächsten zwei Wochen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nothing due in the next two weeks"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nada que cobrar en las próximas dos semanas"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rien à prélever dans les deux semaines"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nessun addebito nelle prossime due settimane"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今後2週間の請求はありません"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앞으로 2주 동안 결제가 없습니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nada a cobrar nas próximas duas semanas"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "未來兩週沒有扣款"
-          }
-        }
-      }
-    },
     "未能完成验证，App 锁定未开启。" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -19565,63 +18596,66 @@
       }
     },
     "本机，并可通过 iCloud 在设备间同步" : {
-
-    },
-    "查看分类构成、月均排名和计费方式，把每一笔固定支出看清楚。" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mix, Ranking und Abrechnungsart – jede Fixkostenposition im Blick."
+            "value" : "Auf dem Gerät, per iCloud zwischen Geräten synchronisierbar"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "See category mix, rankings, and billing styles so every recurring charge is clear."
+            "value" : "On this device, and can sync across devices with iCloud"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mix, ranking y ciclo de cobro para ver cada gasto fijo."
+            "value" : "En el dispositivo; se puede sincronizar con iCloud"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Répartition, classement et périodicité pour voir chaque charge fixe."
+            "value" : "Sur l’appareil, synchronisable via iCloud"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mix, classifiche e cicli per vedere ogni spesa fissa."
+            "value" : "Sul dispositivo, sincronizzabile via iCloud"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "内訳、月額ランキング、請求サイクルで、固定費をはっきり把握。"
+            "value" : "このデバイス（iCloud で他のデバイスと同期可能）"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "구성, 월평균 순위, 결제 주기로 고정 지출을 한눈에 보세요."
+            "value" : "이 기기, iCloud로 기기 간 동기화 가능"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Composição, ranking e ciclo de cobrança para ver cada gasto fixo."
+            "value" : "Neste dispositivo, com sincronização iCloud entre aparelhos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本机，并可通过 iCloud 在设备间同步"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "查看分類構成、月均排名和計費方式，把每一筆固定支出看清楚。"
+            "value" : "本機，並可透過 iCloud 在裝置間同步"
           }
         }
       }
@@ -19692,7 +18726,69 @@
       }
     },
     "查看日历" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalender anzeigen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View calendar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver el calendario"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir le calendrier"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedi il calendario"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーを表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캘린더 보기"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver calendário"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看日历"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看日曆"
+          }
+        }
+      }
     },
     "查看未来两周内即将付款的订阅。" : {
       "extractionState" : "manual",
@@ -19755,65 +18851,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "查看未來兩週內即將付款的訂閱。"
-          }
-        }
-      }
-    },
-    "查看未来两周内即将扣费的订阅。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abos, die in den nächsten zwei Wochen abgebucht werden."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "See subscriptions due in the next two weeks."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver suscripciones que se cobran en las próximas dos semanas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voir les abonnements prélevés dans les deux semaines."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vedi gli abbonamenti in addebito nelle prossime due settimane."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今後2週間に請求されるサブスクを表示します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앞으로 2주 안에 결제될 구독을 봅니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver assinaturas cobradas nas próximas duas semanas."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "查看未來兩週內即將扣款的訂閱。"
           }
         }
       }
@@ -20798,65 +19835,6 @@
         }
       }
     },
-    "每月开支与即将续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monatsausgaben und anstehende Verlängerungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monthly spend and upcoming renewals"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gasto mensual y próximas renovaciones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dépenses du mois et renouvellements"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spesa mensile e prossimi rinnovi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "月間支出と更新予定"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "월 지출과 예정된 갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gastos do mês e próximas renovações"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每月開支與即將續訂"
-          }
-        }
-      }
-    },
     "每次付款" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -20918,65 +19896,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "每次付款"
-          }
-        }
-      }
-    },
-    "每次扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pro Abbuchung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Each charge"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Por cargo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Par prélèvement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Per addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1回あたり"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제당"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Por cobrança"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "每次扣款"
           }
         }
       }
@@ -22480,130 +21399,6 @@
         }
       }
     },
-    "用户协议" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nutzungsbedingungen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terms of Use"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Términos de uso"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conditions d’utilisation"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termini di utilizzo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "利用規約"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이용 약관"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termos de uso"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用者條款"
-          }
-        }
-      }
-    },
-    "用户协议（网页）" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nutzungsbedingungen (Web)"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terms of Use (web)"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Términos de uso (web)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conditions d’utilisation (web)"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termini di utilizzo (web)"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "利用規約（Web）"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이용약관(웹)"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termos de uso (web)"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "用户协议（网页）"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用者條款（網頁）"
-          }
-        }
-      }
-    },
     "用语音快速记录一笔订阅" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -22959,10 +21754,134 @@
       }
     },
     "第二种货币" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zweite Währung"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Second currency"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segunda moneda"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seconde devise"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seconda valuta"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第二の通貨"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두 번째 통화"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segunda moeda"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第二种货币"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第二種貨幣"
+          }
+        }
+      }
     },
     "管理页面" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwaltungsseite"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage page"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Página de gestión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Page de gestion"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pagina di gestione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理ページ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "관리 페이지"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Página de gerenciamento"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理页面"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理頁面"
+          }
+        }
+      }
     },
     "类别" : {
       "extractionState" : "manual",
@@ -23639,242 +22558,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "續訂提醒"
-          }
-        }
-      }
-    },
-    "续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlängerung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewal"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renovación"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renouvellement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rinnovo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "갱신"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renovação"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "續訂"
-          }
-        }
-      }
-    },
-    "续费前提醒你" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vor der Verlängerung erinnern"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Get reminded before renewal"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aviso antes de renovar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappel avant renouvellement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Promemoria prima del rinnovo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新前にお知らせ"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "갱신 전에 알려 드려요"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aviso antes da renovação"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "續訂前提醒你"
-          }
-        }
-      }
-    },
-    "续费提醒" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlängerungserinnerung"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewal reminder"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aviso de renovación"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rappel de renouvellement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Promemoria di rinnovo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新通知"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "갱신 알림"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lembrete de renovação"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "續訂提醒"
-          }
-        }
-      }
-    },
-    "续费日期" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlängerungsdatum"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renewal date"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fecha de renovación"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Date de renouvellement"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data di rinnovo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新日"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "갱신일"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data de renovação"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "續訂日期"
           }
         }
       }
@@ -24895,7 +23578,69 @@
       }
     },
     "解锁 Pro。年度或终身。" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro freischalten. Jährlich oder lebenslang."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlock Pro. Yearly or lifetime."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desbloquear Pro. Anual o de por vida."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Débloquer Pro. Annuel ou à vie."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sblocca Pro. Annuale o a vita."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro を解除。年額または買い切り。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pro 잠금 해제. 연간 또는 평생."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desbloquear o Pro. Anual ou vitalício."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解锁 Pro。年度或终身。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解鎖 Pro。年度或終身。"
+          }
+        }
+      }
     },
     "解锁 Renewity" : {
       "extractionState" : "manual",
@@ -25133,65 +23878,6 @@
         }
       }
     },
-    "计费方式" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrechnungsart"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Billing style"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forma de cobro"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mode de facturation"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modalità di addebito"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請求方法"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제 방식"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Forma de cobrança"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "計費方式"
-          }
-        }
-      }
-    },
     "订阅" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -25316,71 +24002,6 @@
         }
       }
     },
-    "订阅即将扣费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbuchung steht bevor"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charge coming up"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cargo próximo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prélèvement imminent"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Addebito imminente"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "まもなく請求されます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결제가 곧 진행됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cobrança em breve"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "订阅即将扣费"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "訂閱即將扣費"
-          }
-        }
-      }
-    },
     "订阅即将续订" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -25436,65 +24057,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "订阅即将续订"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "訂閱即將續訂"
-          }
-        }
-      }
-    },
-    "订阅即将续费" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abo verlängert sich bald"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Subscription renewing soon"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La suscripción se renueva pronto"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Renouvellement bientôt"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’abbonamento si rinnova presto"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "サブスクの更新が近づいています"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "구독이 곧 갱신됩니다"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A assinatura renova em breve"
           }
         },
         "zh-Hant" : {
@@ -25625,65 +24187,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "订阅名称、金额和日期都保存在你的设备上。续订提醒使用系统本地通知，不会上传到服务器。购买通过 Apple 完成。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "訂閱名稱、金額和日期都保存在你的裝置上。續訂提醒使用系統本機通知，不會上傳到伺服器。購買透過 Apple 完成。"
-          }
-        }
-      }
-    },
-    "订阅名称、金额和日期都保存在你的设备上。续费提醒使用系统本地通知，不会上传到服务器。购买通过 Apple 完成。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Namen, Beträge und Daten bleiben auf dem Gerät. Erinnerungen sind lokal und werden nicht hochgeladen. Käufe laufen über Apple."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Names, amounts, and dates stay on your device. Renewal reminders use local notifications and are not uploaded. Purchases are processed by Apple."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombres, importes y fechas se quedan en el dispositivo. Los avisos son locales y no se suben. Las compras van por Apple."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noms, montants et dates restent sur l’appareil. Les rappels sont locaux et ne sont pas envoyés. Les achats passent par Apple."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nomi, importi e date restano sul dispositivo. I promemoria sono locali e non vengono caricati. Gli acquisti passano da Apple."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "名前・金額・日付はこのデバイスに保存されます。更新通知はローカル通知で、サーバーには上がりません。購入はApple経由です。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이름, 금액, 날짜는 기기에 저장됩니다. 갱신 알림은 로컬 알림이며 서버로 올라가지 않습니다. 구입은 Apple을 통해 이루어집니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nomes, valores e datas ficam no dispositivo. Os lembretes são locais e não são enviados. As compras são pela Apple."
           }
         },
         "zh-Hant" : {
@@ -25873,6 +24376,71 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訂閱管理"
+          }
+        }
+      }
+    },
+    "订阅类型" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrechnungsart"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billing style"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forma de cobro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode de facturation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modalità di addebito"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求方法"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 방식"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forma de cobrança"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "订阅类型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "計費方式"
           }
         }
       }
@@ -26296,136 +24864,6 @@
         }
       }
     },
-    "试用持续到下次扣费日，当天开始按上面的费用扣款。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Testphase läuft bis zum nächsten Abbuchungstag. Ab dann gilt der Betrag oben."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The trial lasts until the next charge date. Billing at the amount above starts that day."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prueba dura hasta la próxima fecha de cobro; ese día empieza el importe de arriba."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’essai dure jusqu’à la prochaine date de prélèvement, qui démarre le tarif ci-dessus."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prova dura fino alla prossima data di addebito; da quel giorno vale l’importo sopra."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無料期間は次回請求日までです。その日から上記の料金が請求されます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "체험은 다음 결제일까지이며, 당일부터 위 금액이 청구됩니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O teste vai até a próxima data de cobrança; nesse dia começa o valor acima."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "试用持续到下次扣费日，当天开始按上面的费用扣款。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "試用持續到下次扣費日，當天開始按上面的費用扣款。"
-          }
-        }
-      }
-    },
-    "试用持续到扣费日，当天一次性扣款，之后不再续费。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Testphase läuft bis zum Abbuchungstag. Dann wird einmal abgebucht, danach gibt es keine Verlängerung."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The trial lasts until the charge date. You’ll be billed once that day, with no renewal after."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prueba dura hasta la fecha de cargo. Ese día se cobra una vez y no se renueva."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L’essai dure jusqu’à la date de prélèvement. Un seul paiement ce jour-là, sans renouvellement ensuite."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La prova dura fino alla data di addebito. Quel giorno viene addebitato una sola volta, senza rinnovi."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無料期間は請求日までです。その日に1回請求され、その後の更新はありません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "체험은 결제일까지이며, 당일 한 번 청구되고 이후 갱신되지 않습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O teste vai até a data da cobrança. Nesse dia cobra uma vez, sem renovação depois."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "试用持续到扣费日，当天一次性扣款，之后不再续费。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "試用持續到扣費日，當天一次性扣款，之後不再續訂。"
-          }
-        }
-      }
-    },
     "试用提醒" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -26540,65 +24978,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "試用期"
-          }
-        }
-      }
-    },
-    "试用结束前会按设置提醒。下次扣费默认设为试用到期当天，之后按计费周期续费。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du wirst vor Testende erinnert. Das nächste Abbuchungsdatum ist standardmäßig das Testende."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You’ll be reminded before the trial ends. The next charge is set to the trial end date by default."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recibirás un aviso antes de que termine la prueba. El próximo cargo se establece por defecto el día en que acaba."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vous serez rappelé avant la fin de l’essai. La prochaine date de prélèvement est celle de fin d’essai par défaut."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Riceverai un promemoria prima della fine della prova. Il prossimo addebito è impostato sulla data di fine prova."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無料期間の終了前に通知します。次回請求日は終了日に合わせて設定されます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "체험 종료 전에 알림을 보냅니다. 다음 결제일 기본값은 체험 종료일입니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Você será lembrado antes do fim do teste. A próxima cobrança usa a data de término por padrão."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "試用結束前會依設定提醒。下次扣費預設為試用到期當天，之後按計費週期續費。"
           }
         }
       }
@@ -26829,6 +25208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moeda"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "货币"
           }
         },
         "zh-Hant" : {
@@ -27194,7 +25579,69 @@
       }
     },
     "轻点可编辑。点「编辑」后可拖动排序或删除。至少保留一个分类；删除后，该分类下的订阅会改到剩余分类。" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippen zum Bearbeiten. Nach „Bearbeiten“ kannst du sortieren oder löschen. Mindestens eine Kategorie behalten; Abos wechseln zu einer verbleibenden."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to edit. After Edit, you can reorder or delete. Keep at least one category; subscriptions in a deleted category move to a remaining one."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para editar. Tras «Editar» puedes reordenar o eliminar. Conserva al menos una categoría; las suscripciones pasarán a otra restante."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez pour modifier. Après « Modifier », vous pouvez réordonner ou supprimer. Conservez au moins une catégorie ; les abonnements iront dans une restante."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocca per modificare. Dopo «Modifica» puoi riordinare o eliminare. Conserva almeno una categoria; gli abbonamenti passeranno a una rimanente."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップで編集。「編集」後に並べ替えや削除ができます。カテゴリは1つ以上残してください。削除したカテゴリのサブスクは残りに移ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "눌러 편집합니다. 「편집」 후 순서를 바꾸거나 삭제할 수 있습니다. 분류는 하나 이상 남겨 두세요. 삭제된 분류의 구독은 남은 분류로 옮겨집니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toque para editar. Em «Editar» você pode reordenar ou apagar. Mantenha ao menos uma categoria; as assinaturas irão para outra restante."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点可编辑。点「编辑」后可拖动排序或删除。至少保留一个分类；删除后，该分类下的订阅会改到剩余分类。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輕點可編輯。點「編輯」後可拖動排序或刪除。至少保留一個分類；刪除後，該分類下的訂閱會改到剩餘分類。"
+          }
+        }
+      }
     },
     "轻点更换官方图标" : {
       "extractionState" : "manual",
@@ -27674,124 +26121,6 @@
         }
       }
     },
-    "适合免费试用，到期前可提醒你取消，避免自动扣费。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Für kostenlose Tests. Lass dich vor Ablauf erinnern, um automatische Abbuchungen zu vermeiden."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "For free trials. Get reminded before it ends so you can cancel in time."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para pruebas gratis. Recibe un aviso antes de que termine para cancelar a tiempo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pour les essais gratuits. Soyez rappelé avant la fin pour pouvoir annuler."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Per le prove gratuite. Ricevi un promemoria prima della scadenza per disdire in tempo."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無料期間向け。終了前に通知して、自動課金を防げます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "무료 체험용입니다. 종료 전에 알림을 받아 자동 결제를 막을 수 있습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para testes grátis. Receba um lembrete antes do fim para cancelar a tempo."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "適合免費試用，到期前可提醒你取消，避免自動扣費。"
-          }
-        }
-      }
-    },
-    "选择下一次扣费的日期。" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle das Datum der nächsten Abbuchung."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose the next charge date."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige la fecha del próximo cargo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choisissez la date du prochain prélèvement."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scegli la data del prossimo addebito."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "次回の請求日を選択します。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "다음 결제일을 선택하세요."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha a data da próxima cobrança."
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇下一次扣款的日期。"
-          }
-        }
-      }
-    },
     "选择下次付款或上次付款" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -28100,7 +26429,69 @@
       }
     },
     "选择第二种货币" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zweite Währung wählen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a second currency"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige una segunda moneda"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir une seconde devise"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scegli una seconda valuta"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第二の通貨を選択"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두 번째 통화 선택"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha uma segunda moeda"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择第二种货币"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇第二種貨幣"
+          }
+        }
+      }
     },
     "选择货币" : {
       "extractionState" : "manual",
@@ -28635,65 +27026,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "銀行轉帳"
-          }
-        }
-      }
-    },
-    "锁定 App" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App sperren"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lock the App"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloquear la app"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verrouiller l’app"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Blocca l’app"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appをロック"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱 잠금"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bloquear o app"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "鎖定 App"
           }
         }
       }

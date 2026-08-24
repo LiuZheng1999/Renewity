@@ -12,7 +12,7 @@ LEGAL = ROOT / "Renewity" / "Legal"
 DOCS = ROOT / "docs"
 
 LANGS = [
-    ("zh-Hans", "简体中文", "隐私政策", "用户协议"),
+    ("zh-Hans", "简体中文", "隐私政策", "使用条款"),
     ("zh-Hant", "繁體中文", "隱私權政策", "使用者條款"),
     ("en", "English", "Privacy Policy", "Terms of Use"),
     ("ja", "日本語", "プライバシーポリシー", "利用規約"),
@@ -411,7 +411,7 @@ location.replace('./' + code + '.html');
     (DOCS / "README.md").write_text(
         f"""# GitHub Pages 法律文档
 
-这个 `docs/` 目录可以直接作为 GitHub Pages 站点发布，内容与应用内《隐私政策》《用户协议》一致。
+这个 `docs/` 目录可以直接作为 GitHub Pages 站点发布，内容与应用内《隐私政策》《使用条款》一致。
 
 ## 发布步骤
 
@@ -427,7 +427,7 @@ location.replace('./' + code + '.html');
 - `Renewity/Legal/` 下各语言文档中的网址
 - 然后重新运行 `python3 scripts/build_legal_pages.py`
 
-应用「关于」页的「隐私政策（网页）」「用户协议（网页）」会打开上述地址。
+应用「关于」页的「隐私政策（网页）」「使用条款（网页）」会打开上述地址。
 """,
         encoding="utf-8",
     )

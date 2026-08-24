@@ -8,7 +8,7 @@ enum LegalDocument: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .termsOfUse: String(localized: "用户协议")
+        case .termsOfUse: String(localized: "使用条款")
         case .privacyPolicy: String(localized: "隐私政策")
         }
     }

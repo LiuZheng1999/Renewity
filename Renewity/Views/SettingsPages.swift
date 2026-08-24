@@ -108,7 +108,7 @@ struct CurrencySettingsView: View {
                 Text("每 5 天自动更新一次汇率，你也可以每天手动更新。")
             }
         }
-        .navigationTitle("币种")
+        .navigationTitle("货币")
         .toolbarTitleDisplayMode(.inline)
         .sheet(isPresented: $showingCurrencyPicker, onDismiss: presentPaywallIfCurrencyLocked) {
             CurrencyPickerView(currencyCode: $currencyCode, onSelect: handleDefaultCurrencySelect)

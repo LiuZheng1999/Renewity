@@ -532,10 +532,10 @@ private struct CurrencyMonthlySpendView: View {
                         }
                     }
                 } footer: {
-                    Text("按每笔订阅的付款币种，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。")
+                    Text("按每笔订阅的付款货币，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。")
                 }
             }
-            .navigationTitle("各币种月支出")
+            .navigationTitle("各货币月支出")
             .toolbarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {

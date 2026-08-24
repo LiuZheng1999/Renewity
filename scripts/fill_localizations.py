@@ -43,6 +43,16 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ko": "합계 %@", "de": "%@ insgesamt", "fr": "%@ au total",
         "es": "%@ en total", "it": "%@ in totale", "pt-BR": "%@ no total",
     },
+    "%@ · %lld 笔": {
+        "en": "%@ · %lld", "zh-Hant": "%@ · %lld 筆", "ja": "%@ · %lld件",
+        "ko": "%@ · %lld건", "de": "%@ · %lld", "fr": "%@ · %lld",
+        "es": "%@ · %lld", "it": "%@ · %lld", "pt-BR": "%@ · %lld",
+    },
+    "%lld 笔": {
+        "en": "%lld", "zh-Hant": "%lld 筆", "ja": "%lld件",
+        "ko": "%lld건", "de": "%lld", "fr": "%lld",
+        "es": "%lld", "it": "%lld", "pt-BR": "%lld",
+    },
     "American Express": same("American Express"),
     "Apple Pay": same("Apple Pay"),
     "Google Pay": same("Google Pay"),
@@ -50,9 +60,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     "PayPal": same("PayPal"),
     "Pro": same("Pro"),
     "Visa": same("Visa"),
-    "一次买断": {
-        "en": "One-time purchase", "zh-Hant": "一次買斷", "ja": "買い切り",
-        "ko": "평생 구매", "de": "Einmalkauf", "fr": "Achat unique",
+    "一次性购买": {
+        "en": "One-time purchase", "zh-Hant": "一次性購買", "ja": "買い切り",
+        "ko": "일회성 구입", "de": "Einmalkauf", "fr": "Achat unique",
         "es": "Pago único", "it": "Acquisto una tantum", "pt-BR": "Compra única",
     },
     "上个月": {
@@ -162,8 +172,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ko": "이미 구매하셨나요?", "de": "Bereits gekauft? ", "fr": "Déjà acheté ? ",
         "es": "¿Ya lo compraste? ", "it": "Hai già acquistato? ", "pt-BR": "Já comprou? ",
     },
-    "币种": {
-        "en": "Currency", "zh-Hant": "幣種", "ja": "通貨",
+    "货币": {
+        "en": "Currency", "zh-Hant": "貨幣", "ja": "通貨",
         "ko": "통화", "de": "Währung", "fr": "Devise",
         "es": "Moneda", "it": "Valuta", "pt-BR": "Moeda",
     },
@@ -222,11 +232,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ko": "모든 통화", "de": "Alle Währungen", "fr": "Toutes les devises",
         "es": "Todas las monedas", "it": "Tutte le valute", "pt-BR": "Todas as moedas",
     },
-    "扣费货币": {
-        "en": "Billing currency", "zh-Hant": "扣費貨幣", "ja": "請求通貨",
-        "ko": "결제 통화", "de": "Abrechnungswährung", "fr": "Devise de facturation",
-        "es": "Moneda de cobro", "it": "Valuta di addebito", "pt-BR": "Moeda de cobrança",
-    },
     "换算为其他货币": {
         "en": "Convert to another currency", "zh-Hant": "換算為其他貨幣", "ja": "別の通貨に換算",
         "ko": "다른 통화로 환산", "de": "In andere Währung umrechnen", "fr": "Convertir dans une autre devise",
@@ -246,17 +251,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Payment method", "zh-Hant": "支付方式", "ja": "支払い方法",
         "ko": "결제 수단", "de": "Zahlungsmethode", "fr": "Moyen de paiement",
         "es": "Método de pago", "it": "Metodo di pagamento", "pt-BR": "Forma de pagamento",
-    },
-    "改默认货币、扣费货币，并把合计换算到其他货币": {
-        "en": "Change display and billing currencies, and convert totals",
-        "zh-Hant": "改預設貨幣、扣費貨幣，並把合計換算到其他貨幣",
-        "ja": "表示通貨・請求通貨を変更し、合計を換算",
-        "ko": "기본 통화와 결제 통화를 바꾸고 합계를 환산",
-        "de": "Anzeige- und Abrechnungswährung ändern und Summen umrechnen",
-        "fr": "Changer les devises d’affichage et de facturation, et convertir les totaux",
-        "es": "Cambiar moneda de visualización y cobro, y convertir totales",
-        "it": "Cambia valuta di visualizzazione e addebito e converti i totali",
-        "pt-BR": "Alterar moedas de exibição e cobrança e converter totais",
     },
     "新建": {
         "en": "New", "zh-Hant": "新增", "ja": "新規",
@@ -305,17 +299,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Yesterday %@", "zh-Hant": "昨天 %@", "ja": "昨日 %@",
         "ko": "어제 %@", "de": "Gestern %@", "fr": "Hier %@",
         "es": "Ayer %@", "it": "Ieri %@", "pt-BR": "Ontem %@",
-    },
-    "暂停后不再按期扣费，也不会发送提醒。": {
-        "en": "While paused, it won’t count as a charge and reminders won’t be sent.",
-        "zh-Hant": "暫停後不再按期扣費，也不會發送提醒。",
-        "ja": "一時停止中は請求もリマインダーも行われません。",
-        "ko": "일시 중지하면 정기 결제가 잡히지 않고 알림도 보내지 않습니다.",
-        "de": "Im Pause-Status gibt es keine fällige Abbuchung und keine Erinnerungen.",
-        "fr": "En pause, aucun prélèvement ni rappel n’est prévu.",
-        "es": "En pausa no se cuenta un cobro ni se envían recordatorios.",
-        "it": "In pausa non risultano addebiti e non partono promemoria.",
-        "pt-BR": "Em pausa, não há cobrança prevista nem lembretes.",
     },
     "暂时无法连接到 App Store": {
         "en": "Can’t connect to the App Store right now",
@@ -420,49 +403,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Billing cycle", "zh-Hant": "訂閱週期", "ja": "請求サイクル",
         "ko": "결제 주기", "de": "Abrechnungszyklus", "fr": "Périodicité",
         "es": "Ciclo de facturación", "it": "Ciclo di fatturazione", "pt-BR": "Ciclo de cobrança",
-    },
-    "试用持续到下次扣费日，当天开始按上面的费用扣款。": {
-        "en": "The trial lasts until the next charge date. Billing at the amount above starts that day.",
-        "zh-Hant": "試用持續到下次扣費日，當天開始按上面的費用扣款。",
-        "ja": "無料期間は次回請求日までです。その日から上記の料金が請求されます。",
-        "ko": "체험은 다음 결제일까지이며, 당일부터 위 금액이 청구됩니다.",
-        "de": "Die Testphase läuft bis zum nächsten Abbuchungstag. Ab dann gilt der Betrag oben.",
-        "fr": "L’essai dure jusqu’à la prochaine date de prélèvement, qui démarre le tarif ci-dessus.",
-        "es": "La prueba dura hasta la próxima fecha de cobro; ese día empieza el importe de arriba.",
-        "it": "La prova dura fino alla prossima data di addebito; da quel giorno vale l’importo sopra.",
-        "pt-BR": "O teste vai até a próxima data de cobrança; nesse dia começa o valor acima.",
-    },
-    "试用持续到扣费日，当天一次性扣款，之后不再续费。": {
-        "en": "The trial lasts until the charge date. You’ll be billed once that day, with no renewal after.",
-        "zh-Hant": "試用持續到扣費日，當天一次性扣款，之後不再續訂。",
-        "ja": "無料期間は請求日までです。その日に1回請求され、その後の更新はありません。",
-        "ko": "체험은 결제일까지이며, 당일 한 번 청구되고 이후 갱신되지 않습니다.",
-        "de": "Die Testphase läuft bis zum Abbuchungstag. Dann wird einmal abgebucht, danach gibt es keine Verlängerung.",
-        "fr": "L’essai dure jusqu’à la date de prélèvement. Un seul paiement ce jour-là, sans renouvellement ensuite.",
-        "es": "La prueba dura hasta la fecha de cargo. Ese día se cobra una vez y no se renueva.",
-        "it": "La prova dura fino alla data di addebito. Quel giorno viene addebitato una sola volta, senza rinnovi.",
-        "pt-BR": "O teste vai até a data da cobrança. Nesse dia cobra uma vez, sem renovação depois.",
-    },
-    "只扣一次，之后不再自动续费。": {
-        "en": "Charged once, then it won’t auto-renew.",
-        "zh-Hant": "只扣一次，之後不再自動續訂。",
-        "ja": "1回だけ請求され、その後は自動更新されません。",
-        "ko": "한 번만 청구되며 이후 자동 갱신되지 않습니다.",
-        "de": "Wird einmal abgebucht und verlängert sich danach nicht automatisch.",
-        "fr": "Prélevé une seule fois, sans renouvellement automatique ensuite.",
-        "es": "Se cobra una sola vez y no se renueva automáticamente.",
-        "it": "Addebitato una sola volta, senza rinnovo automatico.",
-        "pt-BR": "Cobra uma vez e não renova automaticamente.",
-    },
-    "循环续费": {
-        "en": "Recurring", "zh-Hant": "循環續訂", "ja": "定期更新",
-        "ko": "반복 갱신", "de": "Wiederkehrend", "fr": "Récurrent",
-        "es": "Periódico", "it": "Ricorrente", "pt-BR": "Recorrente",
-    },
-    "不续费": {
-        "en": "One-time", "zh-Hant": "不續訂", "ja": "更新しない",
-        "ko": "갱신 안 함", "de": "Ohne Verlängerung", "fr": "Sans renouvellement",
-        "es": "Sin renovación", "it": "Senza rinnovo", "pt-BR": "Sem renovação",
     },
     "自动续订": {
         "en": "Auto-renew", "zh-Hant": "自動續訂", "ja": "自動更新",
@@ -744,17 +684,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "it": "Importi a rinnovo automatico ancora in programma da oggi (incluso) a fine mese nel mese visualizzato. È 0 per i mesi passati e coincide con il totale per i mesi futuri.",
         "pt-BR": "Valores de renovação automática que ainda ocorrem de hoje (inclusive) até o fim do mês exibido. É 0 em meses passados e igual ao total em meses futuros.",
     },
-    "按每笔订阅的付款币种，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。": {
-        "en": "Adds each subscription’s cycle cost as a monthly amount in its payment currency, with no exchange-rate conversion. Trials that have not started billing are excluded.",
-        "zh-Hant": "按每筆訂閱的付款幣種，把週期費用折成每月後直接相加，不做匯率換算。試用中還沒首次付款的不計入。",
-        "ja": "各サブスクの支払い通貨のまま周期費用を月額に換算して合計します。為替換算はしません。まだ初回支払いがない無料期間は含みません。",
-        "ko": "각 구독의 결제 통화로 주기 비용을 월 금액으로 바꾼 뒤 더하며, 환율 환산은 하지 않습니다. 아직 첫 결제가 없는 체험은 포함하지 않습니다.",
-        "de": "Rechnet die Zyklusgebühr jedes Abos in seiner Zahlungswährung auf den Monat um und addiert sie ohne Kursumrechnung. Tests ohne erste Zahlung zählen nicht.",
-        "fr": "Additionne le coût de cycle de chaque abonnement en montant mensuel dans sa devise de paiement, sans conversion. Les essais sans premier paiement sont exclus.",
-        "es": "Suma el coste de ciclo de cada suscripción como importe mensual en su moneda de pago, sin conversión. No se incluyen las pruebas sin el primer pago.",
-        "it": "Somma il costo di ciclo di ogni abbonamento come importo mensile nella sua valuta di pagamento, senza conversione. Sono escluse le prove senza il primo pagamento.",
-        "pt-BR": "Soma o custo do ciclo de cada assinatura como valor mensal na moeda de pagamento, sem conversão. Testes sem o primeiro pagamento ficam de fora.",
-    },
     "按每个订阅的续订和试用设置发送本地通知。": {
         "en": "Sends local notifications based on each subscription’s renewal and trial settings.",
         "zh-Hant": "按每個訂閱的續訂和試用設定發送本機通知。",
@@ -832,38 +761,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "it": "Mostra la spesa abbonamenti del mese e quella annualizzata.",
         "pt-BR": "Mostra o gasto com assinaturas deste mês e o gasto anualizado.",
     },
-    "扣费提醒": {
-        "en": "Charge reminder", "zh-Hant": "扣費提醒", "ja": "請求リマインダー",
-        "ko": "결제 알림", "de": "Abbuchungserinnerung", "fr": "Rappel de prélèvement",
-        "es": "Aviso de cargo", "it": "Promemoria addebito", "pt-BR": "Lembrete de cobrança",
-    },
-    "订阅即将扣费": {
-        "en": "Charge coming up", "zh-Hant": "訂閱即將扣費", "ja": "まもなく請求されます",
-        "ko": "결제가 곧 진행됩니다", "de": "Abbuchung steht bevor", "fr": "Prélèvement imminent",
-        "es": "Cargo próximo", "it": "Addebito imminente", "pt-BR": "Cobrança em breve",
-    },
-    "「%@」将于明天扣费 %@": {
-        "en": "“%@” will be charged tomorrow for %@",
-        "zh-Hant": "「%@」將於明天扣費 %@",
-        "ja": "「%@」は明日 %@ が請求されます",
-        "ko": "「%@」이(가) 내일 %@에 결제됩니다",
-        "de": "„%@“ wird morgen um %@ abgebucht",
-        "fr": "« %@ » sera prélevé demain pour %@",
-        "es": "«%@» se cargará mañana por %@",
-        "it": "“%@” verrà addebitato domani per %@",
-        "pt-BR": "“%@” será cobrado amanhã por %@",
-    },
-    "「%@」将于 %lld 天后扣费 %@": {
-        "en": "“%@” will be charged in %lld days for %@",
-        "zh-Hant": "「%@」將於 %lld 天後扣費 %@",
-        "ja": "「%@」は %lld 日後に %@ が請求されます",
-        "ko": "「%@」이(가) %lld일 후 %@에 결제됩니다",
-        "de": "„%@“ wird in %lld Tagen um %@ abgebucht",
-        "fr": "« %@ » sera prélevé dans %lld jours pour %@",
-        "es": "«%@» se cargará en %lld días por %@",
-        "it": "“%@” verrà addebitato tra %lld giorni per %@",
-        "pt-BR": "“%@” será cobrado em %lld dias por %@",
-    },
     "已结束": {
         "en": "Ended", "zh-Hant": "已結束", "ja": "終了",
         "ko": "종료됨", "de": "Beendet", "fr": "Terminé",
@@ -911,61 +808,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "it": "Cambia la valuta della spesa annualizzata e del resto dell’anno",
         "pt-BR": "Alternar a moeda do gasto anualizado e do restante neste ano",
     },
-    "一次性付费不计入这些指标。日历上仍会显示圆点，但不会加入金额。": {
-        "en": "One-time payments are not included in these figures. They still appear as dots on the calendar, but are not added to the totals.",
-        "zh-Hant": "一次性付費不計入這些指標。日曆上仍會顯示圓點，但不會加入金額。",
-        "ja": "一回限りの支払いはこれらの数値に含まれません。カレンダーには点が表示されますが、合計には加算されません。",
-        "ko": "일회성 결제는 이 수치에 포함되지 않습니다. 캘린더에는 점이 표시되지만 합계에는 더하지 않습니다.",
-        "de": "Einmalzahlungen fließen nicht in diese Kennzahlen ein. Im Kalender erscheinen sie weiterhin als Punkte, werden aber nicht zu den Beträgen addiert.",
-        "fr": "Les paiements uniques ne sont pas inclus dans ces indicateurs. Ils apparaissent encore en points sur le calendrier, mais ne s’ajoutent pas aux montants.",
-        "es": "Los pagos únicos no entran en estas cifras. Siguen apareciendo como puntos en el calendario, pero no se suman a los importes.",
-        "it": "I pagamenti una tantum non rientrano in questi valori. Restano visibili come punti nel calendario, ma non vengono sommati agli importi.",
-        "pt-BR": "Pagamentos únicos não entram nestes indicadores. Eles ainda aparecem como pontos no calendário, mas não são somados aos valores.",
-    },
-    "如果每笔正在续费的订阅都按今天的价格再付满一年，就是年均支出。各周期会先折成月费，再乘以 12。已暂停、试用尚未开始扣费的不计入。": {
-        "en": "Annualized spend if every recurring subscription continues for a full year at today’s price. Each cycle is converted to a monthly amount, then multiplied by 12. Paused subscriptions and trials that have not started billing are excluded.",
-        "zh-Hant": "如果每筆正在續費的訂閱都按今天的價格再付滿一年，就是年均支出。各週期會先折成月費，再乘以 12。已暫停、試用尚未開始扣費的不計入。",
-        "ja": "継続課金中の各サブスクが今日の価格のまま1年間続くと仮定した年換算支出です。各周期を月額に換算して12倍します。一時停止中と、まだ課金が始まっていない無料期間は含みません。",
-        "ko": "계속 갱신 중인 구독이 오늘 가격으로 1년 동안 유지된다고 가정한 연환산 지출입니다. 각 주기를 월 요금으로 환산한 뒤 12를 곱합니다. 일시중지된 구독과 아직 결제가 시작되지 않은 체험은 포함하지 않습니다.",
-        "de": "Jahresausgaben, wenn jedes laufende Abo ein Jahr lang zum heutigen Preis weiterläuft. Jeder Zyklus wird in einen Monatsbetrag umgerechnet und mit 12 multipliziert. Pausierte Abos und Testphasen ohne erste Abbuchung zählen nicht.",
-        "fr": "Dépense annualisée si chaque abonnement récurrent continue un an au prix d’aujourd’hui. Chaque cycle est converti en montant mensuel, puis multiplié par 12. Les abonnements en pause et les essais sans premier prélèvement sont exclus.",
-        "es": "Gasto anualizado si cada suscripción recurrente continúa un año al precio de hoy. Cada ciclo se convierte a un importe mensual y se multiplica por 12. No se incluyen las pausadas ni las pruebas que aún no han cobrado.",
-        "it": "Spesa annualizzata se ogni abbonamento ricorrente continua per un anno al prezzo odierno. Ogni ciclo è convertito in importo mensile e moltiplicato per 12. Sono esclusi quelli in pausa e le prove senza il primo addebito.",
-        "pt-BR": "Gasto anualizado se cada assinatura recorrente continuar por um ano no preço de hoje. Cada ciclo vira um valor mensal e é multiplicado por 12. Pausadas e testes que ainda não cobraram ficam de fora.",
-    },
-    "从今天起到今年 12 月 31 日，这些续费订阅实际还会扣几次，把这几次的金额加起来。年内已经扣过、不会再扣的不计入。": {
-        "en": "From today through December 31, add up each remaining charge for these recurring subscriptions. Charges that already happened this year and will not occur again this year are excluded.",
-        "zh-Hant": "從今天起到今年 12 月 31 日，這些續費訂閱實際還會扣幾次，把這幾次的金額加起來。年內已經扣過、不會再扣的不計入。",
-        "ja": "今日から今年の12月31日までに、これらの継続課金が実際に発生する回数の金額を合計します。年内にすでに引き落とされ、今年中に再課金されない分は含みません。",
-        "ko": "오늘부터 올해 12월 31일까지 이 갱신 구독이 실제로 더 청구되는 횟수의 금액을 합산합니다. 올해 이미 청구되어 더 이상 청구되지 않는 건은 포함하지 않습니다.",
-        "de": "Von heute bis zum 31. Dezember werden die noch anstehenden Abbuchungen dieser Abos addiert. Abbuchungen, die in diesem Jahr bereits erfolgt sind und nicht erneut anfallen, zählen nicht.",
-        "fr": "Du jour jusqu’au 31 décembre, additionnez les prélèvements encore prévus pour ces abonnements. Ceux déjà effectués cette année et qui ne se reproduiront pas cette année sont exclus.",
-        "es": "Desde hoy hasta el 31 de diciembre se suman los cobros que aún ocurrirán de estas suscripciones. Los que ya ocurrieron este año y no volverán a ocurrir no se incluyen.",
-        "it": "Da oggi al 31 dicembre si sommano gli addebiti ancora previsti per questi abbonamenti. Quelli già avvenuti quest’anno e che non si ripeteranno entro l’anno sono esclusi.",
-        "pt-BR": "De hoje até 31 de dezembro, some cada cobrança restante dessas assinaturas. Cobranças que já ocorreram neste ano e não vão se repetir ficam de fora.",
-    },
-    "当前显示月份里，所有循环扣费的金额之和，包括本月已经过去的日子。": {
-        "en": "The sum of all recurring charges in the month currently shown, including days that have already passed.",
-        "zh-Hant": "目前顯示月份裡，所有循環扣費的金額之和，包括本月已經過去的日子。",
-        "ja": "表示中の月における継続課金の合計です。すでに過ぎた日も含みます。",
-        "ko": "현재 표시 중인 달의 모든 반복 청구 합계이며, 이미 지난 날짜도 포함합니다.",
-        "de": "Summe aller wiederkehrenden Abbuchungen im angezeigten Monat, einschließlich bereits vergangener Tage.",
-        "fr": "Somme de tous les prélèvements récurrents du mois affiché, y compris les jours déjà passés.",
-        "es": "Suma de todos los cobros recurrentes del mes mostrado, incluidos los días ya transcurridos.",
-        "it": "Somma di tutti gli addebiti ricorrenti del mese visualizzato, compresi i giorni già trascorsi.",
-        "pt-BR": "Soma de todas as cobranças recorrentes do mês exibido, incluindo os dias que já passaram.",
-    },
-    "当前显示月份里，从今天（含今天）到月底还会发生的循环扣费之和。查看过去的月份时为 0；查看未来的月份时与总计相同。": {
-        "en": "Recurring charges still due from today through the end of the month currently shown. This is 0 for past months, and matches the total for future months.",
-        "zh-Hant": "目前顯示月份裡，從今天（含今天）到月底還會發生的循環扣費之和。查看過去的月份時為 0；查看未來的月份時與總計相同。",
-        "ja": "表示中の月のうち、今日以降（当日を含む）月末までに発生する継続課金の合計です。過去の月は0、未来の月は合計と同じです。",
-        "ko": "현재 표시 중인 달에서 오늘(오늘 포함)부터 말일까지 남은 반복 청구 합계입니다. 지난달은 0이고, 다음 달은 합계와 같습니다.",
-        "de": "Noch anstehende wiederkehrende Abbuchungen vom heutigen Tag bis Monatsende im angezeigten Monat. Für vergangene Monate 0, für zukünftige Monate identisch mit der Gesamtsumme.",
-        "fr": "Prélèvements récurrents encore dus d’aujourd’hui (inclus) à la fin du mois affiché. Vaut 0 pour un mois passé, et égale le total pour un mois futur.",
-        "es": "Cobros recurrentes que quedan desde hoy (incluido) hasta fin de mes en el mes mostrado. Es 0 en meses pasados y coincide con el total en meses futuros.",
-        "it": "Addebiti ricorrenti ancora in programma da oggi (incluso) a fine mese nel mese visualizzato. È 0 per i mesi passati e coincide con il totale per i mesi futuri.",
-        "pt-BR": "Cobranças recorrentes que ainda ocorrem de hoje (inclusive) até o fim do mês exibido. É 0 em meses passados e igual ao total em meses futuros.",
-    },
     "切换本年预计支出和本年剩余支出的货币": {
         "en": "Switch the currency for this year’s estimated and remaining spend",
         "zh-Hant": "切換本年預計支出和本年剩餘支出的貨幣",
@@ -1007,21 +849,6 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ko": "%lld일 후 만료", "de": "Läuft in %lld Tagen ab", "fr": "Expire dans %lld j",
         "es": "Caduca en %lld días", "it": "Scade tra %lld giorni", "pt-BR": "Expira em %lld dias",
     },
-    "今天扣费": {
-        "en": "Charges today", "zh-Hant": "今天扣費", "ja": "今日請求",
-        "ko": "오늘 결제", "de": "Abbuchung heute", "fr": "Prélèvement aujourd’hui",
-        "es": "Cargo hoy", "it": "Addebito oggi", "pt-BR": "Cobrança hoje",
-    },
-    "明天扣费": {
-        "en": "Charges tomorrow", "zh-Hant": "明天扣費", "ja": "明日請求",
-        "ko": "내일 결제", "de": "Abbuchung morgen", "fr": "Prélèvement demain",
-        "es": "Cargo mañana", "it": "Addebito domani", "pt-BR": "Cobrança amanhã",
-    },
-    "%lld 天后扣费": {
-        "en": "Charges in %lld days", "zh-Hant": "%lld 天後扣費", "ja": "%lld 日後に請求",
-        "ko": "%lld일 후 결제", "de": "Abbuchung in %lld Tagen", "fr": "Prélèvement dans %lld j",
-        "es": "Cargo en %lld días", "it": "Addebito tra %lld giorni", "pt-BR": "Cobrança em %lld dias",
-    },
     "银行转账": {
         "en": "Bank transfer", "zh-Hant": "銀行轉帳", "ja": "銀行振込",
         "ko": "계좌이체", "de": "Überweisung", "fr": "Virement bancaire",
@@ -1047,9 +874,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ko": "개인정보 처리방침(웹)", "de": "Datenschutz (Web)", "fr": "Politique de confidentialité (web)",
         "es": "Política de privacidad (web)", "it": "Informativa sulla privacy (web)", "pt-BR": "Política de privacidade (web)",
     },
-    "用户协议（网页）": {
-        "en": "Terms of Use (web)", "zh-Hant": "使用者條款（網頁）", "ja": "利用規約（Web）",
-        "ko": "이용약관(웹)", "de": "Nutzungsbedingungen (Web)", "fr": "Conditions d’utilisation (web)",
+    "使用条款（网页）": {
+        "en": "Terms of Use (web)", "zh-Hant": "使用條款（網頁）", "ja": "利用規約（Web）",
+        "ko": "이용 약관(웹)", "de": "Nutzungsbedingungen (Web)", "fr": "Conditions d’utilisation (web)",
         "es": "Términos de uso (web)", "it": "Termini di utilizzo (web)", "pt-BR": "Termos de uso (web)",
     },
     "本机，可选 iCloud 备份": {
@@ -1068,6 +895,199 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "ko": "팔로우", "de": "Folge uns", "fr": "Nous suivre",
         "es": "Síguenos", "it": "Seguici", "pt-BR": "Siga-nos",
     },
+    "使用条款": {
+        "en": "Terms of Use", "zh-Hant": "使用條款", "ja": "利用規約",
+        "ko": "이용 약관", "de": "Nutzungsbedingungen", "fr": "Conditions d’utilisation",
+        "es": "Términos de uso", "it": "Termini di utilizzo", "pt-BR": "Termos de uso",
+    },
+    "订阅类型": {
+        "en": "Subscription type", "zh-Hant": "訂閱類型", "ja": "サブスクリプションの種類",
+        "ko": "구독 유형", "de": "Abo-Typ", "fr": "Type d’abonnement",
+        "es": "Tipo de suscripción", "it": "Tipo di abbonamento", "pt-BR": "Tipo de assinatura",
+    },
+    "App 锁定": {
+        "en": "App Lock", "zh-Hant": "App 鎖定", "ja": "Appロック",
+        "ko": "앱 잠금", "de": "App-Sperre", "fr": "Verrouillage de l’App",
+        "es": "Bloqueo de la app", "it": "Blocco dell’app", "pt-BR": "Bloqueio do app",
+    },
+    "Renewity 已锁定": {
+        "en": "Renewity is locked", "zh-Hant": "Renewity 已鎖定", "ja": "Renewity はロックされています",
+        "ko": "Renewity가 잠겨 있습니다", "de": "Renewity ist gesperrt", "fr": "Renewity est verrouillé",
+        "es": "Renewity está bloqueado", "it": "Renewity è bloccato", "pt-BR": "O Renewity está bloqueado",
+    },
+    "7 天免费试用": {
+        "en": "7-day free trial", "zh-Hant": "7 天免費試用", "ja": "7日間の無料トライアル",
+        "ko": "7일 무료 체험", "de": "7 Tage kostenlos testen", "fr": "Essai gratuit de 7 jours",
+        "es": "Prueba gratis de 7 días", "it": "Prova gratuita di 7 giorni", "pt-BR": "Teste grátis de 7 dias",
+    },
+    "各货币月支出": {
+        "en": "Monthly spend by currency", "zh-Hant": "各貨幣月支出", "ja": "通貨別の月額支出",
+        "ko": "통화별 월 지출", "de": "Monatsausgaben nach Währung", "fr": "Dépenses mensuelles par devise",
+        "es": "Gasto mensual por moneda", "it": "Spesa mensile per valuta", "pt-BR": "Gasto mensal por moeda",
+    },
+    "按每笔订阅的付款货币，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。": {
+        "en": "Adds each subscription’s monthly equivalent in its payment currency, without converting exchange rates. Trials that have not been billed yet are excluded.",
+        "zh-Hant": "按每筆訂閱的付款貨幣，把週期費用折成每月後直接相加，不做匯率換算。試用中還沒首次付款的不計入。",
+        "ja": "各サブスクの支払い通貨のまま月額換算して合計します。為替換算はしません。まだ初回支払いがない無料期間は含めません。",
+        "ko": "각 구독의 결제 통화 기준 월 환산액을 더하며 환율은 적용하지 않습니다. 아직 첫 결제가 없는 체험은 제외됩니다.",
+        "de": "Addiert die monatlichen Äquivalente in der Zahlungswährung jedes Abos ohne Umrechnung. Noch nicht abgerechnete Testphasen zählen nicht.",
+        "fr": "Additionne l’équivalent mensuel dans la devise de paiement de chaque abonnement, sans conversion. Les essais non encore facturés sont exclus.",
+        "es": "Suma el equivalente mensual en la moneda de pago de cada suscripción, sin convertir. Las pruebas aún no cobradas no entran.",
+        "it": "Somma l’equivalente mensile nella valuta di pagamento di ogni abbonamento, senza conversione. Le prove non ancora addebitate sono escluse.",
+        "pt-BR": "Soma o equivalente mensal na moeda de pagamento de cada assinatura, sem converter câmbio. Testes ainda não cobrados ficam de fora.",
+    },
+    "即将到来": {
+        "en": "Upcoming", "zh-Hant": "即將到來", "ja": "近日",
+        "ko": "예정", "de": "Demnächst", "fr": "À venir",
+        "es": "Próximos", "it": "In arrivo", "pt-BR": "Em breve",
+    },
+    "总计": {
+        "en": "Total", "zh-Hant": "總計", "ja": "合計",
+        "ko": "합계", "de": "Summe", "fr": "Total",
+        "es": "Total", "it": "Totale", "pt-BR": "Total",
+    },
+    "管理页面": {
+        "en": "Manage page", "zh-Hant": "管理頁面", "ja": "管理ページ",
+        "ko": "관리 페이지", "de": "Verwaltungsseite", "fr": "Page de gestion",
+        "es": "Página de gestión", "it": "Pagina di gestione", "pt-BR": "Página de gerenciamento",
+    },
+    "第二种货币": {
+        "en": "Second currency", "zh-Hant": "第二種貨幣", "ja": "第二の通貨",
+        "ko": "두 번째 통화", "de": "Zweite Währung", "fr": "Seconde devise",
+        "es": "Segunda moneda", "it": "Seconda valuta", "pt-BR": "Segunda moeda",
+    },
+    "选择第二种货币": {
+        "en": "Choose a second currency", "zh-Hant": "選擇第二種貨幣", "ja": "第二の通貨を選択",
+        "ko": "두 번째 통화 선택", "de": "Zweite Währung wählen", "fr": "Choisir une seconde devise",
+        "es": "Elige una segunda moneda", "it": "Scegli una seconda valuta", "pt-BR": "Escolha uma segunda moeda",
+    },
+    "搜索已有订阅": {
+        "en": "Search subscriptions", "zh-Hant": "搜尋現有訂閱", "ja": "登録済みのサブスクを検索",
+        "ko": "기존 구독 검색", "de": "Abos durchsuchen", "fr": "Rechercher des abonnements",
+        "es": "Buscar suscripciones", "it": "Cerca abbonamenti", "pt-BR": "Buscar assinaturas",
+    },
+    "日期类型": {
+        "en": "Date type", "zh-Hant": "日期類型", "ja": "日付の種類",
+        "ko": "날짜 유형", "de": "Datumstyp", "fr": "Type de date",
+        "es": "Tipo de fecha", "it": "Tipo di data", "pt-BR": "Tipo de data",
+    },
+    "当前没有计入月支出的订阅": {
+        "en": "No subscriptions currently count toward monthly spend",
+        "zh-Hant": "目前沒有計入月支出的訂閱",
+        "ja": "月額支出に含まれるサブスクはありません",
+        "ko": "월 지출에 포함되는 구독이 없습니다",
+        "de": "Derzeit zählen keine Abos zur Monatsausgabe",
+        "fr": "Aucun abonnement n’entre actuellement dans les dépenses mensuelles",
+        "es": "Ninguna suscripción cuenta ahora en el gasto mensual",
+        "it": "Nessun abbonamento rientra al momento nella spesa mensile",
+        "pt-BR": "Nenhuma assinatura entra no gasto mensal no momento",
+    },
+    "填写该服务的账号或订阅管理链接。点详情页的「管理订阅」会打开这个地址。": {
+        "en": "Enter the account or subscription management URL for this service. Opening Manage Subscription on the detail page uses this address.",
+        "zh-Hant": "填寫該服務的帳號或訂閱管理連結。點詳情頁的「管理訂閱」會打開這個地址。",
+        "ja": "このサービスのアカウントまたは管理用 URL を入力します。詳細ページの「サブスクを管理」で開きます。",
+        "ko": "이 서비스의 계정 또는 구독 관리 링크를 입력하세요. 상세 화면의 「구독 관리」에서 이 주소가 열립니다.",
+        "de": "Gib Konto- oder Verwaltungs-URL des Dienstes ein. „Abo verwalten“ auf der Detailseite öffnet diese Adresse.",
+        "fr": "Saisissez le compte ou l’URL de gestion. « Gérer l’abonnement » sur la fiche ouvre cette adresse.",
+        "es": "Introduce la cuenta o el enlace de gestión. «Gestionar suscripción» en el detalle abre esta dirección.",
+        "it": "Inserisci account o URL di gestione. «Gestisci abbonamento» nella scheda apre questo indirizzo.",
+        "pt-BR": "Informe a conta ou o link de gerenciamento. «Gerenciar assinatura» nos detalhes abre este endereço.",
+    },
+    "本机，并可通过 iCloud 在设备间同步": {
+        "en": "On this device, and can sync across devices with iCloud",
+        "zh-Hant": "本機，並可透過 iCloud 在裝置間同步",
+        "ja": "このデバイス（iCloud で他のデバイスと同期可能）",
+        "ko": "이 기기, iCloud로 기기 간 동기화 가능",
+        "de": "Auf dem Gerät, per iCloud zwischen Geräten synchronisierbar",
+        "fr": "Sur l’appareil, synchronisable via iCloud",
+        "es": "En el dispositivo; se puede sincronizar con iCloud",
+        "it": "Sul dispositivo, sincronizzabile via iCloud",
+        "pt-BR": "Neste dispositivo, com sincronização iCloud entre aparelhos",
+    },
+    "查看日历": {
+        "en": "View calendar", "zh-Hant": "查看日曆", "ja": "カレンダーを表示",
+        "ko": "캘린더 보기", "de": "Kalender anzeigen", "fr": "Voir le calendrier",
+        "es": "Ver el calendario", "it": "Vedi il calendario", "pt-BR": "Ver calendário",
+    },
+    "删除分类": {
+        "en": "Delete Category", "zh-Hant": "刪除分類", "ja": "カテゴリを削除",
+        "ko": "분류 삭제", "de": "Kategorie löschen", "fr": "Supprimer la catégorie",
+        "es": "Eliminar categoría", "it": "Elimina categoria", "pt-BR": "Apagar categoria",
+    },
+    "删除后，该分类下的订阅会改到剩余分类。": {
+        "en": "Subscriptions in this category will move to another remaining category.",
+        "zh-Hant": "刪除後，該分類下的訂閱會改到剩餘分類。",
+        "ja": "削除後、このカテゴリのサブスクは残りのカテゴリに移ります。",
+        "ko": "삭제하면 이 분류의 구독은 남은 분류로 옮겨집니다.",
+        "de": "Abos dieser Kategorie werden einer verbleibenden Kategorie zugeordnet.",
+        "fr": "Les abonnements de cette catégorie seront déplacés vers une catégorie restante.",
+        "es": "Las suscripciones de esta categoría pasarán a otra categoría restante.",
+        "it": "Gli abbonamenti di questa categoria passeranno a una categoria rimanente.",
+        "pt-BR": "As assinaturas desta categoria irão para outra categoria restante.",
+    },
+    "删除后无法恢复。该分类下的订阅会改到剩余分类。": {
+        "en": "This can’t be undone. Subscriptions in this category will move to another remaining category.",
+        "zh-Hant": "刪除後無法恢復。該分類下的訂閱會改到剩餘分類。",
+        "ja": "削除は取り消せません。このカテゴリのサブスクは残りのカテゴリに移ります。",
+        "ko": "삭제하면 되돌릴 수 없습니다. 이 분류의 구독은 남은 분류로 옮겨집니다.",
+        "de": "Das kann nicht rückgängig gemacht werden. Abos werden einer verbleibenden Kategorie zugeordnet.",
+        "fr": "Action irréversible. Les abonnements seront déplacés vers une catégorie restante.",
+        "es": "No se puede deshacer. Las suscripciones pasarán a otra categoría restante.",
+        "it": "Operazione irreversibile. Gli abbonamenti passeranno a una categoria rimanente.",
+        "pt-BR": "Isso não pode ser desfeito. As assinaturas irão para outra categoria restante.",
+    },
+    "轻点可编辑。点「编辑」后可拖动排序或删除。至少保留一个分类；删除后，该分类下的订阅会改到剩余分类。": {
+        "en": "Tap to edit. After Edit, you can reorder or delete. Keep at least one category; subscriptions in a deleted category move to a remaining one.",
+        "zh-Hant": "輕點可編輯。點「編輯」後可拖動排序或刪除。至少保留一個分類；刪除後，該分類下的訂閱會改到剩餘分類。",
+        "ja": "タップで編集。「編集」後に並べ替えや削除ができます。カテゴリは1つ以上残してください。削除したカテゴリのサブスクは残りに移ります。",
+        "ko": "눌러 편집합니다. 「편집」 후 순서를 바꾸거나 삭제할 수 있습니다. 분류는 하나 이상 남겨 두세요. 삭제된 분류의 구독은 남은 분류로 옮겨집니다.",
+        "de": "Tippen zum Bearbeiten. Nach „Bearbeiten“ kannst du sortieren oder löschen. Mindestens eine Kategorie behalten; Abos wechseln zu einer verbleibenden.",
+        "fr": "Touchez pour modifier. Après « Modifier », vous pouvez réordonner ou supprimer. Conservez au moins une catégorie ; les abonnements iront dans une restante.",
+        "es": "Toca para editar. Tras «Editar» puedes reordenar o eliminar. Conserva al menos una categoría; las suscripciones pasarán a otra restante.",
+        "it": "Tocca per modificare. Dopo «Modifica» puoi riordinare o eliminare. Conserva almeno una categoria; gli abbonamenti passeranno a una rimanente.",
+        "pt-BR": "Toque para editar. Em «Editar» você pode reordenar ou apagar. Mantenha ao menos uma categoria; as assinaturas irão para outra restante.",
+    },
+    "iPhone 与 iPad 同步，还可备份到 iCloud 云盘": {
+        "en": "Sync iPhone and iPad, and back up to iCloud Drive",
+        "zh-Hant": "iPhone 與 iPad 同步，還可備份到 iCloud 雲碟",
+        "ja": "iPhone と iPad を同期し、iCloud Drive にもバックアップ",
+        "ko": "iPhone과 iPad를 동기화하고 iCloud Drive에 백업",
+        "de": "iPhone und iPad synchronisieren und in iCloud Drive sichern",
+        "fr": "Synchroniser iPhone et iPad, et sauvegarder sur iCloud Drive",
+        "es": "Sincroniza iPhone e iPad y copia en iCloud Drive",
+        "it": "Sincronizza iPhone e iPad e fai backup su iCloud Drive",
+        "pt-BR": "Sincronize iPhone e iPad e faça backup no iCloud Drive",
+    },
+    "Renewity 高级会员": {
+        "en": "Renewity Pro", "zh-Hant": "Renewity 高級會員", "ja": "Renewity プレミアム",
+        "ko": "Renewity 프리미엄", "de": "Renewity Premium", "fr": "Renewity Premium",
+        "es": "Renewity Premium", "it": "Renewity Premium", "pt-BR": "Renewity Premium",
+    },
+    "解锁 Pro。年度或终身。": {
+        "en": "Unlock Pro. Yearly or lifetime.",
+        "zh-Hant": "解鎖 Pro。年度或終身。",
+        "ja": "Pro を解除。年額または買い切り。",
+        "ko": "Pro 잠금 해제. 연간 또는 평생.",
+        "de": "Pro freischalten. Jährlich oder lebenslang.",
+        "fr": "Débloquer Pro. Annuel ou à vie.",
+        "es": "Desbloquear Pro. Anual o de por vida.",
+        "it": "Sblocca Pro. Annuale o a vita.",
+        "pt-BR": "Desbloquear o Pro. Anual ou vitalício.",
+    },
+    "App Store 未返回套餐。请确认产品已创建，本地调试请在 Scheme 中选用 Products.storekit。": {
+        "en": "App Store returned no products. Confirm they exist; for local testing, select Products.storekit in the scheme.",
+        "zh-Hant": "App Store 未返回方案。請確認產品已建立，本機偵錯請在 Scheme 中選用 Products.storekit。",
+        "ja": "App Store から商品が返りませんでした。作成済みか確認し、ローカルでは Scheme で Products.storekit を選んでください。",
+        "ko": "App Store에서 상품이 반환되지 않았습니다. 제품이 있는지 확인하고, 로컬 디버깅은 Scheme에서 Products.storekit을 선택하세요.",
+        "de": "Der App Store lieferte keine Produkte. Prüfe, ob sie existieren; lokal Products.storekit im Scheme wählen.",
+        "fr": "L’App Store n’a renvoyé aucun produit. Vérifiez qu’ils existent ; en local, choisissez Products.storekit dans le scheme.",
+        "es": "App Store no devolvió productos. Confirma que existen; en local, elige Products.storekit en el scheme.",
+        "it": "L’App Store non ha restituito prodotti. Verifica che esistano; in locale seleziona Products.storekit nello scheme.",
+        "pt-BR": "A App Store não devolveu produtos. Confirme que existem; no teste local, escolha Products.storekit no scheme.",
+    },
+    "Instagram": same("Instagram"),
+    "X": same("X"),
+    "https://": same("https://"),
     "法律": {
         "en": "Legal", "zh-Hant": "法律", "ja": "法務",
         "ko": "법률", "de": "Rechtliches", "fr": "Mentions légales",
@@ -1086,12 +1106,31 @@ def can_generate_swift_symbol(key: str) -> bool:
     return any(ch == "_" or ch.isalpha() for ch in stripped)
 
 
+UNUSED_STALE_KEYS = {
+    "一次买断，永久解锁",
+    "查看分类构成、月均排名和计费方式，把每一笔固定支出看清楚。",
+    "按每笔订阅的付款币种，把周期费用折成每月后直接相加，不做汇率换算。试用中还没首次付款的不计入。",
+}
+
+
+def is_stale_glossary_key(key: str) -> bool:
+    return "扣费" in key or "扣款" in key or "续费" in key or "币种" in key or key in UNUSED_STALE_KEYS
+
+
+def dump_xcstrings(path: Path, data: dict) -> None:
+    """Keep Xcode's `"key" : {` spacing so a rewrite does not churn the whole catalog."""
+    path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2, separators=(",", " : ")) + "\n",
+        encoding="utf-8",
+    )
+
+
 def fill_file(path: Path, upsert_translations: bool = False) -> int:
     data = json.loads(path.read_text(encoding="utf-8"))
     added = 0
     strings = data.setdefault("strings", {})
     for key in list(strings):
-        if not can_generate_swift_symbol(key):
+        if not can_generate_swift_symbol(key) or is_stale_glossary_key(key):
             strings.pop(key, None)
     for key, entry in list(strings.items()):
         if not can_generate_swift_symbol(key):
@@ -1119,7 +1158,7 @@ def fill_file(path: Path, upsert_translations: bool = False) -> int:
             locs["zh-Hans"] = unit(key)
     if upsert_translations:
         for key, mapping in TRANSLATIONS.items():
-            if not can_generate_swift_symbol(key):
+            if not can_generate_swift_symbol(key) or is_stale_glossary_key(key):
                 continue
             entry = strings.setdefault(key, {})
             if entry is None:
@@ -1135,7 +1174,7 @@ def fill_file(path: Path, upsert_translations: bool = False) -> int:
                     continue
                 locs[lang] = unit(mapping[lang])
                 added += 1
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    dump_xcstrings(path, data)
     return added
 
 

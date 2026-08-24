@@ -256,7 +256,7 @@ struct SubscriptionFormView: View {
 
             Section() {
                 amountRow
-                Picker("计费方式", selection: $doesRenew) {
+                Picker("订阅类型", selection: $doesRenew) {
                     Text("自动续订").tag(true)
                     Text("一次性").tag(false)
                 }

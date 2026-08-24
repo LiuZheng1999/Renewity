@@ -64,10 +64,11 @@ nonisolated enum BrandSearchService {
     static func searchWeb(_ query: String) async -> [BrandSearchHit] {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmed.count >= 2 else { return [] }
+        guard BrandSearchSafety.allowsQuery(trimmed) else { return [] }
 
         async let companies = companyHits(for: trimmed)
         async let apps = appHits(for: trimmed)
-        return merge(await companies, await apps)
+        return merge(await companies, await apps).filter(BrandSearchSafety.allows)
     }
 
     private static func companyHits(for query: String) async -> [BrandSearchHit] {
@@ -199,7 +200,7 @@ nonisolated enum BrandSearchService {
             unique.append(app)
         }
 
-        return Array(unique.prefix(24))
+        return Array(unique.filter(BrandSearchSafety.allows).prefix(24))
     }
 
     private static func normalize(_ value: String) -> String {
@@ -224,7 +225,7 @@ extension SubscriptionCategory {
             (.productivity, ["notion", "slack", "figma", "adobe", "microsoft", "google workspace", "openai", "chatgpt", "anthropic", "claude", "cursor", "github", "zoom", "canva"]),
             (.cloud, ["icloud", "dropbox", "box.com", "onedrive", "aws", "cloudflare", "digitalocean", "nordvpn", "expressvpn", "1password"]),
             (.news, ["nytimes", "new york times", "wsj", "washingtonpost", "economist", "bloomberg", "medium", "substack", "wired", "atlantic"]),
-            (.fitness, ["peloton", "strava", "calm", "headspace", "myfitnesspal", "classpass", "whoop", "oura"]),
+            (.fitness, ["peloton", "strava", "calm", "headspace", "myfitnesspal", "classpass", "whoop", "oura", "asknebula"]),
             (.shopping, ["amazon", "walmart", "costco", "instacart", "doordash", "uber", "grubhub"]),
             (.education, ["duolingo", "coursera", "masterclass", "skillshare", "udemy", "codecademy", "brilliant"]),
             (.gaming, ["xbox", "playstation", "nintendo", "steam", "roblox", "discord", "ea.com", "ubisoft"]),

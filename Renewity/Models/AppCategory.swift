@@ -62,10 +62,9 @@ final class AppCategory {
 
     static func seedBuiltIns(in context: ModelContext) {
         let existing = (try? context.fetch(FetchDescriptor<AppCategory>())) ?? []
-        let existingIDs = Set(existing.map(\.identifier))
+        guard existing.isEmpty else { return }
 
         for (index, preset) in SubscriptionCategory.allCases.enumerated() {
-            guard !existingIDs.contains(preset.rawValue) else { continue }
             context.insert(
                 AppCategory(
                     identifier: preset.rawValue,
@@ -79,6 +78,28 @@ final class AppCategory {
         }
 
         try? context.save()
+    }
+
+    static func delete(
+        _ category: AppCategory,
+        subscriptions: [Subscription],
+        remaining: [AppCategory],
+        in context: ModelContext
+    ) {
+        guard remaining.contains(where: { $0.identifier != category.identifier }) else { return }
+        let fallbackID = fallbackIdentifier(deleting: category, remaining: remaining)
+        for subscription in subscriptions where subscription.categoryRaw == category.identifier {
+            subscription.categoryRaw = fallbackID
+        }
+        context.delete(category)
+    }
+
+    static func fallbackIdentifier(deleting category: AppCategory, remaining: [AppCategory]) -> String {
+        let others = remaining.filter { $0.identifier != category.identifier }
+        if let other = others.first(where: { $0.identifier == SubscriptionCategory.other.rawValue }) {
+            return other.identifier
+        }
+        return others.first?.identifier ?? SubscriptionCategory.other.rawValue
     }
 }
 

@@ -37,7 +37,7 @@ La sauvegarde iCloud, l’achat Pro via Apple ou le déverrouillage Face ID / To
 
 Vous êtes responsable des noms, montants, dates, catégories et notes (« Contenus utilisateur »). Vous déclarez avoir le droit de les enregistrer et qu’ils ne portent pas atteinte à des droits tiers ni à la loi.
 
-Vous conservez vos droits. Vous nous accordez une licence pour les traiter uniquement afin de fournir enregistrement, statistiques, rappels, widgets et sauvegarde sur vos appareils. Nous ne les vendons pas et ne les utilisons pas pour la publicité.
+Vous conservez vos droits. Vous nous accordez une licence pour les traiter uniquement afin de fournir enregistrement, statistiques, rappels et sauvegarde sur vos appareils. Nous ne les vendons pas et ne les utilisons pas pour la publicité.
 
 ## 6. Marques tierces
 
@@ -51,11 +51,11 @@ Certaines fonctions (au-delà de la limite gratuite, catégories perso, analyses
 
 Achats, paiement, reçus et renouvellement auto passent par Apple. Nous ne voyons pas le numéro de carte complet. Gérez, annulez ou demandez un remboursement selon les règles du compte Apple / App Store. Le gratuit reste utilisable avec des limites. Restaurez les achats avec le même compte Apple.
 
-## 8. Notifications, widgets, verrouillage
+## 8. Notifications et verrouillage
 
 Les rappels utilisent des **notifications locales**, en général la veille du prélèvement. Vous pouvez les désactiver. La livraison n’est pas garantie (autorisation, économie d’énergie, Concentration, etc.).
 
-Les widgets lisent un instantané local via un App Group. Le verrouillage demande Face ID, Touch ID ou le code. Ce n’est pas un substitut à un chiffrement complet.
+Le verrouillage demande Face ID, Touch ID ou le code. Ce n’est pas un substitut à un chiffrement complet.
 
 ## 9. Services tiers
 

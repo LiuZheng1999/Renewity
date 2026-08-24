@@ -37,7 +37,7 @@ iCloud-Backup, Pro-Kauf über Apple oder Entsperren mit Face ID / Touch ID authe
 
 Für Namen, Beträge, Daten, Kategorien, Notizen („Nutzerinhalte“) bist du verantwortlich. Du versicherst, sie aufzeichnen zu dürfen und dass sie keine Rechte Dritter verletzen und nicht rechtswidrig sind.
 
-Die Rechte bleiben bei dir. Du räumst uns eine Lizenz ein, Nutzerinhalte nur so weit zu verarbeiten, wie es für Aufzeichnung, Statistik, Erinnerungen, Widgets und Backup auf deinen Geräten nötig ist. Wir verkaufen sie nicht und nutzen sie nicht für Werbung.
+Die Rechte bleiben bei dir. Du räumst uns eine Lizenz ein, Nutzerinhalte nur so weit zu verarbeiten, wie es für Aufzeichnung, Statistik, Erinnerungen und Backup auf deinen Geräten nötig ist. Wir verkaufen sie nicht und nutzen sie nicht für Werbung.
 
 ## 6. Marken Dritter
 
@@ -51,11 +51,11 @@ Funktionen wie mehr als das kostenlose Limit, eigene Kategorien, Anzeigewährung
 
 Käufe, Zahlung, Belege und Auto-Verlängerung laufen über Apple. Wir sehen keine vollständigen Kartendaten. Kündigung und Erstattung richten sich nach Apple-Account-/App-Store-Regeln. Preise sind die von Apple angezeigten. Die Gratisversion bleibt mit Limits nutzbar. Stelle Käufe mit demselben Apple Account wieder her, mit dem du gekauft hast.
 
-## 8. Mitteilungen, Widgets, App-Sperre
+## 8. Mitteilungen und App-Sperre
 
 Erinnerungen nutzen **lokale Mitteilungen**, in der Regel am Tag vor der Abbuchung. Du kannst sie in App und System abschalten. Zustellung hängt von Berechtigung, Energiesparmodus, Fokus usw. ab und ist nicht garantiert.
 
-Widgets lesen einen lokalen Snapshot über eine App Group. Mit App-Sperre brauchst du Face ID, Touch ID oder den Gerätecode. Das ersetzt keine Vollverschlüsselung.
+Mit App-Sperre brauchst du Face ID, Touch ID oder den Gerätecode. Das ersetzt keine Vollverschlüsselung.
 
 ## 9. Dienste Dritter
 

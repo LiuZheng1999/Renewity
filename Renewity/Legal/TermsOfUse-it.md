@@ -37,7 +37,7 @@ Backup iCloud, acquisto Pro tramite Apple o sblocco con Face ID / Touch ID sono 
 
 Sei responsabile di nomi, importi, date, categorie e note («Contenuti utente»). Dichiari di avere il diritto di registrarli e che non violano diritti di terzi né la legge.
 
-Conservi i tuoi diritti. Ci concedi una licenza per trattarli solo quanto serve per registrazione, statistiche, promemoria, widget e backup sui tuoi dispositivi. Non li vendiamo né li usiamo per pubblicità.
+Conservi i tuoi diritti. Ci concedi una licenza per trattarli solo quanto serve per registrazione, statistiche, promemoria e backup sui tuoi dispositivi. Non li vendiamo né li usiamo per pubblicità.
 
 ## 6. Marchi di terzi
 
@@ -51,11 +51,11 @@ Funzioni come superare il limite gratuito, categorie personalizzate, valuta di v
 
 Acquisti, pagamento, ricevute e rinnovo automatico passano da Apple. Non vediamo il numero completo della carta. Disdici o chiedi rimborsi secondo le regole dell’Account Apple / App Store. Il piano gratuito resta disponibile con limiti. Ripristina gli acquisti con lo stesso Account Apple.
 
-## 8. Notifiche, widget e blocco
+## 8. Notifiche e blocco
 
 I promemoria usano **notifiche locali**, di solito il giorno prima dell’addebito. Puoi disattivarle. La consegna non è garantita.
 
-I widget leggono uno snapshot locale tramite un App Group. Il blocco richiede Face ID, Touch ID o il codice. Non sostituisce una cifratura completa.
+Il blocco richiede Face ID, Touch ID o il codice. Non sostituisce una cifratura completa.
 
 ## 9. Servizi di terzi
 

@@ -65,15 +65,15 @@ struct WelcomeView: View {
         welcomeLayout(
             systemImage: "chart.pie.fill",
             title: "看清每一笔固定支出",
-            subtitle: "按分类统计月费和年化费用，马上知道哪些订阅最贵，哪些可以砍掉。"
+            subtitle: "按分类统计月费和年均支出，马上知道哪些订阅最贵，哪些可以砍掉。"
         )
     }
 
     private var reminderPage: some View {
         welcomeLayout(
             systemImage: "bell.badge.fill",
-            title: "续费前提醒你",
-            subtitle: "在扣费前一天收到通知，避免忘了取消，也不用再翻邮件找账单。"
+            title: "续订前提醒你",
+            subtitle: "在付款前一天收到通知，避免忘了取消，也不用再翻邮件找账单。"
         )
     }
 

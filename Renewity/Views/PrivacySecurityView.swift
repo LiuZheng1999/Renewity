@@ -15,13 +15,13 @@ struct PrivacySecurityView: View {
             }
 
             Section("数据") {
-                LabeledContent("存储位置", value: String(localized: "本机，可选 iCloud 备份"))
+                LabeledContent("存储位置", value: String(localized: "本机，并可通过 iCloud 在设备间同步"))
                 LabeledContent("账户", value: String(localized: "不需要登录"))
                 LabeledContent("分析", value: String(localized: "不收集"))
             }
 
             Section("隐私说明") {
-                Text("订阅名称、金额和日期都保存在你的设备上。续费提醒使用系统本地通知，不会上传到服务器。购买通过 Apple 完成。")
+                Text("订阅名称、金额和日期都保存在你的设备上。续订提醒使用系统本地通知，不会上传到服务器。购买通过 Apple 完成。")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

@@ -4,15 +4,13 @@ enum Formatters {
     private static var locale: Locale { .autoupdatingCurrent }
 
     static func currency(_ value: Decimal, code: String, approximate: Bool = false) -> String {
-        let formatted = value.formatted(
+        _ = approximate
+        let text = value.formatted(
             .currency(code: code)
                 .locale(locale)
                 .precision(.fractionLength(0...2))
         )
-        if approximate {
-            return String(localized: "约 \(formatted)")
-        }
-        return formatted
+        return simplifiedUSDSymbol(text, code: code)
     }
 
     static func currencySymbol(for code: String) -> String {
@@ -20,7 +18,12 @@ enum Formatters {
         formatter.numberStyle = .currency
         formatter.currencyCode = code
         formatter.locale = locale
-        return formatter.currencySymbol ?? code
+        return simplifiedUSDSymbol(formatter.currencySymbol ?? code, code: code)
+    }
+
+    private static func simplifiedUSDSymbol(_ text: String, code: String) -> String {
+        guard code.caseInsensitiveCompare("USD") == .orderedSame else { return text }
+        return text.replacingOccurrences(of: #"US\s*\$"#, with: "$", options: .regularExpression)
     }
 
     static func currencyPickerTitle(for code: String) -> String {
@@ -32,7 +35,29 @@ enum Formatters {
     }
 
     static func billingRelative(_ date: Date) -> String {
-        relative(date, today: "今天续费", tomorrow: "明天续费", later: { String(localized: "\($0) 天后续费") })
+        relative(date, today: "今天续订", tomorrow: "明天续订", later: { String(localized: "\($0) 天后续订") })
+    }
+
+    static func chargeRelative(_ date: Date) -> String {
+        let calendar = Calendar.current
+        let days = calendar.dateComponents(
+            [.day],
+            from: calendar.startOfDay(for: Date()),
+            to: calendar.startOfDay(for: date)
+        ).day ?? 0
+        if days < 0 { return String(localized: "已付款") }
+        return relative(date, today: "今天付款", tomorrow: "明天付款", later: { String(localized: "\($0) 天后付款") })
+    }
+
+    static func expiryRelative(_ date: Date) -> String {
+        let calendar = Calendar.current
+        let days = calendar.dateComponents(
+            [.day],
+            from: calendar.startOfDay(for: Date()),
+            to: calendar.startOfDay(for: date)
+        ).day ?? 0
+        if days < 0 { return String(localized: "已到期") }
+        return relative(date, today: "今天到期", tomorrow: "明天到期", later: { String(localized: "\($0) 天后到期") })
     }
 
     static func trialRelative(_ date: Date) -> String {
@@ -42,6 +67,9 @@ enum Formatters {
     static func eventRelative(for subscription: Subscription) -> String {
         if subscription.isInTrial {
             return trialRelative(subscription.nextRelevantDate)
+        }
+        if !subscription.doesRenew {
+            return expiryRelative(subscription.upcomingBillingDate)
         }
         return billingRelative(subscription.upcomingBillingDate)
     }

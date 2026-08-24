@@ -46,7 +46,7 @@ If you use iCloud backup, buy Pro through Apple, or unlock the App with Face ID 
 
 You are responsible for the subscription names, amounts, dates, categories, payment methods, notes, and other information you enter (“User Content”). You represent that you have the right to record that information and that it does not infringe others’ rights or violate the law.
 
-You retain your rights in User Content. You grant us a license to process User Content only as needed to provide recording, statistics, reminders, widgets, and backup on your devices. We do not sell your User Content or use it for advertising.
+You retain your rights in User Content. You grant us a license to process User Content only as needed to provide recording, statistics, reminders, and backup on your devices. We do not sell your User Content or use it for advertising.
 
 ## 6. Brand names and third-party marks
 
@@ -68,11 +68,9 @@ Some features may require Renewity Pro, such as more than the free subscription 
 
 Use Restore Purchases with the same Apple Account you used to buy.
 
-## 8. Notifications, widgets, and App Lock
+## 8. Notifications and App Lock
 
 Renewal and trial reminders use **local notifications** provided by the operating system. You can choose whether to remind and how many days in advance, per subscription. The App schedules several upcoming reminders in advance and refreshes that queue when you open the App. The system limits pending notifications, so if you do not open the App for a long time, later reminders may stop. Delivery also depends on notification permission, Low Power Mode, Focus, and similar settings. We do not guarantee that a notification will be delivered.
-
-Home screen widgets read a local snapshot through an App Group so they can show a spending summary.
 
 If you enable App Lock, returning to the App requires Face ID, Touch ID, or your device passcode. This is not a substitute for full-disk encryption or a professional secrecy solution, and it cannot fully protect data if someone already has an unlocked device.
 
@@ -106,7 +104,7 @@ Our total liability to you will not exceed the amount you actually paid us for t
 
 You may stop using and delete the App at any time. We may terminate your license if you materially breach these Terms. Provisions that by their nature should survive (including disclaimers, limitations of liability, and governing law) will survive.
 
-Export or back up your data before deleting the App. The App does not live-sync your database to the cloud. Deleting the App, turning off iCloud, or changing devices may make local data unrecoverable unless you have backed up as described in the App.
+Export or back up your data before deleting the App. When you are signed in to iCloud, records can sync across your devices with CloudKit. Deleting the App, turning off iCloud, or changing devices may still make data unavailable unless you have backed up as described in the App.
 
 ## 13. Changes
 

@@ -68,34 +68,31 @@ footer { color: var(--muted); font-size: 14px; }
 <li>show and manage subscriptions in the App;</li>
 <li>estimate monthly and yearly spend and category totals using reference exchange rates;</li>
 <li>schedule several upcoming local notifications for renewal and trial reminders, based on the lead times you choose;</li>
-<li>provide a spending summary to home-screen widgets.</li>
 </ul>
 <p>Uninstalling the App typically deletes data that exists only on the device and has not been saved somewhere you chose (such as the Files app or iCloud Drive).</p>
-<h2>3. App Group and widgets</h2>
-<p>The App and its widgets share the App Group <code>group.Maoxia-Xiang.Renewity</code> (app bundle ID: <code>Maoxia-Xiang.Renewity</code>). The App writes a display snapshot into that container so widgets can show monthly spend and upcoming renewals. The snapshot stays on your device and is not sent to us for that purpose.</p>
-<h2>4. Optional iCloud backup (Pro)</h2>
-<p>The App <strong>does not live-sync the SwiftData store with CloudKit</strong>. If you have Pro and turn on iCloud backup, the App writes a backup of subscriptions, custom categories, and custom payment methods to <strong>your</strong> iCloud Drive (container <code>iCloud.Maoxia-Xiang.Renewity</code>).</p>
+<h2>3. iCloud sync and backup</h2>
+<p>If you are signed in to iCloud, the App can sync subscriptions, custom categories, payment methods, appearance, reminder time, display currency, and your profile photo through <strong>CloudKit’s private database</strong> (container <code>iCloud.Maoxia-Xiang.Renewity</code>) across your devices. Apple processes this under your Apple Account. We cannot sign in to read it.</p>
+<p>If you have Pro and turn on iCloud backup, the App also writes a JSON copy to <strong>your</strong> iCloud Drive (same container) so you can restore manually. That file can include subscriptions, custom categories, payment methods, appearance, reminder time, and your profile photo.</p>
 <ul>
-<li>The file includes the records you created so you can restore them on another device.</li>
 <li>It is stored under your Apple Account and handled by Apple under Apple’s iCloud policies.</li>
 <li>We cannot sign in to your Apple Account to read that backup.</li>
-<li>You can turn off automatic backup in the App or manage iCloud Drive in system settings.</li>
+<li>You can turn off automatic backup in the App or manage iCloud in system settings.</li>
 </ul>
 <p>You may also export a JSON backup to Files, a computer, or another location you choose. You are responsible for copies you export.</p>
-<h2>5. Notifications</h2>
+<h2>4. Notifications</h2>
 <p>Renewal and trial reminders use <strong>local notifications</strong>. Notification content is created on device from information you already stored locally (such as a name and amount). It is <strong>not</strong> uploaded to our servers in order to send the reminder.</p>
 <p>The system limits how many pending local notifications an app may hold. The App schedules several future reminders in advance and refreshes that queue when you open the App. If you do not open the App for a long time, later reminders may stop until the App runs again. Delivery also depends on notification permission, Low Power Mode, Focus, and similar system settings.</p>
-<h2>6. Face ID, Touch ID, and passcode</h2>
+<h2>5. Face ID, Touch ID, and passcode</h2>
 <p>If you enable App Lock, the App uses LocalAuthentication so that returning to the App requires you to authenticate. Biometric templates are stored by the operating system in the device’s secure area. <strong>We do not collect or upload Face ID or fingerprint data.</strong> If authentication fails, the App stays locked.</p>
 <p>The system shows a purpose string: to unlock Renewity and protect your subscription data.</p>
-<h2>7. Purchases and Apple Account</h2>
+<h2>6. Purchases and Apple Account</h2>
 <p>Monthly, yearly, or lifetime Pro purchases go through StoreKit / the App Store. Apple processes payment and receipts. We may learn on device whether you have an active purchase (so Pro features can unlock). We <strong>do not</strong> receive your full card number or Apple Account password.</p>
 <p>Refunds and cancellation of auto-renewing subscriptions follow Apple’s rules.</p>
-<h2>8. Network requests when you use certain features</h2>
+<h2>7. Network requests when you use certain features</h2>
 <p>The App may use the internet in the situations below. Your device talks to the relevant service <strong>directly</strong>, not to a user database we operate. Those providers may process technical logs (which can include IP address, time, and device/technical data) under their own policies.</p>
-<h3>8.1 Exchange-rate estimates</h3>
-<p>Overview totals, category totals, and widgets may convert amounts from each subscription’s billing currency into your display currency using reference rates. The App may request USD-based rates from a public API (currently <code>open.er-api.com</code>). That figure is an estimate only, not an offer to exchange currency.</p>
-<h3>8.2 Service search and icons</h3>
+<h3>7.1 Exchange-rate estimates</h3>
+<p>Overview totals and category totals may convert amounts from each subscription’s billing currency into your display currency using reference rates. The App may request USD-based rates from a public API (currently <code>open.er-api.com</code>). That figure is an estimate only, not an offer to exchange currency.</p>
+<h3>7.2 Service search and icons</h3>
 <p>When you search in “Choose a service”, the App may query:</p>
 <ul>
 <li>Apple’s App Store / iTunes Search API;</li>
@@ -104,36 +101,36 @@ footer { color: var(--muted); font-size: 14px; }
 </ul>
 <p><strong>The keywords or domain names you type</strong> may be sent to those services. Do not enter passwords, card numbers, or other sensitive personal data in the search field.</p>
 <p>A third-party app or website appearing in results is not a review, endorsement, or affiliation. You decide whether to add it.</p>
-<h3>8.3 iCloud</h3>
+<h3>7.3 iCloud</h3>
 <p>When cloud backup is on, Apple syncs the file under Apple’s Privacy Policy.</p>
-<h2>9. Information you send us</h2>
+<h2>8. Information you send us</h2>
 <p>If you use the in-app email links (bug report, support, feedback, or feature request), your message goes to <strong>philiptrip1975@gmail.com</strong>. You may include device or version details you choose to add. We use this only to respond and handle your request, and we delete it when it is no longer needed unless the law requires us to keep it.</p>
-<h2>10. Analytics, advertising, and tracking</h2>
+<h2>9. Analytics, advertising, and tracking</h2>
 <ul>
 <li>The App does not include third-party ads.</li>
 <li>The App does not use analytics SDKs to build a marketing profile from your subscription data.</li>
 <li>The App does not track you across other companies’ apps and does not request the “Allow Tracking” permission.</li>
 </ul>
 <p>The operating system may send diagnostics or App Store statistics to Apple if you allow that. That is part of Apple’s products and is governed by Apple’s policies, not additional collection by us.</p>
-<h2>11. Children</h2>
+<h2>10. Children</h2>
 <p>The App is a personal finance recorder and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have received such information in error, contact us and we will delete what is within our control.</p>
-<h2>12. Retention, export, and deletion</h2>
+<h2>11. Retention, export, and deletion</h2>
 <ul>
 <li><strong>On-device data:</strong> deleted when you delete it in the App or uninstall (apart from ordinary system caches).</li>
 <li><strong>iCloud backup:</strong> kept with your Apple Account until you overwrite it in the App, delete it in iCloud Drive, or turn off the relevant iCloud features.</li>
 <li><strong>Exported JSON:</strong> retained wherever you saved it.</li>
 </ul>
 <p>You can manage data by deleting subscriptions or custom categories, restoring a backup, exporting and then uninstalling, or deleting the iCloud backup file.</p>
-<h2>13. Security</h2>
+<h2>12. Security</h2>
 <p>We use safeguards that match this product: on-device storage by default, optional App Lock, and Apple’s purchase and iCloud channels for paid features and backup. No electronic or cloud storage is perfectly secure. Use a device passcode and protect your Apple Account.</p>
-<h2>14. Your rights</h2>
+<h2>13. Your rights</h2>
 <p>Depending on where you live (for example if GDPR, CCPA, or similar laws apply), you may have rights to access, correct, delete, export, restrict, or object to processing of personal information about you.</p>
 <p>Because records mainly live on your device or in your iCloud, you can usually exercise these rights in the App or system settings. For email you sent to support, email us and we will respond within the time the law requires.</p>
-<h2>15. International processing</h2>
+<h2>14. International processing</h2>
 <p>Exchange-rate, search, and icon requests may be handled in other countries. Apple processes purchases and iCloud under its policies. If you are in the EEA, the UK, or another region with cross-border rules, using those optional online features means you understand that related data may be processed accordingly.</p>
-<h2>16. Changes</h2>
+<h2>15. Changes</h2>
 <p>We may update this policy. The new version will appear in the App and on the GitHub Pages site above, with a revised effective date. If a change materially affects your rights, we will provide a reasonable notice in the App. Continued use after the change means you are aware of the updated policy.</p>
-<h2>17. Contact</h2>
+<h2>16. Contact</h2>
 <p>Privacy requests: <strong>philiptrip1975@gmail.com</strong></p>
 <p>Web: <a href="https://liuzheng1999.github.io/Renewity/privacy/" rel="noopener">https://liuzheng1999.github.io/Renewity/privacy/</a></p>
 <p>Please include “Privacy Policy” in the subject line.</p>

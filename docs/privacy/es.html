@@ -57,45 +57,43 @@ footer { color: var(--muted); font-size: 14px; }
 <p>Salvo lo indicado, no pedimos cuenta con nosotros ni subimos a servidores que controlamos: nombre o correo (salvo que nos escribas), datos de suscripciones que introduces, identificadores publicitarios o SDK de analítica para rastrearte entre apps.</p>
 <p>La App <strong>no incluye SDK de anuncios de terceros ni herramientas de analítica de seguimiento entre apps</strong>.</p>
 <h2>2. Información en el dispositivo</h2>
-<p>Suscripciones, categorías, notas, iconos, divisa, apariencia, notificaciones, bloqueo, etc. se guardan <strong>en el dispositivo</strong> (SwiftData / almacenamiento del sistema). Sirven para mostrar y gestionar, totales, aviso local el día anterior y resumen de widgets. Desinstalar suele borrar lo que solo está en el dispositivo y no hayas copiado a otro sitio.</p>
-<h2>3. App Group y widgets</h2>
-<p>La App y los widgets comparten <code>group.Maoxia-Xiang.Renewity</code>. La instantánea de visualización permanece en el dispositivo.</p>
-<h2>4. Copia iCloud opcional</h2>
+<p>Suscripciones, categorías, notas, iconos, divisa, apariencia, notificaciones, bloqueo, etc. se guardan <strong>en el dispositivo</strong> (SwiftData / almacenamiento del sistema). Sirven para mostrar y gestionar, totales, aviso local el día anterior. Desinstalar suele borrar lo que solo está en el dispositivo y no hayas copiado a otro sitio.</p>
+<h2>3. Copia iCloud opcional</h2>
 <p>Con Pro y la copia iCloud activada, un archivo va a <strong>tu</strong> iCloud Drive (contenedor <code>iCloud.Maoxia-Xiang.Renewity</code>), bajo tu cuenta de Apple y las políticas de iCloud de Apple. No podemos iniciar sesión en tu cuenta. Los JSON exportados son tu responsabilidad.</p>
-<h2>5. Notificaciones</h2>
+<h2>4. Notificaciones</h2>
 <p>Los avisos son <strong>notificaciones locales</strong>, creadas en el dispositivo, no subidas a nuestros servidores para enviar el recordatorio.</p>
-<h2>6. Face ID, Touch ID y código</h2>
+<h2>5. Face ID, Touch ID y código</h2>
 <p>El bloqueo usa LocalAuthentication. Las plantillas biométricas las guarda el sistema en el área segura. <strong>No recogemos ni subimos datos de Face ID ni huellas.</strong></p>
-<h2>7. Compras</h2>
+<h2>6. Compras</h2>
 <p>Las compras Pro van por StoreKit / App Store. Apple procesa pago y recibos. Podemos saber en el dispositivo si hay una compra activa, pero <strong>no recibimos el número de tarjeta completo ni la contraseña de la cuenta de Apple</strong>.</p>
-<h2>8. Peticiones de red</h2>
+<h2>7. Peticiones de red</h2>
 <p>El dispositivo habla directamente con el servicio, no con una base de usuarios nuestra.</p>
 <p>Si la divisa de visualización difiere de la de referencia local, pueden pedirse tipos a una API pública (actualmente <code>open.er-api.com</code>) para una estimación, no una oferta de cambio.</p>
 <p>Al «Elegir un servicio» puede consultarse la API del App Store / iTunes, servicios públicos de dominio (p. ej. Clearbit) y CDN de iconos (icon.horse, unavatar.io, favicone.com, según las peticiones). <strong>Las palabras o dominios que escribas</strong> pueden enviarse. No pongas contraseñas ni números de tarjeta. Los resultados no son una recomendación.</p>
 <p>La copia iCloud sigue la política de privacidad de Apple.</p>
-<h2>9. Lo que nos envías</h2>
+<h2>8. Lo que nos envías</h2>
 <p>Los correos in-app van a <strong>philiptrip1975@gmail.com</strong>. Los usamos para responder y los borramos cuando ya no hacen falta, salvo obligación legal.</p>
-<h2>10. Analítica, publicidad y seguimiento</h2>
+<h2>9. Analítica, publicidad y seguimiento</h2>
 <p>Sin anuncios de terceros, sin SDK de analítica para perfiles de marketing con tus suscripciones, sin seguimiento entre apps de otras empresas. Diagnósticos o estadísticas del App Store hacia Apple, si los permites, se rigen por Apple.</p>
-<h2>11. Menores</h2>
+<h2>10. Menores</h2>
 <p>La App no está dirigida a menores de 13 años y no recogemos a sabiendas sus datos. Si crees que ha habido un error, contáctanos.</p>
-<h2>12. Conservación y supresión</h2>
+<h2>11. Conservación y supresión</h2>
 <p>Datos del dispositivo: al borrar en la App o desinstalar. Copia iCloud: hasta sobrescribir, borrar en iCloud Drive o desactivar. JSON exportado: según dónde lo guardes.</p>
-<h2>13. Seguridad</h2>
+<h2>12. Seguridad</h2>
 <p>Almacenamiento local por defecto, bloqueo opcional, canales de Apple. Ningún almacenamiento es perfectamente seguro.</p>
-<h2>14. Tus derechos</h2>
+<h2>13. Tus derechos</h2>
 <p>Según dónde vivas (RGPD, CCPA, etc.) puedes tener derechos de acceso, rectificación, supresión, exportación, limitación u oposición. La mayoría de los datos están en el dispositivo o en tu iCloud. Para correos de soporte respondemos en el plazo legal.</p>
-<h2>15. Tratamiento internacional</h2>
+<h2>14. Tratamiento internacional</h2>
 <p>Tipos de cambio, búsqueda e iconos pueden tratarse en otros países. En el EEE, Reino Unido u otras regiones, usar esas funciones opcionales implica que comprendes ese tratamiento.</p>
-<h2>16. Cambios</h2>
+<h2>15. Cambios</h2>
 <p>Las actualizaciones aparecen en la App con nueva fecha. Si un cambio afecta de forma sustancial a tus derechos, daremos un aviso razonable.</p>
-<h2>17. Contacto</h2>
+<h2>16. Contacto</h2>
 <p>Solicitudes de privacidad: <strong>philiptrip1975@gmail.com</strong></p>
 <p>Incluye «Política de privacidad» en el asunto.</p>
 <h2>Nota adicional (20 de agosto de 2026)</h2>
 <ul>
 <li>La app requiere iOS 18 o posterior.</li>
-<li><strong>No hay sincronización CloudKit en vivo</strong> de la base de datos. La copia Pro se guarda en tu iCloud Drive.</li>
+<li>Con iCloud, la app puede sincronizar suscripciones, apariencia, hora de aviso y avatar con CloudKit. La copia Pro sigue en iCloud Drive.</li>
 <li>Los recordatorios son notificaciones locales. La app programa varias fechas futuras y actualiza la cola al abrirla. Si no la abres durante mucho tiempo, los avisos posteriores pueden detenerse por el límite del sistema.</li>
 <li>Incluye Privacy Manifest y no hace seguimiento entre apps.</li>
 </ul>

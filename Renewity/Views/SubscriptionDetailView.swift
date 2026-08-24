@@ -21,16 +21,29 @@ struct SubscriptionDetailView: View {
             }
 
             Section("费用") {
-                LabeledContent("每次扣费", value: Formatters.currency(subscription.price, code: subscription.resolvedCurrencyCode))
+                LabeledContent("每次付款", value: Formatters.currency(subscription.price, code: subscription.resolvedCurrencyCode))
                 LabeledContent("计费周期", value: subscription.cycleDisplayTitle)
-                LabeledContent("折合每月", value: Formatters.currency(subscription.monthlyCost, code: subscription.resolvedCurrencyCode))
-                LabeledContent("折合每年", value: Formatters.currency(subscription.yearlyCost, code: subscription.resolvedCurrencyCode))
+                if subscription.doesRenew {
+                    LabeledContent("折合每月", value: Formatters.currency(subscription.monthlyCost, code: subscription.resolvedCurrencyCode))
+                    LabeledContent("折合每年", value: Formatters.currency(subscription.yearlyCost, code: subscription.resolvedCurrencyCode))
+                }
             }
 
-            Section("续费") {
-                LabeledContent("下次扣费", value: Formatters.mediumDate(subscription.upcomingBillingDate))
-                LabeledContent("剩余时间", value: Formatters.billingRelative(subscription.upcomingBillingDate))
-                LabeledContent("续费提醒", value: subscription.reminderSummary)
+            Section(subscription.doesRenew ? "续订" : "付款") {
+                LabeledContent(
+                    subscription.doesRenew ? "下次付款" : "到期日",
+                    value: Formatters.mediumDate(subscription.upcomingBillingDate)
+                )
+                LabeledContent(
+                    "剩余时间",
+                    value: subscription.doesRenew
+                        ? Formatters.billingRelative(subscription.upcomingBillingDate)
+                        : Formatters.expiryRelative(subscription.upcomingBillingDate)
+                )
+                LabeledContent(
+                    subscription.doesRenew ? "续订提醒" : "付款提醒",
+                    value: subscription.reminderSummary
+                )
             }
 
             if subscription.trialEndDate != nil {
@@ -44,7 +57,29 @@ struct SubscriptionDetailView: View {
             Section("信息") {
                 LabeledContent("支付方式", value: subscription.resolvedPaymentMethod(in: paymentMethods).localizedName)
                 LabeledContent("分类", value: subscription.resolvedCategory(in: categories).localizedName)
-                LabeledContent("状态", value: subscription.isActive ? String(localized: "进行中") : String(localized: "已暂停"))
+                LabeledContent(
+                    "状态",
+                    value: subscription.isCompletedOneTime
+                        ? String(localized: "已结束")
+                        : (subscription.isActive ? String(localized: "进行中") : String(localized: "已暂停"))
+                )
+                if let url = subscription.resolvedManagementURL {
+                    Link(destination: url) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("管理页面")
+                                .foregroundStyle(.secondary)
+                            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                                Text(url.absoluteString)
+                                    .foregroundStyle(Color(uiColor: .systemBlue))
+                                    .multilineTextAlignment(.leading)
+                                Image(systemName: "arrow.up.right")
+                                    .font(.footnote.weight(.semibold))
+                                    .foregroundStyle(Color(uiColor: .systemBlue))
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
+                }
                 if !subscription.notes.isEmpty {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("备注")
@@ -55,9 +90,11 @@ struct SubscriptionDetailView: View {
             }
 
             Section {
-                Button(subscription.isActive ? String(localized: "暂停订阅") : String(localized: "恢复订阅")) {
-                    subscription.isActive.toggle()
-                    ReminderService.reschedule(for: subscription)
+                if subscription.doesRenew {
+                    Button(subscription.isActive ? String(localized: "暂停订阅") : String(localized: "恢复订阅")) {
+                        subscription.isActive.toggle()
+                        ReminderService.reschedule(for: subscription)
+                    }
                 }
 
                 Button("删除订阅", role: .destructive) {
@@ -65,6 +102,7 @@ struct SubscriptionDetailView: View {
                 }
             }
         }
+        .scrollContentBackground(.visible)
         .navigationTitle(subscription.name)
         .toolbarTitleDisplayMode(.inline)
         .toolbar {

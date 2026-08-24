@@ -28,11 +28,15 @@ struct AppearanceSettingsView: View {
 
 struct CurrencySettingsView: View {
     @AppStorage("currencyCode") private var currencyCode = "CNY"
+    @AppStorage("heroConversionCurrencyCode") private var conversionCurrencyCode = ""
+    @AppStorage("heroConversionCurrencyChosen") private var conversionCurrencyChosen = false
     @Environment(ExchangeRateStore.self) private var exchangeRates
     @Environment(ProStore.self) private var proStore
     @State private var showingCurrencyPicker = false
+    @State private var showingConversionPicker = false
     @State private var showingPaywall = false
     @State private var pendingCurrencyCode: String?
+    @State private var pendingConversionCurrencyCode: String?
     @State private var alertMessage: String?
 
     var body: some View {
@@ -52,8 +56,28 @@ struct CurrencySettingsView: View {
                     }
                 }
                 .foregroundStyle(.primary)
+
+                Button {
+                    showingConversionPicker = true
+                } label: {
+                    HStack {
+                        Text("第二种货币")
+                        Spacer()
+                        if let selectedConversionCurrencyCode {
+                            Text(Formatters.currencyPickerTitle(for: selectedConversionCurrencyCode))
+                                .foregroundStyle(.secondary)
+                        } else {
+                            Text("选择货币")
+                                .foregroundStyle(.tertiary)
+                        }
+                        Image(systemName: "chevron.up.chevron.down")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+                .foregroundStyle(.primary)
             } footer: {
-                Text("总览、分类合计和小组件会按参考汇率换算到此货币，仅供参考，不会改写各笔订阅记下的金额。")
+                Text("总览和分类合计按默认货币换算。轻点概览卡片可切换到第二种货币。选择货币需要 Renewity Pro。")
             }
 
             Section {
@@ -89,7 +113,17 @@ struct CurrencySettingsView: View {
         .sheet(isPresented: $showingCurrencyPicker, onDismiss: presentPaywallIfCurrencyLocked) {
             CurrencyPickerView(currencyCode: $currencyCode, onSelect: handleDefaultCurrencySelect)
         }
-        .sheet(isPresented: $showingPaywall, onDismiss: applyPendingCurrencyIfPro) {
+        .sheet(isPresented: $showingConversionPicker, onDismiss: presentPaywallIfCurrencyLocked) {
+            CurrencyPickerView(
+                currencyCode: Binding(
+                    get: { selectedConversionCurrencyCode ?? "" },
+                    set: { conversionCurrencyCode = $0 }
+                ),
+                onSelect: handleConversionCurrencySelect,
+                excludedCodes: [currencyCode.uppercased()]
+            )
+        }
+        .fullScreenCover(isPresented: $showingPaywall, onDismiss: applyPendingCurrencyIfPro) {
             PaywallView()
         }
         .alert(alertTitle, isPresented: Binding(
@@ -104,6 +138,11 @@ struct CurrencySettingsView: View {
         }
     }
 
+    private var selectedConversionCurrencyCode: String? {
+        guard conversionCurrencyChosen else { return nil }
+        return AppConfig.selectedCurrencyCode(from: conversionCurrencyCode)
+    }
+
     private func handleDefaultCurrencySelect(_ code: String) {
         guard code != currencyCode else { return }
         if proStore.isPro {
@@ -113,19 +152,37 @@ struct CurrencySettingsView: View {
         }
     }
 
+    private func handleConversionCurrencySelect(_ code: String) {
+        guard code.uppercased() != currencyCode.uppercased() else { return }
+        if proStore.isPro {
+            applyConversionCurrency(code)
+        } else {
+            pendingConversionCurrencyCode = code
+        }
+    }
+
     private func presentPaywallIfCurrencyLocked() {
-        guard pendingCurrencyCode != nil, !proStore.isPro else { return }
+        let hasPending = pendingCurrencyCode != nil || pendingConversionCurrencyCode != nil
+        guard hasPending, !proStore.isPro else { return }
         DispatchQueue.main.async {
             showingPaywall = true
         }
     }
 
     private func applyPendingCurrencyIfPro() {
-        guard let pendingCurrencyCode else { return }
-        if proStore.isPro {
+        if let pendingCurrencyCode, proStore.isPro {
             currencyCode = pendingCurrencyCode
         }
+        if let pendingConversionCurrencyCode, proStore.isPro {
+            applyConversionCurrency(pendingConversionCurrencyCode)
+        }
         self.pendingCurrencyCode = nil
+        self.pendingConversionCurrencyCode = nil
+    }
+
+    private func applyConversionCurrency(_ code: String) {
+        conversionCurrencyCode = code
+        conversionCurrencyChosen = true
     }
 
     private var lastUpdatedText: String {
@@ -163,9 +220,9 @@ struct NotificationSettingsView: View {
     var body: some View {
         Form {
             Section {
-                Toggle("续费提醒", isOn: $remindersEnabled)
+                Toggle("续订提醒", isOn: $remindersEnabled)
             } footer: {
-                Text("按每个订阅的续费和试用设置发送本地通知。")
+                Text("按每个订阅的续订和试用设置发送本地通知。")
             }
 
             if remindersEnabled {
@@ -220,17 +277,15 @@ struct NotificationSettingsView: View {
 }
 
 struct AboutView: View {
-    @Environment(\.openURL) private var openURL
-
     var body: some View {
         List {
             Section {
                 VStack(spacing: 12) {
-                    Image(systemName: "creditcard.fill")
-                        .font(.system(size: 36))
-                        .foregroundStyle(.white)
+                    Image("AppMark")
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 72, height: 72)
-                        .background(Color.accentColor.gradient, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     Text(AppConfig.appName)
                         .font(.title2.bold())
                     Text("版本 \(AppConfig.versionText)")
@@ -245,19 +300,6 @@ struct AboutView: View {
                 LabeledContent("名称", value: AppConfig.appName)
                 LabeledContent("版本", value: AppConfig.versionText)
                 LabeledContent("类别", value: String(localized: "财务"))
-            }
-
-            Section("法律") {
-                Button {
-                    openURL(AppConfig.privacyPolicyWebURL)
-                } label: {
-                    Label("隐私政策（网页）", systemImage: "safari")
-                }
-                Button {
-                    openURL(AppConfig.termsOfUseWebURL)
-                } label: {
-                    Label("用户协议（网页）", systemImage: "safari")
-                }
             }
         }
         .navigationTitle("关于")

@@ -41,6 +41,74 @@ extension Color {
         Color(nsColor: .controlBackgroundColor)
         #endif
     }
+
+    static var paywallGradient: LinearGradient {
+        LinearGradient(
+            stops: [
+                .init(color: Color(hex: "072767"), location: 0),
+                .init(color: Color(hex: "4C78C4"), location: 0.42),
+                .init(color: Color(hex: "7FACE8"), location: 0.78),
+                .init(color: Color(hex: "8BABDB"), location: 1),
+            ],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+    }
+
+    static func skyGradient(for scheme: ColorScheme) -> LinearGradient {
+        if scheme == .dark {
+            LinearGradient(
+                stops: [
+                    .init(color: Color(hex: "060117"), location: 0),
+                    .init(color: Color(hex: "062665"), location: 0.51),
+                    .init(color: Color(hex: "527ABD"), location: 1),
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        } else {
+            LinearGradient(
+                stops: [
+                    .init(color: Color(hex: "0077E3"), location: 0),
+                    .init(color: Color(hex: "63B4FA"), location: 0.5),
+                    .init(color: Color(hex: "E1E1FF"), location: 1),
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        }
+    }
+}
+
+private struct AppSkyBackground: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
+
+    func body(content: Content) -> some View {
+        content
+            .scrollContentBackground(.hidden)
+            .background {
+                Color.skyGradient(for: colorScheme)
+                    .ignoresSafeArea()
+            }
+    }
+}
+
+extension View {
+    func appSkyBackground() -> some View {
+        modifier(AppSkyBackground())
+    }
+
+    func skyNavigationChrome() -> some View {
+        modifier(SkyNavigationChrome())
+    }
+}
+
+private struct SkyNavigationChrome: ViewModifier {
+    @Environment(\.colorScheme) private var colorScheme
+
+    func body(content: Content) -> some View {
+        content.toolbarColorScheme(colorScheme == .light ? .dark : nil, for: .navigationBar)
+    }
 }
 
 enum BrandArtwork {
@@ -171,6 +239,20 @@ struct SubscriptionRowView: View {
                             .padding(.horizontal, 6)
                             .padding(.vertical, 2)
                             .background(Color.orange.opacity(0.15), in: Capsule())
+                    } else if subscription.isCompletedOneTime {
+                        Text("已结束")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(.quaternary, in: Capsule())
+                    } else if !subscription.doesRenew {
+                        Text("一次性")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(.quaternary, in: Capsule())
                     }
                     if !subscription.isActive {
                         Text("已暂停")

@@ -37,7 +37,7 @@ La copia en iCloud, la compra de Pro a través de Apple o el desbloqueo con Face
 
 Eres responsable de nombres, importes, fechas, categorías y notas («Contenido de usuario»). Declaras que tienes derecho a registrarlos y que no infringen derechos de terceros ni la ley.
 
-Conservas tus derechos. Nos concedes licencia para tratarlos solo lo necesario para registro, estadísticas, avisos, widgets y copia en tus dispositivos. No los vendemos ni los usamos para publicidad.
+Conservas tus derechos. Nos concedes licencia para tratarlos solo lo necesario para registro, estadísticas, avisos y copia en tus dispositivos. No los vendemos ni los usamos para publicidad.
 
 ## 6. Marcas de terceros
 
@@ -51,11 +51,11 @@ Funciones como superar el límite gratuito, categorías propias, divisa de visua
 
 Compras, pago, recibos y renovación automática los procesa Apple. No vemos el número de tarjeta completo. Cancela o pide reembolsos según las reglas de la cuenta de Apple / App Store. Lo gratuito sigue disponible con límites. Restaura las compras con la misma cuenta de Apple.
 
-## 8. Notificaciones, widgets y bloqueo
+## 8. Notificaciones y bloqueo
 
 Los avisos usan **notificaciones locales**, normalmente el día anterior al cargo. Puedes desactivarlas. La entrega no está garantizada.
 
-Los widgets leen una instantánea local mediante un App Group. El bloqueo pide Face ID, Touch ID o el código. No sustituye un cifrado completo.
+El bloqueo pide Face ID, Touch ID o el código. No sustituye un cifrado completo.
 
 ## 9. Servicios de terceros
 

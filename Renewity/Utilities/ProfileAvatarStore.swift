@@ -20,6 +20,16 @@ enum ProfileAvatarStore {
         FileManager.default.fileExists(atPath: fileURL.path)
     }
 
+    static func loadData() -> Data? {
+        guard hasAvatar else { return nil }
+        return try? Data(contentsOf: fileURL)
+    }
+
+    static func saveRawJPEG(_ data: Data) {
+        try? data.write(to: fileURL, options: .atomic)
+        bumpRevision()
+    }
+
     static func save(_ data: Data) {
         let jpeg = compressedJPEG(from: data) ?? data
         try? jpeg.write(to: fileURL, options: .atomic)
@@ -102,10 +112,11 @@ enum ProfileAvatarStore {
 struct ProfileAvatarView: View {
     var size: CGFloat = 32
     @AppStorage(ProfileAvatarStore.revisionKey) private var revision = 0
+    @State private var image: Image?
 
     var body: some View {
         Group {
-            if let image = ProfileAvatarStore.loadImage() {
+            if let image {
                 image
                     .resizable()
                     .scaledToFill()
@@ -119,7 +130,14 @@ struct ProfileAvatarView: View {
         }
         .frame(width: size, height: size)
         .clipShape(Circle())
-        .id(revision)
+        .onAppear(perform: reload)
+        .onChange(of: revision) { _, _ in
+            reload()
+        }
         .accessibilityHidden(true)
+    }
+
+    private func reload() {
+        image = ProfileAvatarStore.loadImage()
     }
 }

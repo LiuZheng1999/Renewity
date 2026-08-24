@@ -119,11 +119,14 @@ struct PaywallView: View {
             Button {
                 dismiss()
             } label: {
-                Image(systemName: "xmark")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(.primary)
-                    .frame(width: 36, height: 36)
-                    .contentShape(Rectangle())
+                if #available(iOS 26.0, *) {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(width: 36, height: 36)
+                        .contentShape(Rectangle())
+                        .glassEffect(.clear)
+                }
             }
             .accessibilityLabel(Text("关闭"))
 
@@ -134,7 +137,7 @@ struct PaywallView: View {
                     Task { await proStore.restore() }
                 }
                 .font(.system(size: 16, weight: .medium))
-                .foregroundStyle(.primary)
+                .foregroundStyle(.white)
                 .disabled(proStore.isLoading || isLoadingProducts)
             }
         }
@@ -164,7 +167,7 @@ struct PaywallView: View {
             )
             featureRow(
                 title: String(localized: "多货币"),
-                detail: String(localized: "改默认货币、扣费货币，并把合计换算到其他货币")
+                detail: String(localized: "改默认货币、付款货币，并把合计换算到其他货币")
             )
             featureRow(
                 title: String(localized: "自定义分类"),
@@ -176,7 +179,7 @@ struct PaywallView: View {
             )
             featureRow(
                 title: String(localized: "云备份"),
-                detail: String(localized: "自动备份到 iCloud，换机也能恢复")
+                detail: String(localized: "iPhone 与 iPad 同步，还可备份到 iCloud 云盘")
             )
         }
         .padding(.horizontal, 20)
@@ -431,8 +434,13 @@ private struct PurchasePlanOptionRow: View {
                     .foregroundStyle(isSelected ? Color(uiColor: .systemBackground) : Color(uiColor: .tertiaryLabel))
 
                 VStack(alignment: .leading, spacing: 7) {
-                    Text(plan.title)
-                        .font(.system(size: 16, weight: .semibold))
+                    HStack(alignment: .center, spacing: 6) {
+                        Text(plan.title)
+                            .font(.system(size: 16, weight: .semibold))
+                        if plan == .yearly {
+                            YearlyTrialBadge()
+                        }
+                    }
                     Text(planSubtitle)
                         .font(.system(size: 13, weight: .regular))
                 }
@@ -483,88 +491,59 @@ private struct PurchasePlanOptionRow: View {
     }
 }
 
-private struct PurchasePaywallBackground: View {
-    @Environment(\.colorScheme) private var colorScheme
+private struct YearlyTrialBadge: View {
+    private let fill = Color(red: 0.16, green: 0.05, blue: 0.32)
+    private let ink = Color(red: 0.80, green: 0.70, blue: 0.96)
+    private let grid = Color(red: 0.52, green: 0.38, blue: 0.78).opacity(0.42)
 
     var body: some View {
-        GeometryReader { geo in
-            let w = geo.size.width
-            let h = geo.size.height
-
-            ZStack {
-                (colorScheme == .dark ? Color.black : Color.white)
-
-                Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 1.0, green: 0.59, blue: 0.4),
-                                Color(red: 1.0, green: 1.0, blue: 1.0),
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .frame(width: w * 0.3, height: w * 0.3)
-                    .position(x: w * 0.35, y: h * 0.04)
-
-                RoundedRectangle(cornerRadius: w * 0.22)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.95, green: 0.35, blue: 0.55),
-                                Color(red: 0.94, green: 0.74, blue: 0.79),
-                                Color(red: 0.85, green: 0.25, blue: 0.28),
-                            ],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .frame(width: w * 1, height: w * 0.42)
-                    .position(x: w * 0.02, y: h * 0.28)
-
-                RoundedRectangle(cornerRadius: 1, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.0, green: 0.2, blue: 1.0),
-                                Color(red: 0.51, green: 0.87, blue: 0.95),
-                                Color(red: 0.94, green: 0.94, blue: 0.94),
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
-                    .frame(width: w * 0.42, height: w * 0.42)
-                    .position(x: w * 0.88, y: h * 0.2)
-
-                Circle()
-                    .fill(
-                        RadialGradient(
-                            colors: [
-                                Color(red: 0.45, green: 0.95, blue: 0.35),
-                                Color(red: 0.45, green: 0.95, blue: 0.35).opacity(0),
-                            ],
-                            center: .center,
-                            startRadius: 0,
-                            endRadius: w * 0.32
-                        )
-                    )
-                    .frame(width: w * 0.7, height: w * 0.7)
-                    .position(x: w * 0.92, y: h * 0.42)
-                    .blur(radius: 30)
-
-                LinearGradient(
-                    colors: [
-                        (colorScheme == .dark ? Color.black : Color.white).opacity(0.15),
-                        (colorScheme == .dark ? Color.black : Color.white).opacity(0.55),
-                        (colorScheme == .dark ? Color.black : Color.white).opacity(0.92),
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
+        Text("7天免费试用")
+            .font(.system(size: 10, weight: .bold))
+            .foregroundStyle(Color.white)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
+            .background {
+                Capsule(style: .continuous)
+                    .fill(fill)
+                    .overlay {
+                        TrialBadgeGrid(color: grid, step: 3.5)
+                            .clipShape(Capsule(style: .continuous))
+                    }
             }
+            .fixedSize()
+            .accessibilityLabel("7天免费试用")
+    }
+}
+
+private struct TrialBadgeGrid: View {
+    let color: Color
+    let step: CGFloat
+
+    var body: some View {
+        Canvas { context, size in
+            var path = Path()
+            var x: CGFloat = 0
+            while x <= size.width {
+                path.move(to: CGPoint(x: x, y: 0))
+                path.addLine(to: CGPoint(x: x, y: size.height))
+                x += step
+            }
+            var y: CGFloat = 0
+            while y <= size.height {
+                path.move(to: CGPoint(x: 0, y: y))
+                path.addLine(to: CGPoint(x: size.width, y: y))
+                y += step
+            }
+            context.stroke(path, with: .color(color), lineWidth: 0.4)
         }
+        .allowsHitTesting(false)
+    }
+}
+
+private struct PurchasePaywallBackground: View {
+    var body: some View {
+        Color.paywallGradient
+            .ignoresSafeArea()
     }
 }
 

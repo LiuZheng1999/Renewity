@@ -53,6 +53,7 @@ private struct ReminderPlan: Sendable {
     let cycle: BillingCycle
     let customValue: Int
     let customUnit: CustomCycleUnit
+    let doesRenew: Bool
 
     @MainActor
     init(subscription: Subscription) {
@@ -67,9 +68,10 @@ private struct ReminderPlan: Sendable {
         customValue = subscription.customCycleValue
         customUnit = subscription.customCycleUnit
         cycle = subscription.billingCycle
+        doesRenew = subscription.doesRenew
 
         var billing = subscription.upcomingBillingDate
-        if subscription.isInTrial, let trialEndDate {
+        if subscription.doesRenew, subscription.isInTrial, let trialEndDate {
             billing = subscription.billingCycle.nextDate(
                 after: Calendar.current.startOfDay(for: trialEndDate),
                 customValue: subscription.customCycleValue,
@@ -205,15 +207,17 @@ private actor Scheduler {
                 daysBefore: days,
                 hour: hour,
                 calendar: calendar,
-                limit: maxBillingOccurrences
+                limit: plan.doesRenew ? maxBillingOccurrences : 1
             )
             for (index, components) in occurrences.enumerated() {
                 guard let fireDate = calendar.date(from: components) else { continue }
                 items.append(
                     PlannedRequest(
                         identifier: "\(plan.id.uuidString)-d\(days)-\(index)",
-                        title: String(localized: "订阅即将续费"),
-                        body: billingBody(name: plan.name, days: days, price: plan.priceText),
+                        title: plan.doesRenew
+                            ? String(localized: "订阅即将续订")
+                            : String(localized: "订阅即将付款"),
+                        body: billingBody(name: plan.name, days: days, price: plan.priceText, renews: plan.doesRenew),
                         components: components,
                         fireDate: fireDate
                     )
@@ -224,18 +228,24 @@ private actor Scheduler {
         return items
     }
 
-    private static func billingBody(name: String, days: Int, price: String) -> String {
-        if days == 1 {
-            return String(localized: "「\(name)」将于明天续费 \(price)")
+    private static func billingBody(name: String, days: Int, price: String, renews: Bool) -> String {
+        if renews {
+            if days == 1 {
+                return String(localized: "「\(name)」将于明天续订 \(price)")
+            }
+            return String(localized: "「\(name)」将于 \(days) 天后续订 \(price)")
         }
-        return String(localized: "「\(name)」将于 \(days) 天后续费 \(price)")
+        if days == 1 {
+            return String(localized: "「\(name)」将于明天付款 \(price)")
+        }
+        return String(localized: "「\(name)」将于 \(days) 天后付款 \(price)")
     }
 
     private static func trialBody(name: String, days: Int, price: String) -> String {
         if days == 1 {
-            return String(localized: "「\(name)」将于明天结束试用，随后扣费 \(price)")
+            return String(localized: "「\(name)」将于明天结束试用，随后付款 \(price)")
         }
-        return String(localized: "「\(name)」将于 \(days) 天后结束试用，随后扣费 \(price)")
+        return String(localized: "「\(name)」将于 \(days) 天后结束试用，随后付款 \(price)")
     }
 
     private static func oneShotComponents(

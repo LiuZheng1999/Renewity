@@ -10,14 +10,16 @@ struct SettingsView: View {
     @Environment(\.requestReview) private var requestReview
     @Environment(\.openURL) private var openURL
     @State private var showingPaywall = false
+    @State private var isPickingPhoto = false
     @State private var pickerItem: PhotosPickerItem?
+    @State private var pendingCropImage: UIImage?
     @State private var cropperItem: AvatarCropItem?
 
     var body: some View {
         NavigationStack {
             Form {
-                profileSection
                 proSection
+                profileSection
 
                 Section("通用") {
                     NavigationLink {
@@ -59,16 +61,8 @@ struct SettingsView: View {
                 }
 
                 Section("法律") {
-                    NavigationLink {
-                        LegalDocumentView(document: .termsOfUse)
-                    } label: {
-                        rowLabel("用户协议", systemImage: "doc.plaintext")
-                    }
-                    NavigationLink {
-                        LegalDocumentView(document: .privacyPolicy)
-                    } label: {
-                        rowLabel("隐私政策", systemImage: "doc.text")
-                    }
+                    legalLink("用户协议", systemImage: "doc.plaintext", url: AppConfig.termsOfUseWebURL)
+                    legalLink("隐私政策", systemImage: "doc.text", url: AppConfig.privacyPolicyWebURL)
                 }
 
                 Section("支持") {
@@ -109,7 +103,7 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("设置")
-            .toolbarTitleDisplayMode(.inlineLarge)
+            .toolbarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("完成") {
@@ -118,9 +112,10 @@ struct SettingsView: View {
                     .fontWeight(.semibold)
                 }
             }
-            .sheet(isPresented: $showingPaywall) {
+            .fullScreenCover(isPresented: $showingPaywall) {
                 PaywallView()
             }
+            .photosPicker(isPresented: $isPickingPhoto, selection: $pickerItem, matching: .images)
             .fullScreenCover(item: $cropperItem) { item in
                 ImageCropView(
                     sourceImage: item.image,
@@ -134,14 +129,25 @@ struct SettingsView: View {
             .onChange(of: pickerItem) { _, item in
                 guard let item else { return }
                 Task {
-                    defer { pickerItem = nil }
-                    guard let data = try? await item.loadTransferable(type: Data.self),
-                          let image = UIImage(data: data) else { return }
-                    let prepared = ImageCropView.preparedSource(image)
-                    try? await Task.sleep(for: .milliseconds(350))
+                    let prepared: UIImage? = await {
+                        guard let data = try? await item.loadTransferable(type: Data.self),
+                              let image = UIImage(data: data) else { return nil }
+                        return ImageCropView.preparedSource(image)
+                    }()
                     await MainActor.run {
-                        cropperItem = AvatarCropItem(image: prepared)
+                        pickerItem = nil
+                        isPickingPhoto = false
+                        pendingCropImage = prepared
                     }
+                    try? await Task.sleep(for: .milliseconds(150))
+                    await MainActor.run {
+                        presentPendingCropIfNeeded()
+                    }
+                }
+            }
+            .onChange(of: isPickingPhoto) { _, showing in
+                if !showing {
+                    presentPendingCropIfNeeded()
                 }
             }
         }
@@ -150,10 +156,12 @@ struct SettingsView: View {
     private var profileSection: some View {
         Section {
             HStack(spacing: 14) {
-                PhotosPicker(selection: $pickerItem, matching: .images) {
+                Button {
+                    isPickingPhoto = true
+                } label: {
                     HStack(spacing: 14) {
-                        ProfileAvatarView(size: 64)
-                        VStack(alignment: .leading, spacing: 4) {
+                        ProfileAvatarView(size: 48)
+                        VStack(alignment: .leading) {
                             Text("自定义头像")
                                 .font(.headline)
                                 .foregroundStyle(.primary)
@@ -163,8 +171,11 @@ struct SettingsView: View {
                         }
                     }
                 }
+                .buttonStyle(.plain)
                 .foregroundStyle(.primary)
+
                 Spacer(minLength: 8)
+
                 if hasCustomAvatar {
                     Button("移除头像", role: .destructive) {
                         ProfileAvatarStore.remove()
@@ -182,49 +193,63 @@ struct SettingsView: View {
         return ProfileAvatarStore.hasAvatar
     }
 
+    private func presentPendingCropIfNeeded() {
+        guard cropperItem == nil, let pendingCropImage else { return }
+        self.pendingCropImage = nil
+        cropperItem = AvatarCropItem(image: pendingCropImage)
+    }
+
     @ViewBuilder
     private var proSection: some View {
         Section {
-            if proStore.isPro {
-                Label {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Renewity Pro")
-                            .font(.headline)
-                        Text("已解锁全部功能")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+            Group {
+                if proStore.isPro {
+                    proBannerCard
+                } else {
+                    Button {
+                        showingPaywall = true
+                    } label: {
+                        proBannerCard
                     }
-                } icon: {
-                    Image(systemName: "crown.fill")
-                        .foregroundStyle(Color.accentColor)
+                    .buttonStyle(.plain)
                 }
-            } else {
-                Button {
-                    showingPaywall = true
-                } label: {
-                    HStack {
-                        Label {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("升级到 Pro")
-                                    .font(.headline)
-                                    .foregroundStyle(.primary)
-                                Text("无限订阅、多货币和云备份")
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                            }
-                        } icon: {
-                            Image(systemName: "crown.fill")
-                                .foregroundStyle(Color.accentColor)
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.tertiary)
-                    }
-                }
-                .foregroundStyle(.primary)
+            }
+            .listRowInsets(EdgeInsets())
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
+        }
+    }
+
+    private var proBannerCard: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            HStack(spacing: 8) {
+                Image("AppMark")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 22, height: 22)
+                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+
+                Text("Renewity Pro")
+                    .font(.subheadline.weight(.medium))
+                    .foregroundStyle(.white.opacity(0.92))
+            }
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Renewity 高级会员")
+                    .font(.title2.weight(.bold))
+                    .foregroundStyle(.white)
+
+                Text(proStore.isPro
+                     ? String(localized: "已解锁全部功能")
+                     : String(localized: "解锁 Pro。年度或终身。"))
+                    .font(.subheadline)
+                    .foregroundStyle(Color(hex: "C5D8F5"))
             }
         }
+        .padding(20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.paywallGradient)
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 
     private var deviceInfo: String {
@@ -250,6 +275,13 @@ struct SettingsView: View {
             icon()
                 .foregroundStyle(Color.accentColor)
         }
+    }
+
+    private func legalLink(_ title: LocalizedStringKey, systemImage: String, url: URL) -> some View {
+        Link(destination: url) {
+            rowLabel(title, systemImage: systemImage)
+        }
+        .foregroundStyle(.primary)
     }
 
     private func socialRow<Icon: View>(

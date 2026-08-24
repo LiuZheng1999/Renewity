@@ -26,7 +26,7 @@ struct SubscriptionListView: View {
 
         var title: String {
             switch self {
-            case .upcoming: String(localized: "续费日期")
+            case .upcoming: String(localized: "付款日期")
             case .price: String(localized: "月均金额")
             case .name: String(localized: "名称")
             }
@@ -87,7 +87,9 @@ struct SubscriptionListView: View {
             }
             .navigationTitle("订阅")
             .toolbarTitleDisplayMode(.inlineLarge)
-            .searchable(text: $searchText, prompt: "搜索订阅")
+            .appSkyBackground()
+            .skyNavigationChrome()
+            .searchable(text: $searchText, prompt: "搜索已有订阅")
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Menu {
@@ -98,6 +100,7 @@ struct SubscriptionListView: View {
                         }
                     } label: {
                         Label("排序", systemImage: "arrow.up.arrow.down")
+                            .foregroundStyle(Color.primary)
                     }
                 }
                 ToolbarItem(placement: .primaryAction) {
@@ -114,7 +117,7 @@ struct SubscriptionListView: View {
             .sheet(isPresented: $showingCategoryForm) {
                 CategoryFormView()
             }
-            .sheet(isPresented: $showingPaywall) {
+            .fullScreenCover(isPresented: $showingPaywall) {
                 PaywallView()
             }
         }
@@ -222,16 +225,20 @@ struct SubscriptionListView: View {
             }
         }
         .swipeActions(edge: .leading) {
-            Button(subscription.isActive ? String(localized: "暂停") : String(localized: "恢复")) {
-                subscription.isActive.toggle()
-                ReminderService.reschedule(for: subscription)
+            if subscription.doesRenew {
+                Button(subscription.isActive ? String(localized: "暂停") : String(localized: "恢复")) {
+                    subscription.isActive.toggle()
+                    ReminderService.reschedule(for: subscription)
+                }
+                .tint(subscription.isActive ? .orange : .green)
             }
-            .tint(subscription.isActive ? .orange : .green)
         }
         .contextMenu {
-            Button(subscription.isActive ? String(localized: "暂停") : String(localized: "恢复"), systemImage: subscription.isActive ? "pause.fill" : "play.fill") {
-                subscription.isActive.toggle()
-                ReminderService.reschedule(for: subscription)
+            if subscription.doesRenew {
+                Button(subscription.isActive ? String(localized: "暂停") : String(localized: "恢复"), systemImage: subscription.isActive ? "pause.fill" : "play.fill") {
+                    subscription.isActive.toggle()
+                    ReminderService.reschedule(for: subscription)
+                }
             }
             Button("删除", systemImage: "trash", role: .destructive) {
                 delete(subscription)

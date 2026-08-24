@@ -57,45 +57,43 @@ footer { color: var(--muted); font-size: 14px; }
 <p>Salvo o descrito abaixo, não pedimos conta conosco nem enviamos a servidores que controlamos: nome ou e-mail (salvo se você nos escrever), dados de assinaturas que inserir, identificadores de anúncio ou SDKs de análise para rastreá-lo entre apps.</p>
 <p>O App <strong>não inclui SDKs de anúncios de terceiros nem ferramentas de análise de rastreamento entre apps</strong>.</p>
 <h2>2. Informações no dispositivo</h2>
-<p>Assinaturas, categorias, notas, ícones, moeda, aparência, notificações, bloqueio etc. ficam <strong>no dispositivo</strong> (SwiftData / armazenamento do sistema), para exibir e gerenciar, totais, aviso local no dia anterior e resumo dos widgets. Desinstalar costuma apagar o que só está no dispositivo e não foi salvo em outro lugar.</p>
-<h2>3. App Group e widgets</h2>
-<p>O App e os widgets compartilham <code>group.Maoxia-Xiang.Renewity</code>. O snapshot de exibição permanece no dispositivo.</p>
-<h2>4. Backup iCloud opcional</h2>
+<p>Assinaturas, categorias, notas, ícones, moeda, aparência, notificações, bloqueio etc. ficam <strong>no dispositivo</strong> (SwiftData / armazenamento do sistema), para exibir e gerenciar, totais, aviso local no dia anterior. Desinstalar costuma apagar o que só está no dispositivo e não foi salvo em outro lugar.</p>
+<h2>3. Backup iCloud opcional</h2>
 <p>Com Pro e o backup iCloud ligado, um arquivo vai para o <strong>seu</strong> iCloud Drive (contêiner <code>iCloud.Maoxia-Xiang.Renewity</code>), na sua Conta Apple, segundo as políticas de iCloud da Apple. Não podemos entrar na sua conta. Exports JSON são sua responsabilidade.</p>
-<h2>5. Notificações</h2>
+<h2>4. Notificações</h2>
 <p>Os lembretes são <strong>notificações locais</strong>, criadas no dispositivo, não enviadas aos nossos servidores para disparar o aviso.</p>
-<h2>6. Face ID, Touch ID e código</h2>
+<h2>5. Face ID, Touch ID e código</h2>
 <p>O bloqueio usa LocalAuthentication. Os modelos biométricos ficam na área segura do sistema. <strong>Não coletamos nem enviamos dados de Face ID ou digitais.</strong></p>
-<h2>7. Compras</h2>
+<h2>6. Compras</h2>
 <p>Compras Pro passam por StoreKit / App Store. A Apple processa pagamento e recibos. Podemos saber no dispositivo se há uma compra ativa, mas <strong>não recebemos o número completo do cartão nem a senha da Conta Apple</strong>.</p>
-<h2>8. Pedidos de rede</h2>
+<h2>7. Pedidos de rede</h2>
 <p>O dispositivo fala diretamente com o serviço, não com um banco de usuários nosso.</p>
 <p>Se a moeda de exibição diferir da de referência local, cotações de uma API pública (atualmente <code>open.er-api.com</code>) podem servir para uma estimativa, não uma oferta de câmbio.</p>
 <p>Em «Escolher um serviço», o App pode consultar a API da App Store / iTunes, serviços públicos de domínio (ex.: Clearbit) e CDNs de ícones (icon.horse, unavatar.io, favicone.com, conforme as requisições). <strong>As palavras ou domínios digitados</strong> podem ser enviados. Não coloque senhas nem números de cartão. Resultados não são recomendação.</p>
 <p>O backup iCloud segue a política de privacidade da Apple.</p>
-<h2>9. O que você nos envia</h2>
+<h2>8. O que você nos envia</h2>
 <p>E-mails no app vão para <strong>philiptrip1975@gmail.com</strong>. Usamos só para responder e apagamos quando não forem mais necessários, salvo obrigação legal.</p>
-<h2>10. Análise, publicidade e rastreamento</h2>
+<h2>9. Análise, publicidade e rastreamento</h2>
 <p>Sem anúncios de terceiros, sem SDKs de análise para perfil de marketing com suas assinaturas, sem rastreamento entre apps de outras empresas. Diagnósticos ou estatísticas da App Store para a Apple, se você permitir, seguem as regras da Apple.</p>
-<h2>11. Crianças</h2>
+<h2>10. Crianças</h2>
 <p>O App não é dirigido a menores de 13 anos e não coletamos seus dados de propósito. Se achar que houve erro, fale conosco.</p>
-<h2>12. Retenção e exclusão</h2>
+<h2>11. Retenção e exclusão</h2>
 <p>Dados no dispositivo: ao apagar no App ou desinstalar. Backup iCloud: até sobrescrever, apagar no iCloud Drive ou desativar. JSON exportado: conforme o local escolhido.</p>
-<h2>13. Segurança</h2>
+<h2>12. Segurança</h2>
 <p>Armazenamento local por padrão, bloqueio opcional, canais da Apple. Nenhum armazenamento é perfeitamente seguro.</p>
-<h2>14. Seus direitos</h2>
+<h2>13. Seus direitos</h2>
 <p>Conforme o lugar (LGPD, GDPR, CCPA etc.), você pode ter direitos de acesso, correção, exclusão, exportação, restrição ou oposição. A maior parte dos dados está no dispositivo ou no seu iCloud. Para e-mails de suporte, respondemos no prazo legal.</p>
-<h2>15. Processamento internacional</h2>
+<h2>14. Processamento internacional</h2>
 <p>Cotações, busca e ícones podem ser processados em outros países. No EEE, Reino Unido ou regiões semelhantes, usar esses recursos opcionais significa que você entende esse processamento.</p>
-<h2>16. Alterações</h2>
+<h2>15. Alterações</h2>
 <p>Atualizações aparecem no App com nova data. Se a mudança afetar substancialmente seus direitos, daremos um aviso razoável.</p>
-<h2>17. Contato</h2>
+<h2>16. Contato</h2>
 <p>Pedidos de privacidade: <strong>philiptrip1975@gmail.com</strong></p>
 <p>Inclua «Política de privacidade» no assunto.</p>
 <h2>Complemento (20 de agosto de 2026)</h2>
 <ul>
 <li>O app exige iOS 18 ou posterior.</li>
-<li><strong>Não há sincronização CloudKit em tempo real</strong> do banco. O backup Pro na nuvem vai para o seu iCloud Drive.</li>
+<li>Com iCloud, o app pode sincronizar assinaturas, aparência, horário do lembrete e avatar pelo CloudKit. O backup Pro continua no iCloud Drive.</li>
 <li>Lembretes são notificações locais. O app agenda várias datas futuras e atualiza a fila ao abrir. Se você não abrir o app por muito tempo, os próximos avisos podem parar por causa do limite do sistema.</li>
 <li>Inclui Privacy Manifest e não faz rastreamento entre apps.</li>
 </ul>

@@ -1,5 +1,8 @@
 import SwiftData
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 struct SubscriptionFormView: View {
     @Environment(\.modelContext) private var modelContext
@@ -9,11 +12,14 @@ struct SubscriptionFormView: View {
 
     @State private var name: String
     @State private var priceText: String
+    @State private var isPriceFieldFocused = false
     @State private var billingCycle: BillingCycle
     @State private var categoryID: String
     @State private var billingDate: Date
     @State private var billingDateKind: BillingDateKind = .next
+    @State private var oneTimeDateKind: OneTimeDateKind = .charge
     @State private var notes: String
+    @State private var managementURLText: String
     @State private var iconName: String
     @State private var paymentMethodID: String
     @State private var customCycleValue: Int
@@ -25,6 +31,7 @@ struct SubscriptionFormView: View {
     @State private var trialEndDate: Date
     @State private var trialReminderDrafts: [ReminderDraft]
     @State private var isActive: Bool
+    @State private var doesRenew: Bool
     @State private var isPickingBrand: Bool
     @State private var showingCategoryForm = false
     @State private var showingPaywall = false
@@ -39,7 +46,7 @@ struct SubscriptionFormView: View {
     init(subscription: Subscription? = nil) {
         self.subscription = subscription
         _name = State(initialValue: subscription?.name ?? "")
-        _priceText = State(initialValue: subscription.map { NSDecimalNumber(decimal: $0.price).stringValue } ?? "")
+        _priceText = State(initialValue: subscription.map { Self.priceInputText(from: $0.price) } ?? "")
         _billingCycle = State(initialValue: subscription?.billingCycle ?? .monthly)
         _categoryID = State(initialValue: subscription?.categoryRaw ?? SubscriptionCategory.other.rawValue)
         if let subscription, let trialEnd = subscription.trialEndDate, subscription.isInTrial {
@@ -47,10 +54,17 @@ struct SubscriptionFormView: View {
             _billingDateKind = State(initialValue: .next)
         } else {
             _billingDate = State(initialValue: subscription?.upcomingBillingDate ?? .now)
+            if subscription == nil {
+                let storedKind = UserDefaults.standard.string(forKey: AppConfig.lastCreatedBillingDateKindKey) ?? ""
+                _billingDateKind = State(initialValue: BillingDateKind(rawValue: storedKind) ?? .next)
+            }
         }
         _notes = State(initialValue: subscription?.notes ?? "")
+        _managementURLText = State(initialValue: subscription?.managementURL ?? "")
         _iconName = State(initialValue: subscription?.iconName ?? "")
-        _paymentMethodID = State(initialValue: PaymentMethod.normalizedID(subscription?.paymentMethodRaw ?? PaymentMethod.creditCard.rawValue))
+        let fallbackPayment = UserDefaults.standard.string(forKey: AppConfig.lastCreatedPaymentMethodKey)
+            ?? PaymentMethod.applePay.rawValue
+        _paymentMethodID = State(initialValue: PaymentMethod.normalizedID(subscription?.paymentMethodRaw ?? fallbackPayment))
         _customCycleValue = State(initialValue: max(1, subscription?.customCycleValue ?? 1))
         _customCycleUnit = State(initialValue: subscription?.customCycleUnit ?? .month)
         _accentColorHex = State(initialValue: subscription?.accentColorHex ?? "")
@@ -70,6 +84,7 @@ struct SubscriptionFormView: View {
             return [ReminderDraft(days: 1)]
         }())
         _isActive = State(initialValue: subscription?.isActive ?? true)
+        _doesRenew = State(initialValue: subscription?.doesRenew ?? true)
         _isPickingBrand = State(initialValue: subscription == nil)
         let stored = subscription?.resolvedCurrencyCode
             ?? UserDefaults.standard.string(forKey: "currencyCode")
@@ -82,16 +97,16 @@ struct SubscriptionFormView: View {
     }
 
     private var parsedPrice: Decimal? {
-        let normalized = priceText
-            .replacingOccurrences(of: ",", with: ".")
-            .trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !normalized.isEmpty else { return nil }
-        return Decimal(string: normalized)
+        PriceInput.parse(priceText)
+    }
+
+    private static func priceInputText(from value: Decimal) -> String {
+        NSDecimalNumber(decimal: PriceInput.round(value)).stringValue
     }
 
     private var canSave: Bool {
         !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-            && (parsedPrice ?? 0) > 0
+            && PriceInput.isSavable(parsedPrice)
     }
 
     var body: some View {
@@ -128,7 +143,7 @@ struct SubscriptionFormView: View {
                     categoryID = created.identifier
                 }
             }
-            .sheet(isPresented: $showingPaywall, onDismiss: applyPendingBillingCurrencyIfPro) {
+            .fullScreenCover(isPresented: $showingPaywall, onDismiss: applyPendingBillingCurrencyIfPro) {
                 PaywallView()
             }
             .sheet(isPresented: $showingCurrencyPicker, onDismiss: presentPaywallIfBillingCurrencyLocked) {
@@ -155,18 +170,21 @@ struct SubscriptionFormView: View {
     private var amountRow: some View {
         HStack(spacing: 10) {
             Text("金额")
-            Spacer(minLength: 8)
-            TextField("0.00", text: $priceText)
-                .multilineTextAlignment(.trailing)
-                .monospacedDigit()
-                .frame(minWidth: 72, maxWidth: 140)
-                #if os(iOS)
-                .keyboardType(.decimalPad)
-                #endif
+            TrailingDecimalTextField(
+                text: $priceText,
+                placeholder: String(localized: "输入金额"),
+                isFocused: $isPriceFieldFocused
+            )
+            .frame(maxWidth: .infinity, minHeight: 40)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                isPriceFieldFocused = true
+            }
             Rectangle()
                 .fill(Color.primary.opacity(0.12))
                 .frame(width: 1, height: 22)
             Button {
+                isPriceFieldFocused = false
                 showingCurrencyPicker = true
             } label: {
                 HStack(spacing: 4) {
@@ -175,12 +193,14 @@ struct SubscriptionFormView: View {
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.tertiary)
                 }
+                .frame(minHeight: 40)
+                .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .foregroundStyle(.primary)
-            .accessibilityLabel("扣费货币")
+            .accessibilityLabel("付款货币")
         }
-        .padding(.vertical, 4)
+        .frame(minHeight: 40)
     }
 
     private var formContent: some View {
@@ -209,7 +229,18 @@ struct SubscriptionFormView: View {
                 .listRowBackground(serviceRowBackground)
             }
 
-            Section("基本信息") {
+            Section() {
+                Picker("分类", selection: $categoryID) {
+                    ForEach(categories, id: \.identifier) { item in
+                        Label(item.localizedName, systemImage: item.iconName).tag(item.identifier)
+                    }
+                    Label("新建分类", systemImage: proStore.isPro ? "plus" : "lock.fill")
+                        .tag(Self.newCategoryTag)
+                }
+                .onChange(of: categoryID) { oldValue, newValue in
+                    handleCategoryChange(from: oldValue, to: newValue)
+                }
+                
                 NavigationLink {
                     PaymentMethodPickerView(selection: $paymentMethodID)
                 } label: {
@@ -221,133 +252,111 @@ struct SubscriptionFormView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
-                Picker("分类", selection: $categoryID) {
-                    ForEach(categories, id: \.identifier) { item in
-                        Label(item.localizedName, systemImage: item.iconName).tag(item.identifier)
-                    }
-                    Label("新建分类", systemImage: proStore.isPro ? "plus" : "lock.fill")
-                        .tag(Self.newCategoryTag)
-                }
-                .onChange(of: categoryID) { oldValue, newValue in
-                    handleCategoryChange(from: oldValue, to: newValue)
-                }
             }
 
-            Section("费用") {
+            Section() {
                 amountRow
-                Picker("订阅周期", selection: $billingCycle) {
-                    ForEach(BillingCycle.allCases) { cycle in
-                        Text(cycle.title).tag(cycle)
-                    }
+                Picker("计费方式", selection: $doesRenew) {
+                    Text("自动续订").tag(true)
+                    Text("一次性").tag(false)
                 }
                 .pickerStyle(.menu)
-                if billingCycle == .custom {
-                    Stepper(value: $customCycleValue, in: 1...365) {
-                        Text("每隔 \(customCycleValue) \(customCycleUnit.title)")
+                .onChange(of: doesRenew) { _, renews in
+                    if !renews {
+                        billingDateKind = .next
+                        oneTimeDateKind = .charge
+                        isActive = true
                     }
-                    Picker("单位", selection: $customCycleUnit) {
-                        ForEach(CustomCycleUnit.allCases) { unit in
-                            Text(unit.title).tag(unit)
+                }
+                if doesRenew {
+                    Picker("订阅周期", selection: $billingCycle) {
+                        ForEach(BillingCycle.allCases) { cycle in
+                            Text(cycle.title).tag(cycle)
                         }
                     }
                     .pickerStyle(.menu)
+                    if billingCycle == .custom {
+                        Stepper(value: $customCycleValue, in: 1...365) {
+                            Text("每隔 \(customCycleValue) \(customCycleUnit.title)")
+                        }
+                        Picker("单位", selection: $customCycleUnit) {
+                            ForEach(CustomCycleUnit.allCases) { unit in
+                                Text(unit.title).tag(unit)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                    }
                 }
             }
 
             Section {
-                Toggle("订阅进行中", isOn: $isActive)
-                if isActive {
-                    if !hasTrial {
-                        Picker("扣费日期", selection: $billingDateKind) {
-                            ForEach(BillingDateKind.allCases) { kind in
-                                Text(kind.title).tag(kind)
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                        .onChange(of: billingDateKind) { oldKind, newKind in
-                            switch (oldKind, newKind) {
-                            case (.next, .last):
-                                billingDate = billingCycle.previousDate(
-                                    before: billingDate,
-                                    customValue: customCycleValue,
-                                    customUnit: customCycleUnit
-                                )
-                            case (.last, .next):
-                                billingDate = billingCycle.nextBillingDate(
-                                    afterLastCharge: billingDate,
-                                    customValue: customCycleValue,
-                                    customUnit: customCycleUnit
-                                )
-                            default:
-                                break
-                            }
+                billingDateRow
+                    .onChange(of: billingDate) { _, newValue in
+                        if hasTrial {
+                            billingDateKind = .next
+                            trialEndDate = newValue
                         }
                     }
-                    DatePicker(hasTrial ? String(localized: "下次扣费") : billingDateKind.title, selection: $billingDate, displayedComponents: .date)
-                        .onChange(of: billingDate) { _, newValue in
-                            if hasTrial {
-                                billingDateKind = .next
-                                trialEndDate = newValue
-                            }
+                    .onChange(of: billingDateKind) { oldKind, newKind in
+                        convertBillingDate(from: oldKind, to: newKind)
+                    }
+                Toggle("试用期", isOn: $hasTrial)
+                    .onChange(of: hasTrial) { _, enabled in
+                        guard enabled else { return }
+                        if trialReminderDrafts.isEmpty {
+                            trialReminderDrafts = [ReminderDraft(days: 1)]
                         }
-                    Toggle("试用期", isOn: $hasTrial)
-                        .onChange(of: hasTrial) { _, enabled in
-                            guard enabled else { return }
-                            if trialReminderDrafts.isEmpty {
-                                trialReminderDrafts = [ReminderDraft(days: 1)]
+                        billingDateKind = .next
+                        trialEndDate = billingDate
+                    }
+                if hasTrial {
+                    HStack {
+                        ForEach([7, 14, 30], id: \.self) { days in
+                            Button(trialPresetTitle(days)) {
+                                applyTrialPreset(days)
                             }
-                            billingDateKind = .next
-                            trialEndDate = billingDate
+                            .buttonStyle(.bordered)
+                            .controlSize(.small)
+                            .fontWeight(isTrialPreset(days) ? .semibold : .regular)
                         }
-                    if hasTrial {
-                        HStack {
-                            ForEach([7, 14, 30], id: \.self) { days in
-                                Button(trialPresetTitle(days)) {
-                                    applyTrialPreset(days)
+                    }
+                    Toggle("试用提醒", isOn: trialRemindersEnabledBinding)
+                    if !trialReminderDrafts.isEmpty {
+                        ForEach($trialReminderDrafts) { $draft in
+                            ReminderEditorRow(
+                                draft: $draft,
+                                canDelete: trialReminderDrafts.count > 1,
+                                onDelete: {
+                                    trialReminderDrafts.removeAll { $0.id == draft.id }
                                 }
-                                .buttonStyle(.bordered)
-                                .controlSize(.small)
-                                .fontWeight(isTrialPreset(days) ? .semibold : .regular)
-                            }
+                            )
                         }
-                        Toggle("试用提醒", isOn: trialRemindersEnabledBinding)
-                        if !trialReminderDrafts.isEmpty {
-                            ForEach($trialReminderDrafts) { $draft in
-                                ReminderEditorRow(
-                                    draft: $draft,
-                                    canDelete: trialReminderDrafts.count > 1,
-                                    onDelete: {
-                                        trialReminderDrafts.removeAll { $0.id == draft.id }
-                                    }
+                        if trialReminderDrafts.count < ReminderLead.maxCount {
+                            Button {
+                                addReminder($trialReminderDrafts)
+                            } label: {
+                                Label(
+                                    "添加更多提醒",
+                                    systemImage: trialReminderDrafts.count >= ReminderLead.freeCount && !proStore.isPro
+                                        ? "lock.fill"
+                                        : "plus"
                                 )
-                            }
-                            if trialReminderDrafts.count < ReminderLead.maxCount {
-                                Button {
-                                    addReminder($trialReminderDrafts)
-                                } label: {
-                                    Label(
-                                        "添加更多提醒",
-                                        systemImage: trialReminderDrafts.count >= ReminderLead.freeCount && !proStore.isPro
-                                            ? "lock.fill"
-                                            : "plus"
-                                    )
-                                }
                             }
                         }
                     }
                 }
             } header: {
-                Text("续费")
+                if doesRenew {
+                    Text("续订")
+                }
             } footer: {
-                if !isActive {
-                    Text("暂停后不再按期扣费，也不会发送提醒。")
-                } else if hasTrial {
-                    Text("试用持续到下次扣费日，当天开始按上面的费用扣款。")
+                if doesRenew, hasTrial {
+                    Text("试用持续到下次付款日，当天开始按上面的费用付款。")
                 }
             }
 
-            Section("提醒时间") {
-                Toggle("续费提醒", isOn: remindersEnabledBinding)
+            Section() {
+                Toggle(doesRenew ? "续订提醒" : "付款提醒", isOn: remindersEnabledBinding)
                 if !reminderDrafts.isEmpty {
                     ForEach($reminderDrafts) { $draft in
                         ReminderEditorRow(
@@ -373,16 +382,129 @@ struct SubscriptionFormView: View {
                 }
             }
 
+            Section {
+                TextField("https://", text: $managementURLText)
+                    .keyboardType(.URL)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+            } header: {
+                Text("管理页面")
+            } footer: {
+                Text("填写该服务的账号或订阅管理链接。点详情页的「管理订阅」会打开这个地址。")
+            }
+
             Section("备注") {
                 TextField("可选", text: $notes, axis: .vertical)
                     .lineLimit(3...6)
             }
         }
+        .tint(.primary)
         .navigationTitle(isEditing ? String(localized: "编辑订阅") : String(localized: "添加订阅"))
         .scrollDismissesKeyboard(.interactively)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("完成") {
+                    dismissKeyboard()
+                }
+            }
+        }
     }
 
     private static let newCategoryTag = "__new_category__"
+
+    private func dismissKeyboard() {
+        isPriceFieldFocused = false
+        #if canImport(UIKit)
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        #endif
+    }
+
+    private var billingDateRow: some View {
+        HStack {
+            billingDateTitle
+            Spacer(minLength: 8)
+            DatePicker(
+                "",
+                selection: $billingDate,
+                displayedComponents: .date
+            )
+            .labelsHidden()
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(billingDateTitleText)
+    }
+
+    private var billingDateTitleText: String {
+        if !doesRenew {
+            return oneTimeDateKind.title
+        }
+        return hasTrial ? String(localized: "付款日期") : billingDateKind.title
+    }
+
+    @ViewBuilder
+    private var billingDateTitle: some View {
+        if hasTrial, doesRenew {
+            Text("付款日期")
+        } else if !doesRenew {
+            Menu {
+                Picker("日期类型", selection: $oneTimeDateKind) {
+                    ForEach(OneTimeDateKind.allCases) { kind in
+                        Text(kind.title).tag(kind)
+                    }
+                }
+            } label: {
+                dateKindMenuLabel(oneTimeDateKind.title)
+            }
+            .menuStyle(.button)
+            .buttonStyle(.plain)
+            .accessibilityLabel(oneTimeDateKind.title)
+            .accessibilityHint("选择付款日期或到期日")
+        } else {
+            Menu {
+                Picker("付款日期", selection: $billingDateKind) {
+                    ForEach(BillingDateKind.allCases) { kind in
+                        Text(kind.title).tag(kind)
+                    }
+                }
+            } label: {
+                dateKindMenuLabel(billingDateKind.title)
+            }
+            .menuStyle(.button)
+            .buttonStyle(.plain)
+            .accessibilityLabel(billingDateKind.title)
+            .accessibilityHint("选择下次付款或上次付款")
+        }
+    }
+
+    private func dateKindMenuLabel(_ title: String) -> some View {
+        HStack(spacing: 4) {
+            Text(title)
+            Image(systemName: "chevron.up.chevron.down")
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(.secondary)
+        }
+        .foregroundStyle(.primary)
+    }
+
+    private func convertBillingDate(from oldKind: BillingDateKind, to newKind: BillingDateKind) {
+        switch (oldKind, newKind) {
+        case (.next, .last):
+            billingDate = billingCycle.previousDate(
+                before: billingDate,
+                customValue: customCycleValue,
+                customUnit: customCycleUnit
+            )
+        case (.last, .next):
+            billingDate = billingCycle.nextBillingDate(
+                afterLastCharge: billingDate,
+                customValue: customCycleValue,
+                customUnit: customCycleUnit
+            )
+        default:
+            break
+        }
+    }
 
     private var remindersEnabledBinding: Binding<Bool> {
         Binding(
@@ -479,14 +601,16 @@ struct SubscriptionFormView: View {
 
     private func applyTemplate(_ template: SubscriptionTemplate) {
         name = template.name
-        if template.suggestedPrice > 0 {
-            priceText = NSDecimalNumber(decimal: template.suggestedPrice).stringValue
-        } else if !isEditing {
+        if !isEditing {
             priceText = ""
         }
         billingCycle = template.cycle
         categoryID = template.category.rawValue
         iconName = template.isCustomDraft ? "" : template.iconName
+        if managementURLText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+           let suggested = SubscriptionManageLinks.suggested(iconName: iconName, name: template.name) {
+            managementURLText = suggested.absoluteString
+        }
         isPickingBrand = false
     }
 
@@ -499,7 +623,9 @@ struct SubscriptionFormView: View {
     }
 
     private func save() {
-        guard let price = parsedPrice else { return }
+        guard let parsed = parsedPrice else { return }
+        let price = PriceInput.round(parsed)
+        guard PriceInput.isSavable(price) else { return }
         let trimmedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let resolvedIcon = iconName.isEmpty ? selectedCategory.iconName : iconName
         let item: Subscription
@@ -511,11 +637,13 @@ struct SubscriptionFormView: View {
             subscription.billingCycle = billingCycle
             subscription.categoryRaw = categoryID
             subscription.notes = notes
+            subscription.managementURL = managementURLText.trimmingCharacters(in: .whitespacesAndNewlines)
             subscription.iconName = resolvedIcon
             subscription.paymentMethodRaw = paymentMethodID
             subscription.customCycleValue = max(1, customCycleValue)
             subscription.customCycleUnit = customCycleUnit
             subscription.accentColorHex = accentColorHex
+            subscription.doesRenew = doesRenew
             subscription.applyReminderOffsets(reminderDrafts.map(\.days))
             if hasTrial {
                 let chargeDate = Calendar.current.startOfDay(for: billingDate)
@@ -546,11 +674,17 @@ struct SubscriptionFormView: View {
                 accentColorHex: accentColorHex,
                 reminderOffsets: reminderDrafts.map(\.days),
                 trialEndDate: hasTrial ? chargeDate : nil,
-                trialReminderOffsets: hasTrial ? trialReminderDrafts.map(\.days) : []
+                trialReminderOffsets: hasTrial ? trialReminderDrafts.map(\.days) : [],
+                managementURL: managementURLText.trimmingCharacters(in: .whitespacesAndNewlines),
+                doesRenew: doesRenew
             )
             item.categoryRaw = categoryID
             item.paymentMethodRaw = paymentMethodID
             modelContext.insert(item)
+            UserDefaults.standard.set(paymentMethodID, forKey: AppConfig.lastCreatedPaymentMethodKey)
+            if doesRenew {
+                UserDefaults.standard.set(billingDateKind.rawValue, forKey: AppConfig.lastCreatedBillingDateKindKey)
+            }
         }
 
         Task {
@@ -564,11 +698,12 @@ struct SubscriptionFormView: View {
     }
 
     private var resolvedNextBillingDate: Date {
+        if !doesRenew { return billingDate }
         switch billingDateKind {
         case .next:
-            billingDate
+            return billingDate
         case .last:
-            billingCycle.nextBillingDate(
+            return billingCycle.nextBillingDate(
                 afterLastCharge: billingDate,
                 customValue: customCycleValue,
                 customUnit: customCycleUnit
@@ -626,6 +761,157 @@ private struct ReminderEditorRow: View {
         }
     }
 }
+
+private enum PriceInput {
+    static let maxValue = Decimal(string: "999999999.99")!
+    static let maxFractionDigits = 2
+    static let maxIntegerDigits = 9
+
+    static func parse(_ raw: String) -> Decimal? {
+        let text = raw
+            .replacingOccurrences(of: ",", with: ".")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !text.isEmpty, text != "." else { return nil }
+        return Decimal(string: text)
+    }
+
+    static func round(_ value: Decimal) -> Decimal {
+        var rounded = Decimal()
+        var source = value
+        NSDecimalRound(&rounded, &source, maxFractionDigits, .plain)
+        return rounded
+    }
+
+    static func isSavable(_ value: Decimal?) -> Bool {
+        guard let value else { return false }
+        return value > 0 && value <= maxValue
+    }
+
+    static func isAllowed(_ raw: String) -> Bool {
+        if raw.isEmpty { return true }
+        var sawSeparator = false
+        var integerDigits = 0
+        var fractionDigits = 0
+        for character in raw {
+            if character >= "0" && character <= "9" {
+                if sawSeparator {
+                    fractionDigits += 1
+                    if fractionDigits > maxFractionDigits { return false }
+                } else {
+                    integerDigits += 1
+                    if integerDigits > maxIntegerDigits { return false }
+                }
+            } else if character == "." || character == "," {
+                guard !sawSeparator else { return false }
+                sawSeparator = true
+            } else {
+                return false
+            }
+        }
+        if let value = parse(raw), value > maxValue { return false }
+        return true
+    }
+}
+
+#if canImport(UIKit)
+private struct TrailingDecimalTextField: UIViewRepresentable {
+    @Binding var text: String
+    var placeholder: String
+    @Binding var isFocused: Bool
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(text: $text, isFocused: $isFocused)
+    }
+
+    func makeUIView(context: Context) -> UITextField {
+        let field = UITextField()
+        field.placeholder = placeholder
+        field.keyboardType = .decimalPad
+        field.textAlignment = .right
+        field.adjustsFontForContentSizeCategory = true
+        let size = UIFont.preferredFont(forTextStyle: .body).pointSize
+        field.font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: .regular)
+        field.delegate = context.coordinator
+        field.addTarget(context.coordinator, action: #selector(Coordinator.changed(_:)), for: .editingChanged)
+        field.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        field.inputAccessoryView = context.coordinator.makeAccessoryView()
+        return field
+    }
+
+    func updateUIView(_ field: UITextField, context: Context) {
+        context.coordinator.text = $text
+        context.coordinator.isFocused = $isFocused
+        if field.text != text {
+            field.text = text
+        }
+        if field.attributedPlaceholder?.string != placeholder {
+            field.placeholder = placeholder
+        }
+        if isFocused {
+            if !field.isFirstResponder {
+                field.becomeFirstResponder()
+            }
+        } else if field.isFirstResponder {
+            field.resignFirstResponder()
+        }
+    }
+
+    final class Coordinator: NSObject, UITextFieldDelegate {
+        var text: Binding<String>
+        var isFocused: Binding<Bool>
+
+        init(text: Binding<String>, isFocused: Binding<Bool>) {
+            self.text = text
+            self.isFocused = isFocused
+        }
+
+        func makeAccessoryView() -> UIToolbar {
+            let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
+            toolbar.autoresizingMask = [.flexibleWidth]
+            let done = UIBarButtonItem(
+                title: String(localized: "完成"),
+                style: .done,
+                target: self,
+                action: #selector(doneTapped)
+            )
+            toolbar.items = [UIBarButtonItem.flexibleSpace(), done]
+            return toolbar
+        }
+
+        @objc func doneTapped() {
+            isFocused.wrappedValue = false
+        }
+
+        @objc func changed(_ field: UITextField) {
+            let next = field.text ?? ""
+            guard text.wrappedValue != next else { return }
+            text.wrappedValue = next
+        }
+
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let current = textField.text ?? ""
+            guard let swiftRange = Range(range, in: current) else { return false }
+            return PriceInput.isAllowed(current.replacingCharacters(in: swiftRange, with: string))
+        }
+
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            if !isFocused.wrappedValue {
+                isFocused.wrappedValue = true
+            }
+            DispatchQueue.main.async {
+                let end = textField.endOfDocument
+                textField.selectedTextRange = textField.textRange(from: end, to: end)
+            }
+        }
+
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            if isFocused.wrappedValue {
+                isFocused.wrappedValue = false
+            }
+        }
+    }
+}
+#endif
 
 #Preview {
     SubscriptionFormView()

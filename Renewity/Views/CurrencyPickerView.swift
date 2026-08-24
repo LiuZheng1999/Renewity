@@ -3,6 +3,7 @@ import SwiftUI
 struct CurrencyPickerView: View {
     @Binding var currencyCode: String
     var onSelect: ((String) -> Void)? = nil
+    var excludedCodes: Set<String> = []
     @Environment(\.dismiss) private var dismiss
     @State private var query = ""
 
@@ -67,10 +68,13 @@ struct CurrencyPickerView: View {
                 if currencyCode == code {
                     Image(systemName: "checkmark")
                         .fontWeight(.semibold)
-                        .foregroundStyle(Color.accentColor)
+                        .foregroundStyle(.primary)
                 }
             }
         }
+        .buttonStyle(.plain)
+        .foregroundStyle(.primary)
+        .disabled(excludedCodes.contains(code.uppercased()))
     }
 
     private func matches(_ code: String, name: String) -> Bool {

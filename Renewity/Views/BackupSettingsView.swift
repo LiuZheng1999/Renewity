@@ -135,7 +135,7 @@ struct BackupSettingsView: View {
         } message: {
             Text("将用 iCloud 备份覆盖现有订阅、自定义分类和自定义支付方式，此操作无法撤销。")
         }
-        .sheet(isPresented: $showingPaywall) {
+        .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView()
         }
     }
@@ -226,18 +226,28 @@ struct BackupSettingsView: View {
         for method in paymentMethods where !method.isBuiltIn {
             modelContext.delete(method)
         }
+        try? modelContext.save()
 
+        let currentCategories = (try? modelContext.fetch(FetchDescriptor<AppCategory>())) ?? []
         for item in payload.categories {
-            modelContext.insert(
-                AppCategory(
-                    identifier: item.identifier,
-                    name: item.name,
-                    iconName: item.iconName,
-                    colorHex: item.colorHex,
-                    isBuiltIn: false,
-                    sortOrder: item.sortOrder
+            if let existing = currentCategories.first(where: { $0.identifier == item.identifier }) {
+                existing.name = item.name
+                existing.iconName = item.iconName
+                existing.colorHex = item.colorHex
+                existing.sortOrder = item.sortOrder
+                existing.isBuiltIn = false
+            } else {
+                modelContext.insert(
+                    AppCategory(
+                        identifier: item.identifier,
+                        name: item.name,
+                        iconName: item.iconName,
+                        colorHex: item.colorHex,
+                        isBuiltIn: false,
+                        sortOrder: item.sortOrder
+                    )
                 )
-            )
+            }
         }
 
         for item in payload.paymentMethods ?? [] {
@@ -254,7 +264,7 @@ struct BackupSettingsView: View {
         }
 
         for item in payload.subscriptions {
-            let paymentID = PaymentMethod.normalizedID(item.paymentMethodRaw ?? PaymentMethod.creditCard.rawValue)
+            let paymentID = PaymentMethod.normalizedID(item.paymentMethodRaw ?? PaymentMethod.applePay.rawValue)
             let subscription = Subscription(
                 name: item.name,
                 price: Decimal(item.price),
@@ -279,15 +289,48 @@ struct BackupSettingsView: View {
                 trialEndDate: item.trialEndDate,
                 trialReminderOffsets: item.trialReminderOffsetsRaw.map {
                     Subscription.decodeStoredOffsets($0)
-                }
+                },
+                managementURL: item.managementURL ?? "",
+                doesRenew: item.doesRenew ?? true
             )
             subscription.id = item.id
             subscription.categoryRaw = item.categoryRaw
             subscription.paymentMethodRaw = paymentID
+            if let managementURL = item.managementURL {
+                subscription.managementURL = managementURL
+            } else if let suggested = SubscriptionManageLinks.suggested(iconName: item.iconName, name: item.name) {
+                subscription.managementURL = suggested.absoluteString
+            }
             modelContext.insert(subscription)
         }
 
         currencyCode = payload.currencyCode
+        if let appearanceMode = payload.appearanceMode {
+            UserDefaults.standard.set(appearanceMode, forKey: "appearanceMode")
+        }
+        if let remindersEnabled = payload.remindersEnabled {
+            UserDefaults.standard.set(remindersEnabled, forKey: "remindersEnabled")
+        }
+        if let reminderHour = payload.reminderHour {
+            UserDefaults.standard.set(min(max(reminderHour, 0), 23), forKey: "reminderHour")
+        }
+        if let convert = payload.heroConvertToOtherCurrency {
+            UserDefaults.standard.set(convert, forKey: "heroConvertToOtherCurrency")
+        }
+        if let conversionCode = payload.heroConversionCurrencyCode {
+            UserDefaults.standard.set(conversionCode, forKey: "heroConversionCurrencyCode")
+        }
+        if let chosen = payload.heroConversionCurrencyChosen {
+            UserDefaults.standard.set(chosen, forKey: AppConfig.conversionCurrencyChosenKey)
+        } else if let conversionCode = payload.heroConversionCurrencyCode {
+            UserDefaults.standard.set(
+                AppConfig.selectedCurrencyCode(from: conversionCode) != nil,
+                forKey: AppConfig.conversionCurrencyChosenKey
+            )
+        }
+        if let avatarJPEG = payload.avatarJPEG {
+            ProfileAvatarStore.saveRawJPEG(avatarJPEG)
+        }
         ReminderService.rescheduleAll(
             (try? modelContext.fetch(FetchDescriptor<Subscription>())) ?? []
         )
@@ -330,9 +373,16 @@ nonisolated struct BackupPayload: Codable, Sendable {
     var subscriptions: [BackupSubscription]
     var categories: [BackupCategory]
     var paymentMethods: [BackupPaymentMethod]?
+    var appearanceMode: String?
+    var remindersEnabled: Bool?
+    var reminderHour: Int?
+    var heroConvertToOtherCurrency: Bool?
+    var heroConversionCurrencyCode: String?
+    var heroConversionCurrencyChosen: Bool?
+    var avatarJPEG: Data?
 
     static let empty = BackupPayload(
-        version: 1,
+        version: 2,
         exportedAt: .now,
         currencyCode: "CNY",
         subscriptions: [],
@@ -360,6 +410,8 @@ nonisolated struct BackupSubscription: Codable, Sendable {
     var trialEndDate: Date?
     var trialReminderOffsetsRaw: String?
     var currencyCode: String?
+    var managementURL: String?
+    var doesRenew: Bool?
 
     @MainActor
     init(_ subscription: Subscription) {
@@ -383,6 +435,8 @@ nonisolated struct BackupSubscription: Codable, Sendable {
             ? nil
             : subscription.trialReminderOffsets.map(String.init).joined(separator: ",")
         currencyCode = subscription.resolvedCurrencyCode
+        managementURL = subscription.managementURL.isEmpty ? nil : subscription.managementURL
+        doesRenew = subscription.doesRenew
     }
 }
 
@@ -457,12 +511,19 @@ nonisolated enum CloudBackupService {
         paymentMethods: [AppPaymentMethod]
     ) -> BackupPayload {
         BackupPayload(
-            version: 1,
+            version: 2,
             exportedAt: .now,
             currencyCode: currencyCode,
             subscriptions: subscriptions.map { BackupSubscription($0) },
             categories: categories.filter { !$0.isBuiltIn }.map { BackupCategory($0) },
-            paymentMethods: paymentMethods.filter { !$0.isBuiltIn }.map { BackupPaymentMethod($0) }
+            paymentMethods: paymentMethods.filter { !$0.isBuiltIn }.map { BackupPaymentMethod($0) },
+            appearanceMode: UserDefaults.standard.string(forKey: "appearanceMode"),
+            remindersEnabled: UserDefaults.standard.object(forKey: "remindersEnabled") as? Bool,
+            reminderHour: UserDefaults.standard.object(forKey: "reminderHour") as? Int,
+            heroConvertToOtherCurrency: UserDefaults.standard.object(forKey: "heroConvertToOtherCurrency") as? Bool,
+            heroConversionCurrencyCode: UserDefaults.standard.string(forKey: "heroConversionCurrencyCode"),
+            heroConversionCurrencyChosen: UserDefaults.standard.object(forKey: AppConfig.conversionCurrencyChosenKey) as? Bool,
+            avatarJPEG: ProfileAvatarStore.loadData()
         )
     }
 

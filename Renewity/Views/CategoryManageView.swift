@@ -9,66 +9,58 @@ struct CategoryManageView: View {
     @State private var showingAdd = false
     @State private var editingCategory: AppCategory?
     @State private var showingPaywall = false
+    @State private var editMode: EditMode = .inactive
     @Environment(ProStore.self) private var proStore
 
-    private var builtIn: [AppCategory] {
-        categories.filter(\.isBuiltIn)
+    private var canDelete: Bool {
+        categories.count > 1
     }
 
-    private var custom: [AppCategory] {
-        categories.filter { !$0.isBuiltIn }
+    private var isEditing: Bool {
+        editMode.isEditing
     }
 
     var body: some View {
         List {
             Section {
-                ForEach(builtIn) { category in
+                ForEach(categories) { category in
                     categoryRow(category)
-                }
-            } header: {
-                Text("系统分类")
-            } footer: {
-                Text("系统分类不能删除，可在添加订阅时直接使用。")
-            }
-
-            Section {
-                if custom.isEmpty {
-                    Text("还没有自定义分类")
-                        .foregroundStyle(.secondary)
-                } else {
-                    ForEach(custom) { category in
-                        Button {
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            guard !isEditing else { return }
                             editingCategory = category
-                        } label: {
-                            categoryRow(category)
                         }
-                    }
-                    .onDelete(perform: deleteCustom)
+                        .deleteDisabled(!canDelete)
                 }
-            } header: {
-                Text("我的分类")
+                .onMove(perform: move)
+                .onDelete(perform: delete)
+            } footer: {
+                Text("轻点可编辑。点「编辑」后可拖动排序或删除。至少保留一个分类；删除后，该分类下的订阅会改到剩余分类。")
             }
         }
+        .environment(\.editMode, $editMode)
         .navigationTitle("分类")
         .toolbarTitleDisplayMode(.inlineLarge)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button {
+                Button("新建", systemImage: "plus") {
                     if proStore.isPro {
                         showingAdd = true
                     } else {
                         showingPaywall = true
                     }
-                } label: {
-                    Label("新建分类", systemImage: "plus")
+                }
+            }
+            ToolbarItem(placement: .primaryAction) {
+                Button(isEditing ? "完成" : "编辑") {
+                    withAnimation {
+                        editMode = isEditing ? .inactive : .active
+                    }
                 }
             }
         }
         .sheet(isPresented: $showingAdd) {
             CategoryFormView()
-        }
-        .sheet(isPresented: $showingPaywall) {
-            PaywallView()
         }
         .sheet(isPresented: Binding(
             get: { editingCategory != nil },
@@ -77,6 +69,9 @@ struct CategoryManageView: View {
             if let editingCategory {
                 CategoryFormView(category: editingCategory)
             }
+        }
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
         }
     }
 
@@ -100,14 +95,27 @@ struct CategoryManageView: View {
         subscriptions.filter { $0.categoryRaw == category.identifier }.count
     }
 
-    private func deleteCustom(at offsets: IndexSet) {
-        let otherID = SubscriptionCategory.other.rawValue
-        for index in offsets {
-            let category = custom[index]
-            for subscription in subscriptions where subscription.categoryRaw == category.identifier {
-                subscription.categoryRaw = otherID
-            }
-            modelContext.delete(category)
+    private func move(from source: IndexSet, to destination: Int) {
+        var ordered = Array(categories)
+        ordered.move(fromOffsets: source, toOffset: destination)
+        for (index, item) in ordered.enumerated() {
+            item.sortOrder = index
+        }
+        try? modelContext.save()
+    }
+
+    private func delete(at offsets: IndexSet) {
+        guard canDelete else { return }
+        var remaining = categories
+        for category in offsets.map({ categories[$0] }) {
+            guard remaining.count > 1 else { break }
+            AppCategory.delete(
+                category,
+                subscriptions: subscriptions,
+                remaining: remaining,
+                in: modelContext
+            )
+            remaining.removeAll { $0.identifier == category.identifier }
         }
     }
 }

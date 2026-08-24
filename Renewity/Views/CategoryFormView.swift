@@ -5,6 +5,7 @@ struct CategoryFormView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query(sort: \AppCategory.sortOrder) private var categories: [AppCategory]
+    @Query private var subscriptions: [Subscription]
 
     private let category: AppCategory?
     var onSave: ((AppCategory) -> Void)?
@@ -12,11 +13,12 @@ struct CategoryFormView: View {
     @State private var name: String
     @State private var iconName: String
     @State private var colorHex: String
+    @State private var confirmDelete = false
 
     init(category: AppCategory? = nil, onSave: ((AppCategory) -> Void)? = nil) {
         self.category = category
         self.onSave = onSave
-        _name = State(initialValue: category?.name ?? "")
+        _name = State(initialValue: category?.localizedName ?? "")
         _iconName = State(initialValue: category?.iconName ?? "tag.fill")
         _colorHex = State(initialValue: category?.colorHex ?? CategoryColorPreset.indigo.hex)
     }
@@ -87,6 +89,16 @@ struct CategoryFormView: View {
                     }
                     .padding(.vertical, 4)
                 }
+
+                if category != nil, categories.count > 1 {
+                    Section {
+                        Button("删除分类", role: .destructive) {
+                            confirmDelete = true
+                        }
+                    } footer: {
+                        Text("删除后，该分类下的订阅会改到剩余分类。")
+                    }
+                }
             }
             .navigationTitle(category == nil ? String(localized: "新建分类") : String(localized: "编辑分类"))
             .toolbarTitleDisplayMode(.inline)
@@ -100,6 +112,13 @@ struct CategoryFormView: View {
                         .fontWeight(.semibold)
                 }
             }
+            .confirmationDialog("删除分类", isPresented: $confirmDelete, titleVisibility: .visible) {
+                Button("删除", role: .destructive) {
+                    deleteCategory()
+                }
+            } message: {
+                Text("删除后无法恢复。该分类下的订阅会改到剩余分类。")
+            }
         }
     }
 
@@ -111,6 +130,7 @@ struct CategoryFormView: View {
             category.name = trimmed
             category.iconName = iconName
             category.colorHex = colorHex
+            category.isBuiltIn = false
             item = category
         } else {
             let nextOrder = (categories.map(\.sortOrder).max() ?? 0) + 1
@@ -125,6 +145,17 @@ struct CategoryFormView: View {
         }
 
         onSave?(item)
+        dismiss()
+    }
+
+    private func deleteCategory() {
+        guard let category else { return }
+        AppCategory.delete(
+            category,
+            subscriptions: subscriptions,
+            remaining: categories,
+            in: modelContext
+        )
         dismiss()
     }
 }

@@ -147,8 +147,22 @@ enum BillingDateKind: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .next: String(localized: "下次扣费")
-        case .last: String(localized: "最近扣费")
+        case .next: String(localized: "下次付款")
+        case .last: String(localized: "上次付款")
+        }
+    }
+}
+
+enum OneTimeDateKind: String, CaseIterable, Identifiable {
+    case charge
+    case expiry
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .charge: String(localized: "付款日期")
+        case .expiry: String(localized: "到期日")
         }
     }
 }
@@ -239,6 +253,13 @@ struct CategoryTotal: Identifiable {
     let amount: Decimal
 }
 
+struct CurrencyMonthlySpend: Identifiable {
+    var id: String { code }
+    let code: String
+    let amount: Decimal
+    let count: Int
+}
+
 struct CurrencyConversionResult {
     var amount: Decimal
     var convertedCount: Int
@@ -293,7 +314,7 @@ nonisolated enum PaymentMethod: String, Codable, CaseIterable, Identifiable, Sen
         case "alipay", "wechatPay", "unionPay", "unionpay":
             other.rawValue
         default:
-            raw.isEmpty ? creditCard.rawValue : raw
+            raw.isEmpty ? applePay.rawValue : raw
         }
     }
 }
@@ -310,7 +331,7 @@ final class Subscription {
     var notes: String = ""
     var isActive: Bool = true
     var iconName: String = "creditcard.fill"
-    var paymentMethodRaw: String = PaymentMethod.creditCard.rawValue
+    var paymentMethodRaw: String = PaymentMethod.applePay.rawValue
     var customCycleValue: Int = 1
     var customCycleUnitRaw: String = CustomCycleUnit.month.rawValue
     var accentColorHex: String = ""
@@ -318,7 +339,9 @@ final class Subscription {
     var reminderOffsetsRaw: String = ""
     var trialEndDate: Date? = nil
     var trialReminderOffsetsRaw: String = ""
+    var managementURL: String = ""
     var createdAt: Date = Date()
+    var doesRenew: Bool = true
 
     var billingCycle: BillingCycle {
         get { BillingCycle(rawValue: billingCycleRaw) ?? .monthly }
@@ -359,6 +382,7 @@ final class Subscription {
     }
 
     var monthlyCost: Decimal {
+        guard doesRenew else { return 0 }
         let count = Decimal(max(1, customCycleValue))
         switch billingCycle {
         case .weekly:
@@ -392,6 +416,9 @@ final class Subscription {
     }
 
     var cycleDisplayTitle: String {
+        if !doesRenew {
+            return String(localized: "一次性")
+        }
         if billingCycle == .custom {
             return String(localized: "每 \(max(1, customCycleValue)) \(customCycleUnit.title)")
         }
@@ -401,6 +428,9 @@ final class Subscription {
     var upcomingBillingDate: Date {
         if isInTrial, let trialEndDate {
             return Calendar.current.startOfDay(for: trialEndDate)
+        }
+        if !doesRenew {
+            return Calendar.current.startOfDay(for: nextBillingDate)
         }
         return billingCycle.upcomingDate(
             from: nextBillingDate,
@@ -419,6 +449,10 @@ final class Subscription {
         )
     }
 
+    var isCompletedOneTime: Bool {
+        !doesRenew && !isInTrial && daysUntil(upcomingBillingDate) < 0
+    }
+
     func chargeDates(inMonthOf month: Date, calendar: Calendar = .current) -> [Date] {
         guard isActive else { return [] }
         guard let interval = calendar.dateInterval(of: .month, for: month) else { return [] }
@@ -426,6 +460,14 @@ final class Subscription {
         let monthEnd = interval.end
         let earliest = trialEndDate.map { calendar.startOfDay(for: $0) }
         let anchor = calendar.startOfDay(for: upcomingBillingDate)
+
+        if !doesRenew {
+            if let earliest, anchor < earliest { return [] }
+            if anchor >= monthStart, anchor < monthEnd {
+                return [anchor]
+            }
+            return []
+        }
 
         var dates: [Date] = []
         var seen = Set<TimeInterval>()
@@ -461,6 +503,42 @@ final class Subscription {
         return dates.sorted()
     }
 
+    func chargeDates(from start: Date, before end: Date, calendar: Calendar = .current) -> [Date] {
+        guard isActive else { return [] }
+        let rangeStart = calendar.startOfDay(for: start)
+        let rangeEnd = calendar.startOfDay(for: end)
+        guard rangeStart < rangeEnd else { return [] }
+        let earliest = trialEndDate.map { calendar.startOfDay(for: $0) }
+        var date = calendar.startOfDay(for: upcomingBillingDate)
+
+        if !doesRenew {
+            if let earliest, date < earliest { return [] }
+            if date >= rangeStart, date < rangeEnd {
+                return [date]
+            }
+            return []
+        }
+
+        for _ in 0..<400 {
+            if date >= rangeStart { break }
+            let next = advancedBillingDate(from: date, steps: 1, calendar: calendar)
+            if next <= date { return [] }
+            date = next
+        }
+
+        var dates: [Date] = []
+        for _ in 0..<400 {
+            if date >= rangeEnd { break }
+            if earliest.map({ $0 <= date }) ?? true {
+                dates.append(date)
+            }
+            let next = advancedBillingDate(from: date, steps: 1, calendar: calendar)
+            if next <= date { break }
+            date = next
+        }
+        return dates
+    }
+
     var daysUntilNextBilling: Int {
         daysUntil(upcomingBillingDate)
     }
@@ -470,7 +548,7 @@ final class Subscription {
         return Calendar.current.startOfDay(for: trialEndDate) >= Calendar.current.startOfDay(for: Date())
     }
 
-    /// 试用尚未到期（不含到期当天）。到期当日起按已开始扣费计入开支。
+    /// 试用尚未到期（不含到期当天）。到期当日起按已开始付款计入开支。
     var isAwaitingFirstCharge: Bool {
         guard let trialEndDate else { return false }
         return Calendar.current.startOfDay(for: trialEndDate) > Calendar.current.startOfDay(for: Date())
@@ -562,14 +640,16 @@ final class Subscription {
         notes: String = "",
         isActive: Bool = true,
         iconName: String = "creditcard.fill",
-        paymentMethod: PaymentMethod = .creditCard,
+        paymentMethod: PaymentMethod = .applePay,
         customCycleValue: Int = 1,
         customCycleUnit: CustomCycleUnit = .month,
         accentColorHex: String = "",
         remindBeforeBilling: Bool = false,
         reminderOffsets: [Int]? = nil,
         trialEndDate: Date? = nil,
-        trialReminderOffsets: [Int]? = nil
+        trialReminderOffsets: [Int]? = nil,
+        managementURL: String = "",
+        doesRenew: Bool = true
     ) {
         self.id = UUID()
         self.name = name
@@ -596,6 +676,8 @@ final class Subscription {
         if trialEndDate != nil {
             applyTrialReminderOffsets(trialReminderOffsets ?? [1])
         }
+        self.managementURL = managementURL
+        self.doesRenew = doesRenew
     }
 }
 
@@ -660,12 +742,27 @@ extension [Subscription] {
     }
 
     var currentlyPaying: [Subscription] {
-        active.filter { !$0.isAwaitingFirstCharge }
+        active.filter { $0.doesRenew && !$0.isAwaitingFirstCharge }
     }
 
     func needsCurrencyConversion(to displayCode: String) -> Bool {
         let display = displayCode.uppercased()
         return currentlyPaying.contains { $0.resolvedCurrencyCode != display }
+    }
+
+    func monthlySpendByCurrency() -> [CurrencyMonthlySpend] {
+        Dictionary(grouping: currentlyPaying, by: \.resolvedCurrencyCode)
+            .map { code, items in
+                CurrencyMonthlySpend(
+                    code: code,
+                    amount: items.reduce(0) { $0 + $1.monthlyCost },
+                    count: items.count
+                )
+            }
+            .sorted {
+                if $0.amount == $1.amount { return $0.code < $1.code }
+                return $0.amount > $1.amount
+            }
     }
 
     func convertedMonthlySpend(to displayCode: String, using rates: ExchangeRateStore) -> CurrencyConversionResult {
@@ -688,9 +785,33 @@ extension [Subscription] {
         )
     }
 
+    func convertedRemainingYearSpend(
+        to displayCode: String,
+        using rates: ExchangeRateStore,
+        now: Date = .now,
+        calendar: Calendar = .current
+    ) -> CurrencyConversionResult {
+        let year = calendar.component(.year, from: now)
+        guard let end = calendar.date(from: DateComponents(year: year + 1, month: 1, day: 1)) else {
+            return CurrencyConversionResult(amount: 0, convertedCount: 0, failedCount: 0)
+        }
+        let start = calendar.startOfDay(for: now)
+        return reduce(into: CurrencyConversionResult(amount: 0, convertedCount: 0, failedCount: 0)) { result, item in
+            guard item.doesRenew else { return }
+            let count = item.chargeDates(from: start, before: end, calendar: calendar).count
+            guard count > 0 else { return }
+            if let unit = rates.convert(item.price, from: item.resolvedCurrencyCode, to: displayCode) {
+                result.amount += unit * Decimal(count)
+                result.convertedCount += 1
+            } else {
+                result.failedCount += 1
+            }
+        }
+    }
+
     func upcoming(withinDays days: Int) -> [Subscription] {
         active
-            .filter { $0.daysUntilNextEvent <= days }
+            .filter { (0...days).contains($0.daysUntilNextEvent) }
             .sorted { $0.nextRelevantDate < $1.nextRelevantDate }
     }
 

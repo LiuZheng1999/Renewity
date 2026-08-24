@@ -28,9 +28,9 @@ enum AppConfig {
         URL(string: "https://x.com/\(xUsername)")!
     }
 
-    static let monthlyProductID = "Maoxia-Xiang.SubscriptionTracker.pro.monthly"
-    static let yearlyProductID = "Maoxia-Xiang.SubscriptionTracker.pro.yearly"
-    static let lifetimeProductID = "Maoxia-Xiang.SubscriptionTracker.pro.lifetime"
+    static let monthlyProductID = "Renewity_Monthly"
+    static let yearlyProductID = "Renewity_Yearly"
+    static let lifetimeProductID = "Renewity_Premium"
 
     static var productIDs: Set<String> {
         [monthlyProductID, yearlyProductID, lifetimeProductID]
@@ -52,7 +52,7 @@ enum AppConfig {
     static var versionText: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
         let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
-        return String(localized: "\(version)（\(build)）")
+        return String(localized: "app.versionWithBuild", defaultValue: "\(version)（\(build)）")
     }
 
     static var supportedCurrencies: [(code: String, name: String)] {
@@ -115,8 +115,11 @@ enum AppConfig {
         "ZAL", "ZMK", "ZRN", "ZRZ", "ZWC", "ZWD", "ZWN", "ZWR", "ZWL",
     ]
 
+    static let lastCreatedPaymentMethodKey = "lastCreatedPaymentMethodID"
+    static let lastCreatedBillingDateKindKey = "lastCreatedBillingDateKind"
     static let currencyStorageKey = "currencyCode"
     static let conversionCurrencyStorageKey = "heroConversionCurrencyCode"
+    static let conversionCurrencyChosenKey = "heroConversionCurrencyChosen"
 
     static var localeCurrencyCode: String {
         if let regionCode = Locale.current.region?.identifier {
@@ -137,14 +140,20 @@ enum AppConfig {
         return code
     }
 
+    static func selectedCurrencyCode(from raw: String?) -> String? {
+        normalizedSelectableCurrency(raw)
+    }
+
     static func seedCurrencyDefaultsIfNeeded() {
         let defaults = UserDefaults.standard
         if defaults.object(forKey: currencyStorageKey) == nil {
             defaults.set(localeCurrencyCode, forKey: currencyStorageKey)
         }
-        if defaults.object(forKey: conversionCurrencyStorageKey) == nil {
-            let display = defaults.string(forKey: currencyStorageKey) ?? localeCurrencyCode
-            defaults.set(display == "CNY" ? "USD" : "CNY", forKey: conversionCurrencyStorageKey)
+        // Second display currency must be chosen by the user (Pro).
+        // Clear the previous automatic CNY/USD seed once.
+        if defaults.object(forKey: conversionCurrencyChosenKey) == nil {
+            defaults.set("", forKey: conversionCurrencyStorageKey)
+            defaults.set(false, forKey: conversionCurrencyChosenKey)
         }
     }
 }

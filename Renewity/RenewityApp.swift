@@ -11,16 +11,30 @@ struct RenewityApp: App {
 
     init() {
         AppConfig.seedCurrencyDefaultsIfNeeded()
-        let schema = Schema([Subscription.self, AppCategory.self, AppPaymentMethod.self])
-        let configuration = ModelConfiguration(
+        let schema = Schema([
+            Subscription.self,
+            AppCategory.self,
+            AppPaymentMethod.self,
+            AppPreferences.self,
+        ])
+        let cloud = ModelConfiguration(
             schema: schema,
             isStoredInMemoryOnly: false,
-            cloudKitDatabase: .none
+            cloudKitDatabase: .automatic
         )
         do {
-            container = try ModelContainer(for: schema, configurations: [configuration])
+            container = try ModelContainer(for: schema, configurations: [cloud])
         } catch {
-            fatalError("无法创建数据容器：\(error)")
+            let local = ModelConfiguration(
+                schema: schema,
+                isStoredInMemoryOnly: false,
+                cloudKitDatabase: .none
+            )
+            do {
+                container = try ModelContainer(for: schema, configurations: [local])
+            } catch {
+                fatalError("无法创建数据容器：\(error)")
+            }
         }
         AppCategory.seedBuiltIns(in: container.mainContext)
         AppPaymentMethod.seedBuiltIns(in: container.mainContext)
@@ -31,7 +45,8 @@ struct RenewityApp: App {
         WindowGroup {
             ContentView()
                 .background {
-                    WidgetSyncHost()
+                    CloudBackupHost()
+                    CloudSyncHost()
                 }
                 .environment(proStore)
                 .environment(appLock)

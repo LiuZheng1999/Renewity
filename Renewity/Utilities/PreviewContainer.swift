@@ -9,6 +9,7 @@ enum PreviewContainer {
             for: Subscription.self,
             AppCategory.self,
             AppPaymentMethod.self,
+            AppPreferences.self,
             configurations: configuration
         )
         AppCategory.seedBuiltIns(in: container.mainContext)

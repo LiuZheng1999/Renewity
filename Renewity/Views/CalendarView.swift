@@ -6,6 +6,7 @@ struct CalendarView: View {
     @Environment(\.appCategories) private var categories
     @Environment(ExchangeRateStore.self) private var exchangeRates
     @AppStorage("currencyCode") private var currencyCode = "CNY"
+    @Environment(\.colorScheme) private var colorScheme
 
     @State private var visibleMonth = Calendar.current.startOfDay(for: Date())
     @State private var selectedDay: CalendarDaySelection?
@@ -24,8 +25,7 @@ struct CalendarView: View {
                 .padding(.top, 20)
                 .padding(.bottom, 28)
             }
-            .background(Color.groupedBackground)
-            .navigationBarTitleDisplayMode(.inline)
+            .appSkyBackground()
             .toolbar(.hidden, for: .navigationBar)
             .sheet(item: $selectedDay) { day in
                 CalendarDaySheet(date: day.date, items: day.items)
@@ -38,7 +38,7 @@ struct CalendarView: View {
             HStack(alignment: .center, spacing: 12) {
                 Text(monthTitle)
                     .font(.system(size: 34, weight: .bold))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(skyPrimary)
 
                 Spacer(minLength: 8)
 
@@ -46,13 +46,24 @@ struct CalendarView: View {
             }
 
             HStack(spacing: 18) {
-                Text(String(localized: "\(totalText) 总计"))
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.primary)
+                VStack(alignment: .leading) {
+                    Text(String(localized: "总计"))
+                        .font(.subheadline.weight(.medium))
+                        .foregroundStyle(.secondary)
+                    Text(totalText)
+                        .font(.title3.weight(.medium))
+                        .foregroundStyle(skyPrimary)
+                }
+                Spacer()
 
-                Text(String(localized: "\(upcomingText) 即将到来"))
-                    .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .leading) {
+                    Text(String(localized: "即将到来"))
+                        .font(.subheadline.weight(.medium))
+                        .foregroundStyle(.secondary)
+                    Text(upcomingText)
+                        .font(.title3.weight(.medium))
+                        .foregroundStyle(skyPrimary)
+                }
             }
         }
     }
@@ -64,31 +75,37 @@ struct CalendarView: View {
                     visibleMonth = calendar.startOfDay(for: Date())
                 }
                 .font(.subheadline.weight(.medium))
-                .foregroundStyle(Color.accentColor)
+                .foregroundStyle(Color.white)
                 .padding(.trailing, 4)
             }
 
             Button {
                 shiftMonth(-1)
             } label: {
-                Image(systemName: "chevron.left")
-                    .font(.body.weight(.semibold))
-                    .frame(width: 32, height: 32)
-                    .contentShape(Rectangle())
+                if #available(iOS 26.0, *) {
+                    Image(systemName: "chevron.left")
+                        .font(.body.weight(.semibold))
+                        .frame(width: 32, height: 32)
+                        .contentShape(Rectangle())
+                        .glassEffect(.clear)
+                }
             }
             .accessibilityLabel("上个月")
 
             Button {
                 shiftMonth(1)
             } label: {
-                Image(systemName: "chevron.right")
-                    .font(.body.weight(.semibold))
-                    .frame(width: 32, height: 32)
-                    .contentShape(Rectangle())
+                if #available(iOS 26.0, *) {
+                    Image(systemName: "chevron.right")
+                        .font(.body.weight(.semibold))
+                        .frame(width: 32, height: 32)
+                        .contentShape(Rectangle())
+                        .glassEffect(.clear)
+                }
             }
             .accessibilityLabel("下个月")
         }
-        .foregroundStyle(.primary)
+        .foregroundStyle(skyPrimary)
         .buttonStyle(.plain)
     }
 
@@ -159,6 +176,10 @@ struct CalendarView: View {
         }
     }
 
+    private var skyPrimary: Color {
+        colorScheme == .light ? .white : .primary
+    }
+
     private var monthCharges: [CalendarCharge] {
         subscriptions.flatMap { subscription in
             subscription.chargeDates(inMonthOf: visibleMonth, calendar: calendar).map {
@@ -167,13 +188,17 @@ struct CalendarView: View {
         }
     }
 
+    private var recurringMonthCharges: [CalendarCharge] {
+        monthCharges.filter(\.subscription.doesRenew)
+    }
+
     private var totalAmount: Decimal {
-        monthCharges.reduce(0) { $0 + convertedPrice(of: $1.subscription) }
+        recurringMonthCharges.reduce(0) { $0 + convertedPrice(of: $1.subscription) }
     }
 
     private var upcomingAmount: Decimal {
         let today = calendar.startOfDay(for: Date())
-        return monthCharges.reduce(0) { partial, charge in
+        return recurringMonthCharges.reduce(0) { partial, charge in
             guard charge.date >= today else { return partial }
             return partial + convertedPrice(of: charge.subscription)
         }
@@ -188,7 +213,7 @@ struct CalendarView: View {
     }
 
     private var usesConversion: Bool {
-        monthCharges.contains { $0.subscription.resolvedCurrencyCode != currencyCode.uppercased() }
+        recurringMonthCharges.contains { $0.subscription.resolvedCurrencyCode != currencyCode.uppercased() }
     }
 
     private func items(on date: Date) -> [CalendarCharge] {
@@ -313,7 +338,7 @@ private struct CalendarDayCell: View {
             return day
         }
         let names = items.map(\.subscription.name).joined(separator: "、")
-        return String(localized: "\(day)，\(names)")
+        return String(localized: "calendar.dayWithNames", defaultValue: "\(day)，\(names)")
     }
 }
 

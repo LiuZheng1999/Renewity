@@ -19,29 +19,25 @@ L’App **non include SDK pubblicitari di terzi né strumenti di analisi per il 
 
 ## 2. Informazioni sul dispositivo
 
-Abbonamenti, categorie, note, icone, valuta, aspetto, notifiche, blocco, ecc. restano **sul dispositivo** (SwiftData / archiviazione di sistema), per visualizzazione e gestione, totali, avviso locale il giorno prima e riepilogo dei widget. Disinstallare di solito elimina ciò che è solo sul dispositivo e non hai salvato altrove.
+Abbonamenti, categorie, note, icone, valuta, aspetto, notifiche, blocco, ecc. restano **sul dispositivo** (SwiftData / archiviazione di sistema), per visualizzazione e gestione, totali, avviso locale il giorno prima. Disinstallare di solito elimina ciò che è solo sul dispositivo e non hai salvato altrove.
 
-## 3. App Group e widget
-
-L’App e i widget condividono `group.Maoxia-Xiang.Renewity`. Lo snapshot di visualizzazione resta sul dispositivo.
-
-## 4. Backup iCloud facoltativo
+## 3. Backup iCloud facoltativo
 
 Con Pro e il backup iCloud attivo, un file va nel **tuo** iCloud Drive (contenitore `iCloud.Maoxia-Xiang.Renewity`), sotto il tuo Account Apple, secondo le policy iCloud di Apple. Non possiamo accedere al tuo account. Gli export JSON sono tua responsabilità.
 
-## 5. Notifiche
+## 4. Notifiche
 
 I promemoria sono **notifiche locali**, create sul dispositivo, non caricate sui nostri server per l’invio.
 
-## 6. Face ID, Touch ID e codice
+## 5. Face ID, Touch ID e codice
 
 Il blocco usa LocalAuthentication. I modelli biometrici sono nell’area sicura del sistema. **Non raccogliamo né carichiamo dati Face ID o impronte.**
 
-## 7. Acquisti
+## 6. Acquisti
 
 Gli acquisti Pro passano da StoreKit / App Store. Apple elabora pagamento e ricevute. Possiamo sapere sul dispositivo se c’è un acquisto attivo, ma **non riceviamo il numero completo della carta né la password dell’Account Apple**.
 
-## 8. Richieste di rete
+## 7. Richieste di rete
 
 Il dispositivo parla direttamente con il servizio, non con un database utenti nostro.
 
@@ -51,39 +47,39 @@ In «Scegli un servizio» l’App può interrogare l’API App Store / iTunes, s
 
 Il backup iCloud segue l’informativa sulla privacy di Apple.
 
-## 9. Ciò che ci invii
+## 8. Ciò che ci invii
 
 Le e-mail in-app vanno a **philiptrip1975@gmail.com**. Le usiamo per rispondere e le cancelliamo quando non servono più, salvo obbligo di legge.
 
-## 10. Analisi, pubblicità e tracciamento
+## 9. Analisi, pubblicità e tracciamento
 
 Niente annunci di terzi, niente SDK di analisi per profili di marketing dai tuoi abbonamenti, niente tracciamento tra app di altre società. Diagnostica o statistiche App Store verso Apple, se le consenti, seguono le regole Apple.
 
-## 11. Minori
+## 10. Minori
 
 L’App non è rivolta a minori di 13 anni e non raccogliamo consapevolmente i loro dati. Se ritieni ci sia stato un errore, contattaci.
 
-## 12. Conservazione ed eliminazione
+## 11. Conservazione ed eliminazione
 
 Dati sul dispositivo: eliminazione in-app o disinstallazione. Backup iCloud: fino a sovrascrittura, eliminazione in iCloud Drive o disattivazione. JSON esportato: in base al luogo di salvataggio.
 
-## 13. Sicurezza
+## 12. Sicurezza
 
 Archiviazione locale predefinita, blocco opzionale, canali Apple. Nessun archivio è perfettamente sicuro.
 
-## 14. I tuoi diritti
+## 13. I tuoi diritti
 
 A seconda del luogo (GDPR, CCPA, ecc.) puoi avere diritti di accesso, rettifica, cancellazione, esportazione, limitazione o opposizione. La maggior parte dei dati è sul dispositivo o nel tuo iCloud. Per le e-mail di supporto rispondiamo nei termini di legge.
 
-## 15. Trattamento internazionale
+## 14. Trattamento internazionale
 
 Tassi, ricerca e icone possono essere trattati in altri Paesi. Nello SEE, nel Regno Unito o in regioni simili, usare queste funzioni opzionali significa comprendere tale trattamento.
 
-## 16. Modifiche
+## 15. Modifiche
 
 Gli aggiornamenti compaiono nell’App con nuova data. Se una modifica incide in modo sostanziale sui tuoi diritti, daremo un avviso ragionevole.
 
-## 17. Contatti
+## 16. Contatti
 
 Richieste privacy: **philiptrip1975@gmail.com**
 
@@ -92,6 +88,6 @@ Includi «Informativa sulla privacy» nell’oggetto.
 ## Integrazione (20 agosto 2026)
 
 - L’app richiede iOS 18 o successivo.
-- **Non c’è sincronizzazione CloudKit in tempo reale** del database. Il backup cloud Pro è nel tuo iCloud Drive.
+- Con iCloud, l’app può sincronizzare abbonamenti, aspetto, orario dei promemoria e avatar con CloudKit. Il backup Pro resta su iCloud Drive.
 - I promemoria sono notifiche locali. L’app pianifica più scadenze e aggiorna la coda all’apertura. Se non apri l’app a lungo, i promemoria successivi possono interrompersi per il limite di sistema.
 - Include il Privacy Manifest e non traccia tra app.

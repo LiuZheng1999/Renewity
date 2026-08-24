@@ -62,8 +62,12 @@ final class ProStore {
         do {
             products = try await Product.products(for: AppConfig.productIDs)
                 .sorted { $0.price < $1.price }
+            if products.isEmpty {
+                errorMessage = String(localized: "App Store 未返回套餐。请确认产品已创建，本地调试请在 Scheme 中选用 Products.storekit。")
+            }
         } catch {
             products = []
+            errorMessage = error.localizedDescription
         }
     }
 

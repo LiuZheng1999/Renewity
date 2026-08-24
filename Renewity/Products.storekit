@@ -25,7 +25,7 @@
           "locale" : "zh_Hans"
         }
       ],
-      "productID" : "Maoxia-Xiang.SubscriptionTracker.pro.lifetime",
+      "productID" : "Renewity_Premium",
       "referenceName" : "Pro Lifetime",
       "type" : "NonConsumable"
     }
@@ -86,7 +86,7 @@
               "locale" : "zh_Hans"
             }
           ],
-          "productID" : "Maoxia-Xiang.SubscriptionTracker.pro.monthly",
+          "productID" : "Renewity_Monthly",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Pro Monthly",
           "subscriptionGroupID" : "C3D4E5F64789A0B1C2D3E4F5",
@@ -125,7 +125,7 @@
               "locale" : "zh_Hans"
             }
           ],
-          "productID" : "Maoxia-Xiang.SubscriptionTracker.pro.yearly",
+          "productID" : "Renewity_Yearly",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Pro Yearly",
           "subscriptionGroupID" : "C3D4E5F64789A0B1C2D3E4F5",

@@ -47,7 +47,7 @@ Preise und Regeln setzt der Dritte. Referenzpreise können veraltet oder regiona
 
 ## 7. Pro und In-App-Käufe
 
-Funktionen wie mehr als das kostenlose Limit, eigene Kategorien, Anzeigewährung und iCloud-Backup können Renewity Pro erfordern. Maßgeblich ist die Kaufanzeige in der App.
+Funktionen wie mehr als das kostenlose Limit, eigene Kategorien, mehrere Erinnerungen und Anzeigewährung können Renewity Pro erfordern. iCloud-Sync und Datei-Import/Export sind in der App enthalten. Maßgeblich ist die Kaufanzeige in der App.
 
 Käufe, Zahlung, Belege und Auto-Verlängerung laufen über Apple. Wir sehen keine vollständigen Kartendaten. Kündigung und Erstattung richten sich nach Apple-Account-/App-Store-Regeln. Preise sind die von Apple angezeigten. Die Gratisversion bleibt mit Limits nutzbar. Stelle Käufe mit demselben Apple Account wieder her, mit dem du gekauft hast.
 

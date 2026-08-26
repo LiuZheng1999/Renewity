@@ -47,7 +47,7 @@ Preços e regras são do terceiro. Preços de referência podem estar desatualiz
 
 ## 7. Pro e compras no app
 
-Recursos como ultrapassar o limite grátis, categorias próprias, moeda de exibição e backup no iCloud podem exigir o Gestor Pro. O conteúdo é o mostrado na compra.
+Recursos como ultrapassar o limite grátis, categorias próprias, vários lembretes e moeda de exibição podem exigir o Renewity Pro. A sincronização do iCloud e a importação/exportação de arquivos estão incluídas no app. O conteúdo é o mostrado na compra.
 
 Compras, pagamento, recibos e renovação automática são processados pela Apple. Não vemos o número completo do cartão. Cancele ou peça reembolso pelas regras da Conta Apple / App Store. O plano grátis continua com limites. Restaure as compras com a mesma Conta Apple.
 

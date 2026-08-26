@@ -47,7 +47,7 @@ Les prix et règles sont ceux du tiers. Les prix de référence peuvent être p�
 
 ## 7. Pro et achats intégrés
 
-Certaines fonctions (au-delà de la limite gratuite, catégories perso, analyses, devise d’affichage, sauvegarde iCloud) peuvent exiger Renewity Pro. Le contenu est celui affiché à l’achat.
+Certaines fonctions (au-delà de la limite gratuite, catégories perso, rappels multiples, devise d’affichage) peuvent exiger Renewity Pro. La sync iCloud et l’import/export de fichiers sont inclus dans l’App. Le contenu est celui affiché à l’achat.
 
 Achats, paiement, reçus et renouvellement auto passent par Apple. Nous ne voyons pas le numéro de carte complet. Gérez, annulez ou demandez un remboursement selon les règles du compte Apple / App Store. Le gratuit reste utilisable avec des limites. Restaurez les achats avec le même compte Apple.
 

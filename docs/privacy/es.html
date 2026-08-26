@@ -59,7 +59,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>2. Información en el dispositivo</h2>
 <p>Suscripciones, categorías, notas, iconos, divisa, apariencia, notificaciones, bloqueo, etc. se guardan <strong>en el dispositivo</strong> (SwiftData / almacenamiento del sistema). Sirven para mostrar y gestionar, totales, aviso local el día anterior. Desinstalar suele borrar lo que solo está en el dispositivo y no hayas copiado a otro sitio.</p>
 <h2>3. Copia iCloud opcional</h2>
-<p>Con Pro y la copia iCloud activada, un archivo va a <strong>tu</strong> iCloud Drive (contenedor <code>iCloud.Maoxia-Xiang.Renewity</code>), bajo tu cuenta de Apple y las políticas de iCloud de Apple. No podemos iniciar sesión en tu cuenta. Los JSON exportados son tu responsabilidad.</p>
+<p>Con iCloud, la app sincroniza tus datos con CloudKit (contenedor <code>iCloud.Maoxia-Xiang.Renewity</code>). Los JSON exportados son tu responsabilidad.</p>
 <h2>4. Notificaciones</h2>
 <p>Los avisos son <strong>notificaciones locales</strong>, creadas en el dispositivo, no subidas a nuestros servidores para enviar el recordatorio.</p>
 <h2>5. Face ID, Touch ID y código</h2>
@@ -78,7 +78,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>10. Menores</h2>
 <p>La App no está dirigida a menores de 13 años y no recogemos a sabiendas sus datos. Si crees que ha habido un error, contáctanos.</p>
 <h2>11. Conservación y supresión</h2>
-<p>Datos del dispositivo: al borrar en la App o desinstalar. Copia iCloud: hasta sobrescribir, borrar en iCloud Drive o desactivar. JSON exportado: según dónde lo guardes.</p>
+<p>Datos del dispositivo: al borrar en la App o desinstalar. Sincronización iCloud: hasta borrar los registros, desactivar iCloud o quitar los datos de la app. JSON exportado: según dónde lo guardes.</p>
 <h2>12. Seguridad</h2>
 <p>Almacenamiento local por defecto, bloqueo opcional, canales de Apple. Ningún almacenamiento es perfectamente seguro.</p>
 <h2>13. Tus derechos</h2>
@@ -93,7 +93,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>Nota adicional (20 de agosto de 2026)</h2>
 <ul>
 <li>La app requiere iOS 18 o posterior.</li>
-<li>Con iCloud, la app puede sincronizar suscripciones, apariencia, hora de aviso y avatar con CloudKit. La copia Pro sigue en iCloud Drive.</li>
+<li>Con iCloud, la app puede sincronizar suscripciones, apariencia, hora de aviso y avatar con CloudKit. También puedes exportar un JSON.</li>
 <li>Los recordatorios son notificaciones locales. La app programa varias fechas futuras y actualiza la cola al abrirla. Si no la abres durante mucho tiempo, los avisos posteriores pueden detenerse por el límite del sistema.</li>
 <li>Incluye Privacy Manifest y no hace seguimiento entre apps.</li>
 </ul>

@@ -23,7 +23,7 @@ Abbonamenti, categorie, note, icone, valuta, aspetto, notifiche, blocco, ecc. re
 
 ## 3. Backup iCloud facoltativo
 
-Con Pro e il backup iCloud attivo, un file va nel **tuo** iCloud Drive (contenitore `iCloud.Maoxia-Xiang.Renewity`), sotto il tuo Account Apple, secondo le policy iCloud di Apple. Non possiamo accedere al tuo account. Gli export JSON sono tua responsabilità.
+Con iCloud, l’app sincronizza i dati con CloudKit (contenitore `iCloud.Maoxia-Xiang.Renewity`). Gli export JSON sono tua responsabilità.
 
 ## 4. Notifiche
 
@@ -61,7 +61,7 @@ L’App non è rivolta a minori di 13 anni e non raccogliamo consapevolmente i l
 
 ## 11. Conservazione ed eliminazione
 
-Dati sul dispositivo: eliminazione in-app o disinstallazione. Backup iCloud: fino a sovrascrittura, eliminazione in iCloud Drive o disattivazione. JSON esportato: in base al luogo di salvataggio.
+Dati sul dispositivo: eliminazione in-app o disinstallazione. Sincronizzazione iCloud: fino all’eliminazione dei record, alla disattivazione di iCloud o alla rimozione dei dati dell’app. JSON esportato: in base al luogo di salvataggio.
 
 ## 12. Sicurezza
 
@@ -88,6 +88,6 @@ Includi «Informativa sulla privacy» nell’oggetto.
 ## Integrazione (20 agosto 2026)
 
 - L’app richiede iOS 18 o successivo.
-- Con iCloud, l’app può sincronizzare abbonamenti, aspetto, orario dei promemoria e avatar con CloudKit. Il backup Pro resta su iCloud Drive.
+- Con iCloud, l’app può sincronizzare abbonamenti, aspetto, orario dei promemoria e avatar con CloudKit. Puoi anche esportare un JSON.
 - I promemoria sono notifiche locali. L’app pianifica più scadenze e aggiorna la coda all’apertura. Se non apri l’app a lungo, i promemoria successivi possono interrompersi per il limite di sistema.
 - Include il Privacy Manifest e non traccia tra app.

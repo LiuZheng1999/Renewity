@@ -59,7 +59,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>2. Informations sur l’appareil</h2>
 <p>Abonnements, catégories, notes, icônes, devise, apparence, notifications, verrouillage, etc. sont stockés <strong>sur l’appareil</strong> (SwiftData / stockage système), pour affichage, totaux, notification locale la veille. La désinstallation supprime en général les données uniquement locales non sauvegardées ailleurs.</p>
 <h2>3. Sauvegarde iCloud facultative</h2>
-<p>Avec Pro et la sauvegarde iCloud activée, un fichier va dans <strong>votre</strong> iCloud Drive (conteneur <code>iCloud.Maoxia-Xiang.Renewity</code>), sous votre compte Apple, selon les politiques iCloud d’Apple. Nous ne pouvons pas nous y connecter. Les exports JSON sont sous votre responsabilité.</p>
+<p>Connecté à iCloud, l’App synchronise vos données via CloudKit (conteneur <code>iCloud.Maoxia-Xiang.Renewity</code>). Les exports JSON sont sous votre responsabilité.</p>
 <h2>4. Notifications</h2>
 <p>Les rappels sont des <strong>notifications locales</strong>, créées sur l’appareil, non envoyées à nos serveurs pour l’envoi du rappel.</p>
 <h2>5. Face ID, Touch ID, code</h2>
@@ -78,7 +78,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>10. Enfants</h2>
 <p>L’App n’est pas destinée aux enfants de moins de 13 ans et nous ne collectons pas sciemment leurs données. Contactez-nous en cas d’erreur.</p>
 <h2>11. Conservation et suppression</h2>
-<p>Données appareil : suppression dans l’App ou désinstallation. Sauvegarde iCloud : jusqu’à écrasement, suppression dans iCloud Drive ou désactivation. JSON exporté : selon l’emplacement choisi.</p>
+<p>Données appareil : suppression dans l’App ou désinstallation. Sync iCloud : jusqu’à suppression des enregistrements, désactivation d’iCloud ou suppression des données de l’App. JSON exporté : selon l’emplacement choisi.</p>
 <h2>12. Sécurité</h2>
 <p>Stockage local par défaut, verrouillage optionnel, canaux Apple. Aucun stockage n’est parfaitement sûr.</p>
 <h2>13. Vos droits</h2>
@@ -93,7 +93,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>Complément (20 août 2026)</h2>
 <ul>
 <li>L’App nécessite iOS 18 ou une version ultérieure.</li>
-<li>Connecté à iCloud, l’App peut synchroniser abonnements, apparence, heure de rappel et avatar via CloudKit. La sauvegarde Pro reste dans iCloud Drive.</li>
+<li>Connecté à iCloud, l’App peut synchroniser abonnements, apparence, heure de rappel et avatar via CloudKit. Vous pouvez aussi exporter un JSON.</li>
 <li>Les rappels sont des notifications locales. L’App planifie plusieurs échéances à l’avance et rafraîchit la file à l’ouverture. Faute d’ouvrir l’App longtemps, les rappels suivants peuvent s’arrêter (limite système).</li>
 <li>L’App inclut un manifeste de confidentialité et ne fait pas de suivi inter-apps.</li>
 </ul>

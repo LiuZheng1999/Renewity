@@ -59,7 +59,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>2. Daten auf dem Gerät</h2>
 <p>Abos, Kategorien, Notizen, Icons, Anzeigewährung, Erscheinungsbild, Mitteilungen, App-Sperre usw. liegen <strong>auf dem Gerät</strong> (SwiftData / Systemspeicher). Sie dienen Anzeige und Verwaltung, Monats-/Jahres- und Kategoriesummen, lokaler Erinnerung am Vortag. Deinstallieren löscht in der Regel nur lokal vorhandene, nicht selbst gesicherte Daten.</p>
 <h2>3. Optionales iCloud-Backup</h2>
-<p>Mit Pro und aktiviertem iCloud-Backup schreibt die App eine Sicherung nach <strong>deinem</strong> iCloud Drive (Container <code>iCloud.Maoxia-Xiang.Renewity</code>). Apple verarbeitet sie unter deinem Apple Account. Wir können uns nicht in dein Konto einloggen. JSON-Exporte liegen in deiner Verantwortung.</p>
+<p>Mit iCloud-Anmeldung synchronisiert die App deine Daten über CloudKit (Container <code>iCloud.Maoxia-Xiang.Renewity</code>). JSON-Exporte liegen in deiner Verantwortung.</p>
 <h2>4. Mitteilungen</h2>
 <p>Erinnerungen sind <strong>lokale Mitteilungen</strong>, erzeugt auf dem Gerät, nicht zu uns hochgeladen. Das System zeigt sie nur mit deiner Erlaubnis.</p>
 <h2>5. Face ID, Touch ID, Code</h2>
@@ -78,7 +78,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>10. Kinder</h2>
 <p>Die App richtet sich nicht an Kinder unter 13 und erhebt wissentlich keine Daten von ihnen. Vermutest du einen Irrtum, kontaktiere uns.</p>
 <h2>11. Aufbewahrung und Löschung</h2>
-<p>Gerätedaten: Löschen in der App oder Deinstallation (außer üblichen Caches). iCloud-Backup: bis Überschreiben, Löschen in iCloud Drive oder Abschalten. Exportiertes JSON: am Speicherort.</p>
+<p>Gerätedaten: Löschen in der App oder Deinstallation (außer üblichen Caches). iCloud-Sync: bis Löschen der Einträge, Abschalten von iCloud oder Entfernen der App-Daten. Exportiertes JSON: am Speicherort.</p>
 <h2>12. Sicherheit</h2>
 <p>Speicherung auf dem Gerät, optionale App-Sperre, Apple-Kauf- und iCloud-Kanäle. Kein elektronischer Speicher ist absolut sicher.</p>
 <h2>13. Rechte</h2>
@@ -93,7 +93,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>Ergänzung (20. August 2026)</h2>
 <ul>
 <li>Die App benötigt iOS 18 oder neuer.</li>
-<li>Mit iCloud-Anmeldung können Abos, Darstellung, Erinnerungszeit und Avatar per CloudKit zwischen Geräten synchronisiert werden. Das Pro-Backup liegt zusätzlich in iCloud Drive.</li>
+<li>Mit iCloud-Anmeldung können Abos, Darstellung, Erinnerungszeit und Avatar per CloudKit zwischen Geräten synchronisiert werden. Ein JSON-Export ist ebenfalls möglich.</li>
 <li>Erinnerungen sind lokale Mitteilungen. Die App plant mehrere künftige Termine und aktualisiert die Warteschlange beim Öffnen. Wegen der Systemgrenze können spätere Erinnerungen ausbleiben, wenn die App lange nicht geöffnet wird.</li>
 <li>Die App enthält ein Privacy Manifest und trackt nicht über andere Apps hinweg.</li>
 </ul>

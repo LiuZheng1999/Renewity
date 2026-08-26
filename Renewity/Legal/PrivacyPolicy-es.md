@@ -23,7 +23,7 @@ Suscripciones, categorías, notas, iconos, divisa, apariencia, notificaciones, b
 
 ## 3. Copia iCloud opcional
 
-Con Pro y la copia iCloud activada, un archivo va a **tu** iCloud Drive (contenedor `iCloud.Maoxia-Xiang.Renewity`), bajo tu cuenta de Apple y las políticas de iCloud de Apple. No podemos iniciar sesión en tu cuenta. Los JSON exportados son tu responsabilidad.
+Con iCloud, la app sincroniza tus datos con CloudKit (contenedor `iCloud.Maoxia-Xiang.Renewity`). Los JSON exportados son tu responsabilidad.
 
 ## 4. Notificaciones
 
@@ -61,7 +61,7 @@ La App no está dirigida a menores de 13 años y no recogemos a sabiendas sus da
 
 ## 11. Conservación y supresión
 
-Datos del dispositivo: al borrar en la App o desinstalar. Copia iCloud: hasta sobrescribir, borrar en iCloud Drive o desactivar. JSON exportado: según dónde lo guardes.
+Datos del dispositivo: al borrar en la App o desinstalar. Sincronización iCloud: hasta borrar los registros, desactivar iCloud o quitar los datos de la app. JSON exportado: según dónde lo guardes.
 
 ## 12. Seguridad
 
@@ -88,6 +88,6 @@ Incluye «Política de privacidad» en el asunto.
 ## Nota adicional (20 de agosto de 2026)
 
 - La app requiere iOS 18 o posterior.
-- Con iCloud, la app puede sincronizar suscripciones, apariencia, hora de aviso y avatar con CloudKit. La copia Pro sigue en iCloud Drive.
+- Con iCloud, la app puede sincronizar suscripciones, apariencia, hora de aviso y avatar con CloudKit. También puedes exportar un JSON.
 - Los recordatorios son notificaciones locales. La app programa varias fechas futuras y actualiza la cola al abrirla. Si no la abres durante mucho tiempo, los avisos posteriores pueden detenerse por el límite del sistema.
 - Incluye Privacy Manifest y no hace seguimiento entre apps.

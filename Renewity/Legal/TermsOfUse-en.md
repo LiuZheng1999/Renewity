@@ -11,7 +11,7 @@ If you do not agree, do not use the App and delete it from your device.
 
 ## 1. What the App is
 
-Renewity is a personal tool for recording recurring subscription costs and reminders. It helps you organize streaming, cloud storage, software memberships, and similar charges, review monthly and yearly spend, and receive a local reminder before a charge date. The App requires **iOS 18 or later**.
+Renewity is a personal tool for recording recurring subscription costs and reminders. It helps you organize streaming, cloud storage, software memberships, and similar charges, review monthly and annual spend, and receive a local reminder before a charge date. The App requires **iOS 18 or later**.
 
 The App:
 
@@ -40,7 +40,7 @@ You may not:
 
 The App **does not create its own user accounts** and does not require you to register a username or password with us.
 
-If you use iCloud backup, buy Pro through Apple, or unlock the App with Face ID / Touch ID, authentication is handled by Apple on your device or Apple Account. We cannot access your Apple Account password or biometric data.
+If you use iCloud sync, buy Pro through Apple, or unlock the App with Face ID / Touch ID, authentication is handled by Apple on your device or Apple Account. We cannot access your Apple Account password or biometric data.
 
 ## 5. Your content
 
@@ -59,7 +59,7 @@ Prices, plans, and billing rules are set by the third party. Reference prices in
 
 ## 7. Pro features and in-app purchases
 
-Some features may require Renewity Pro, such as more than the free subscription limit, custom categories, multiple renewal reminders, changing the display currency / converting totals, and iCloud backup plus file import/export. The features included are those described in the App and on the purchase screen at the time of purchase.
+Some features may require Renewity Pro, such as more than the free subscription limit, custom categories, multiple renewal reminders, and changing the display currency / converting totals. iCloud sync and file import/export are included in the App and are not separate Pro features. The features included are those described in the App and on the purchase screen at the time of purchase.
 
 - Purchases, payments, receipts, and auto-renewal are processed by Apple. We do not see your full payment-card details.
 - Manage, cancel, or request refunds for auto-renewing subscriptions through your Apple Account / App Store rules.
@@ -104,7 +104,7 @@ Our total liability to you will not exceed the amount you actually paid us for t
 
 You may stop using and delete the App at any time. We may terminate your license if you materially breach these Terms. Provisions that by their nature should survive (including disclaimers, limitations of liability, and governing law) will survive.
 
-Export or back up your data before deleting the App. When you are signed in to iCloud, records can sync across your devices with CloudKit. Deleting the App, turning off iCloud, or changing devices may still make data unavailable unless you have backed up as described in the App.
+Export your data before deleting the App. When you are signed in to iCloud, records can sync across your devices with iCloud. Deleting the App, turning off iCloud, or changing devices may still make data unavailable unless another device still has the synced copy or you have exported a file.
 
 ## 13. Changes
 

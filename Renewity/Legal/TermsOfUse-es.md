@@ -47,7 +47,7 @@ Los precios y reglas los fija el tercero. Los precios de referencia pueden estar
 
 ## 7. Pro y compras dentro de la app
 
-Funciones como superar el límite gratuito, categorías propias, divisa de visualización y copia en iCloud pueden requerir Gestor Pro. El contenido es el mostrado al comprar.
+Funciones como superar el límite gratuito, categorías propias, varios recordatorios y divisa de visualización pueden requerir Renewity Pro. La sincronización de iCloud y la importación/exportación de archivos están incluidas en la app. El contenido es el mostrado al comprar.
 
 Compras, pago, recibos y renovación automática los procesa Apple. No vemos el número de tarjeta completo. Cancela o pide reembolsos según las reglas de la cuenta de Apple / App Store. Lo gratuito sigue disponible con límites. Restaura las compras con la misma cuenta de Apple.
 

@@ -69,14 +69,14 @@ footer { color: var(--muted); font-size: 14px; }
 <li>計算每月、每年支出和分類統計；</li>
 <li>在扣款前一天傳送本機通知；</li>
 </ul>
-<p>解除安裝本應用程式通常會刪除僅保存在本機、且未備份到你自己選擇的位置（例如檔案 App 或 iCloud Drive）中的資料。</p>
+<p>解除安裝本應用程式通常會刪除僅保存在本機、且未備份到你自己選擇的位置（例如檔案 App）中的資料。已透過 iCloud 同步到其他裝置的資料仍保留在你的 Apple 帳號中。</p>
 <h2>3. iCloud 備份（可選）</h2>
-<p>若你已購買 Pro 並開啟 iCloud 備份，本應用程式會將訂閱和自訂分類的備份檔寫入<strong>你的</strong> iCloud Drive（容器：<code>iCloud.Maoxia-Xiang.Renewity</code>）。</p>
+<p>登入 iCloud 後，記帳資料會透過 CloudKit 私人資料庫（容器：<code>iCloud.Maoxia-Xiang.Renewity</code>）在你的裝置間同步。</p>
 <ul>
 <li>備份內容包括你記錄的訂閱與自訂分類等記帳資料，以便換機還原。</li>
 <li>該檔案儲存在你的 Apple 帳號下，由 Apple 按照其 iCloud 政策處理。</li>
 <li>我們無法登入你的 Apple 帳號查看該備份。</li>
-<li>你可以在本應用程式中關閉自動備份，或在系統設定中管理 iCloud Drive。</li>
+<li>你可以在系統設定中管理 iCloud。</li>
 </ul>
 <p>你也可以將備份匯出為 JSON 檔，儲存到檔案 App、電腦或其他你選擇的位置。你應對自行匯出的副本負責。</p>
 <h2>4. 通知</h2>
@@ -116,7 +116,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>11. 資料保留、匯出與刪除</h2>
 <ul>
 <li><strong>本機資料：</strong> 隨你在應用程式內的刪除操作或解除安裝而刪除（系統快取等除外）。</li>
-<li><strong>iCloud 備份：</strong> 由你的 Apple 帳號保留，直到你在本應用程式中覆蓋、在 iCloud Drive 中刪除，或關閉相關 iCloud 功能。</li>
+<li><strong>iCloud 同步：</strong> 由你的 Apple 帳號保留，直到你刪除對應記錄、關閉 iCloud，或從裝置移除本應用程式的 iCloud 資料。</li>
 <li><strong>匯出的 JSON：</strong> 由你儲存的位置決定保留時間。</li>
 </ul>
 <p>你可以透過刪除訂閱、刪除自訂分類、還原備份覆蓋、匯出後解除安裝，或刪除 iCloud 中的備份檔來管理資料。</p>
@@ -136,7 +136,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>補充說明（2026 年 8 月 20 日）</h2>
 <ul>
 <li>本應用程式需要 iOS 18 或更高版本。</li>
-<li>登入 iCloud 後，記帳資料、外觀、提醒時間和頭像可透過 CloudKit 在你的裝置間同步；Pro 的雲碟備份仍寫入你的 iCloud Drive。</li>
+<li>登入 iCloud 後，記帳資料、外觀、提醒時間和頭像可透過 iCloud 在你的裝置間同步；你也可以自行匯出 JSON。</li>
 <li>續費與試用提醒為本機通知。應用會預先安排未來若干期，並在你打開應用時重新排隊。系統對待發送通知數量有上限，長時間不打開應用可能導致後續提醒不再出現。</li>
 <li>本應用包含隱私清單並聲明不進行跨 App 追蹤。</li>
 </ul>

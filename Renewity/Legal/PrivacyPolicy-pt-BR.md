@@ -23,7 +23,7 @@ Assinaturas, categorias, notas, ícones, moeda, aparência, notificações, bloq
 
 ## 3. Backup iCloud opcional
 
-Com Pro e o backup iCloud ligado, um arquivo vai para o **seu** iCloud Drive (contêiner `iCloud.Maoxia-Xiang.Renewity`), na sua Conta Apple, segundo as políticas de iCloud da Apple. Não podemos entrar na sua conta. Exports JSON são sua responsabilidade.
+Com iCloud, o app sincroniza seus dados pelo CloudKit (contêiner `iCloud.Maoxia-Xiang.Renewity`). Exports JSON são sua responsabilidade.
 
 ## 4. Notificações
 
@@ -61,7 +61,7 @@ O App não é dirigido a menores de 13 anos e não coletamos seus dados de prop�
 
 ## 11. Retenção e exclusão
 
-Dados no dispositivo: ao apagar no App ou desinstalar. Backup iCloud: até sobrescrever, apagar no iCloud Drive ou desativar. JSON exportado: conforme o local escolhido.
+Dados no dispositivo: ao apagar no App ou desinstalar. Sincronização iCloud: até apagar os registros, desativar o iCloud ou remover os dados do app. JSON exportado: conforme o local escolhido.
 
 ## 12. Segurança
 
@@ -88,6 +88,6 @@ Inclua «Política de privacidade» no assunto.
 ## Complemento (20 de agosto de 2026)
 
 - O app exige iOS 18 ou posterior.
-- Com iCloud, o app pode sincronizar assinaturas, aparência, horário do lembrete e avatar pelo CloudKit. O backup Pro continua no iCloud Drive.
+- Com iCloud, o app pode sincronizar assinaturas, aparência, horário do lembrete e avatar pelo CloudKit. Você também pode exportar um JSON.
 - Lembretes são notificações locais. O app agenda várias datas futuras e atualiza a fila ao abrir. Se você não abrir o app por muito tempo, os próximos avisos podem parar por causa do limite do sistema.
 - Inclui Privacy Manifest e não faz rastreamento entre apps.

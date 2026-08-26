@@ -47,7 +47,7 @@ Prezzi e regole li fissa il terzo. I prezzi di riferimento possono essere datati
 
 ## 7. Pro e acquisti in-app
 
-Funzioni come superare il limite gratuito, categorie personalizzate, valuta di visualizzazione e backup iCloud possono richiedere Renewity Pro. Il contenuto è quello mostrato all’acquisto.
+Funzioni come superare il limite gratuito, categorie personalizzate, più promemoria e valuta di visualizzazione possono richiedere Renewity Pro. La sincronizzazione iCloud e l’import/export di file sono inclusi nell’app. Il contenuto è quello mostrato all’acquisto.
 
 Acquisti, pagamento, ricevute e rinnovo automatico passano da Apple. Non vediamo il numero completo della carta. Disdici o chiedi rimborsi secondo le regole dell’Account Apple / App Store. Il piano gratuito resta disponibile con limiti. Ripristina gli acquisti con lo stesso Account Apple.
 

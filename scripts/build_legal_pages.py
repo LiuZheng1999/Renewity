@@ -66,7 +66,7 @@ EXTRA_SECTIONS = {
 ## 補充說明（2026 年 8 月 20 日）
 
 - 本應用程式需要 iOS 18 或更高版本。
-- 登入 iCloud 後，記帳資料、外觀、提醒時間和頭像可透過 CloudKit 在你的裝置間同步；Pro 的雲碟備份仍寫入你的 iCloud Drive。
+- 登入 iCloud 後，記帳資料、外觀、提醒時間和頭像可透過 iCloud 在你的裝置間同步。你也可以自行匯出 JSON 檔。
 - 續費與試用提醒為本機通知。應用會預先安排未來若干期，並在你打開應用時重新排隊。系統對待發送通知數量有上限，長時間不打開應用可能導致後續提醒不再出現。
 - 本應用包含隱私清單並聲明不進行跨 App 追蹤。
 """,
@@ -74,7 +74,7 @@ EXTRA_SECTIONS = {
 ## 追記（2026年8月20日）
 
 - 本アプリは iOS 18 以降が必要です。
-- iCloud にサインインしている場合、記録・外観・通知時刻・アバターは CloudKit で端末間同期できます。Pro のドライブバックアップは iCloud Drive に保存されます。
+- iCloud にサインインしている場合、記録・外観・通知時刻・アバターは iCloud で端末間同期できます。JSON の書き出しもできます。
 - 更新・無料期間のリマインダーはローカル通知です。今後数回分を予約し、アプリ起動時に再スケジュールします。OS の保留上限があるため、長期間起動しないと以降の通知が止まることがあります。
 - プライバシマニフェストを含め、クロスアプリ追跡は行いません。
 """,
@@ -82,7 +82,7 @@ EXTRA_SECTIONS = {
 ## 추가 안내 (2026년 8월 20일)
 
 - 이 앱은 iOS 18 이상이 필요합니다.
-- iCloud에 로그인하면 기록·외관·알림 시각·아바타가 CloudKit으로 기기 간 동기화됩니다. Pro 드라이브 백업은 iCloud Drive에 저장됩니다.
+- iCloud에 로그인하면 기록·외관·알림 시각·아바타가 iCloud로 기기 간 동기화됩니다. JSON 내보내기도 할 수 있습니다.
 - 갱신·체험 알림은 로컬 알림입니다. 앞으로 여러 회차를 미리 예약하고, 앱을 열 때 다시 정렬합니다. 시스템 대기 알림 수 제한 때문에 오래 앱을 열지 않으면 이후 알림이 멈출 수 있습니다.
 - 개인정보 매니페스트를 포함하며 다른 앱을 가로질러 추적하지 않습니다.
 """,
@@ -90,7 +90,7 @@ EXTRA_SECTIONS = {
 ## Ergänzung (20. August 2026)
 
 - Die App benötigt iOS 18 oder neuer.
-- Mit iCloud-Anmeldung können Abos, Darstellung, Erinnerungszeit und Avatar per CloudKit zwischen Geräten synchronisiert werden. Das Pro-Backup liegt zusätzlich in iCloud Drive.
+- Mit iCloud-Anmeldung können Abos, Darstellung, Erinnerungszeit und Avatar per iCloud zwischen Geräten synchronisiert werden. Ein JSON-Export ist ebenfalls möglich.
 - Erinnerungen sind lokale Mitteilungen. Die App plant mehrere künftige Termine und aktualisiert die Warteschlange beim Öffnen. Wegen der Systemgrenze können spätere Erinnerungen ausbleiben, wenn die App lange nicht geöffnet wird.
 - Die App enthält ein Privacy Manifest und trackt nicht über andere Apps hinweg.
 """,
@@ -98,7 +98,7 @@ EXTRA_SECTIONS = {
 ## Complément (20 août 2026)
 
 - L’App nécessite iOS 18 ou une version ultérieure.
-- Connecté à iCloud, l’App peut synchroniser abonnements, apparence, heure de rappel et avatar via CloudKit. La sauvegarde Pro reste dans iCloud Drive.
+- Connecté à iCloud, l’App synchronise abonnements, apparence, heure de rappel et avatar via iCloud. Vous pouvez aussi exporter un JSON.
 - Les rappels sont des notifications locales. L’App planifie plusieurs échéances à l’avance et rafraîchit la file à l’ouverture. Faute d’ouvrir l’App longtemps, les rappels suivants peuvent s’arrêter (limite système).
 - L’App inclut un manifeste de confidentialité et ne fait pas de suivi inter-apps.
 """,
@@ -106,7 +106,7 @@ EXTRA_SECTIONS = {
 ## Nota adicional (20 de agosto de 2026)
 
 - La app requiere iOS 18 o posterior.
-- Con iCloud, la app puede sincronizar suscripciones, apariencia, hora de aviso y avatar con CloudKit. La copia Pro sigue en iCloud Drive.
+- Con iCloud, la app sincroniza suscripciones, apariencia, hora de aviso y avatar. También puedes exportar un JSON.
 - Los recordatorios son notificaciones locales. La app programa varias fechas futuras y actualiza la cola al abrirla. Si no la abres durante mucho tiempo, los avisos posteriores pueden detenerse por el límite del sistema.
 - Incluye Privacy Manifest y no hace seguimiento entre apps.
 """,
@@ -114,7 +114,7 @@ EXTRA_SECTIONS = {
 ## Integrazione (20 agosto 2026)
 
 - L’app richiede iOS 18 o successivo.
-- Con iCloud, l’app può sincronizzare abbonamenti, aspetto, orario dei promemoria e avatar con CloudKit. Il backup Pro resta su iCloud Drive.
+- Con iCloud, l’app sincronizza abbonamenti, aspetto, orario dei promemoria e avatar. Puoi anche esportare un JSON.
 - I promemoria sono notifiche locali. L’app pianifica più scadenze e aggiorna la coda all’apertura. Se non apri l’app a lungo, i promemoria successivi possono interrompersi per il limite di sistema.
 - Include il Privacy Manifest e non traccia tra app.
 """,
@@ -122,7 +122,7 @@ EXTRA_SECTIONS = {
 ## Complemento (20 de agosto de 2026)
 
 - O app exige iOS 18 ou posterior.
-- Com iCloud, o app pode sincronizar assinaturas, aparência, horário do lembrete e avatar pelo CloudKit. O backup Pro continua no iCloud Drive.
+- Com iCloud, o app sincroniza assinaturas, aparência, horário do lembrete e avatar. Você também pode exportar um JSON.
 - Lembretes são notificações locais. O app agenda várias datas futuras e atualiza a fila ao abrir. Se você não abrir o app por muito tempo, os próximos avisos podem parar por causa do limite do sistema.
 - Inclui Privacy Manifest e não faz rastreamento entre apps.
 """,

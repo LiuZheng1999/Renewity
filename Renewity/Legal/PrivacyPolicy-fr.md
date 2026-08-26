@@ -23,7 +23,7 @@ Abonnements, catégories, notes, icônes, devise, apparence, notifications, verr
 
 ## 3. Sauvegarde iCloud facultative
 
-Avec Pro et la sauvegarde iCloud activée, un fichier va dans **votre** iCloud Drive (conteneur `iCloud.Maoxia-Xiang.Renewity`), sous votre compte Apple, selon les politiques iCloud d’Apple. Nous ne pouvons pas nous y connecter. Les exports JSON sont sous votre responsabilité.
+Connecté à iCloud, l’App synchronise vos données via CloudKit (conteneur `iCloud.Maoxia-Xiang.Renewity`). Les exports JSON sont sous votre responsabilité.
 
 ## 4. Notifications
 
@@ -61,7 +61,7 @@ L’App n’est pas destinée aux enfants de moins de 13 ans et nous ne collecto
 
 ## 11. Conservation et suppression
 
-Données appareil : suppression dans l’App ou désinstallation. Sauvegarde iCloud : jusqu’à écrasement, suppression dans iCloud Drive ou désactivation. JSON exporté : selon l’emplacement choisi.
+Données appareil : suppression dans l’App ou désinstallation. Sync iCloud : jusqu’à suppression des enregistrements, désactivation d’iCloud ou suppression des données de l’App. JSON exporté : selon l’emplacement choisi.
 
 ## 12. Sécurité
 
@@ -88,6 +88,6 @@ Indiquez « Politique de confidentialité » en objet.
 ## Complément (20 août 2026)
 
 - L’App nécessite iOS 18 ou une version ultérieure.
-- Connecté à iCloud, l’App peut synchroniser abonnements, apparence, heure de rappel et avatar via CloudKit. La sauvegarde Pro reste dans iCloud Drive.
+- Connecté à iCloud, l’App peut synchroniser abonnements, apparence, heure de rappel et avatar via CloudKit. Vous pouvez aussi exporter un JSON.
 - Les rappels sont des notifications locales. L’App planifie plusieurs échéances à l’avance et rafraîchit la file à l’ouverture. Faute d’ouvrir l’App longtemps, les rappels suivants peuvent s’arrêter (limite système).
 - L’App inclut un manifeste de confidentialité et ne fait pas de suivi inter-apps.

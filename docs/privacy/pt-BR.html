@@ -59,7 +59,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>2. Informações no dispositivo</h2>
 <p>Assinaturas, categorias, notas, ícones, moeda, aparência, notificações, bloqueio etc. ficam <strong>no dispositivo</strong> (SwiftData / armazenamento do sistema), para exibir e gerenciar, totais, aviso local no dia anterior. Desinstalar costuma apagar o que só está no dispositivo e não foi salvo em outro lugar.</p>
 <h2>3. Backup iCloud opcional</h2>
-<p>Com Pro e o backup iCloud ligado, um arquivo vai para o <strong>seu</strong> iCloud Drive (contêiner <code>iCloud.Maoxia-Xiang.Renewity</code>), na sua Conta Apple, segundo as políticas de iCloud da Apple. Não podemos entrar na sua conta. Exports JSON são sua responsabilidade.</p>
+<p>Com iCloud, o app sincroniza seus dados pelo CloudKit (contêiner <code>iCloud.Maoxia-Xiang.Renewity</code>). Exports JSON são sua responsabilidade.</p>
 <h2>4. Notificações</h2>
 <p>Os lembretes são <strong>notificações locais</strong>, criadas no dispositivo, não enviadas aos nossos servidores para disparar o aviso.</p>
 <h2>5. Face ID, Touch ID e código</h2>
@@ -78,7 +78,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>10. Crianças</h2>
 <p>O App não é dirigido a menores de 13 anos e não coletamos seus dados de propósito. Se achar que houve erro, fale conosco.</p>
 <h2>11. Retenção e exclusão</h2>
-<p>Dados no dispositivo: ao apagar no App ou desinstalar. Backup iCloud: até sobrescrever, apagar no iCloud Drive ou desativar. JSON exportado: conforme o local escolhido.</p>
+<p>Dados no dispositivo: ao apagar no App ou desinstalar. Sincronização iCloud: até apagar os registros, desativar o iCloud ou remover os dados do app. JSON exportado: conforme o local escolhido.</p>
 <h2>12. Segurança</h2>
 <p>Armazenamento local por padrão, bloqueio opcional, canais da Apple. Nenhum armazenamento é perfeitamente seguro.</p>
 <h2>13. Seus direitos</h2>
@@ -93,7 +93,7 @@ footer { color: var(--muted); font-size: 14px; }
 <h2>Complemento (20 de agosto de 2026)</h2>
 <ul>
 <li>O app exige iOS 18 ou posterior.</li>
-<li>Com iCloud, o app pode sincronizar assinaturas, aparência, horário do lembrete e avatar pelo CloudKit. O backup Pro continua no iCloud Drive.</li>
+<li>Com iCloud, o app pode sincronizar assinaturas, aparência, horário do lembrete e avatar pelo CloudKit. Você também pode exportar um JSON.</li>
 <li>Lembretes são notificações locais. O app agenda várias datas futuras e atualiza a fila ao abrir. Se você não abrir o app por muito tempo, os próximos avisos podem parar por causa do limite do sistema.</li>
 <li>Inclui Privacy Manifest e não faz rastreamento entre apps.</li>
 </ul>

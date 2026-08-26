@@ -23,7 +23,7 @@ Abos, Kategorien, Notizen, Icons, Anzeigewährung, Erscheinungsbild, Mitteilunge
 
 ## 3. Optionales iCloud-Backup
 
-Mit Pro und aktiviertem iCloud-Backup schreibt die App eine Sicherung nach **deinem** iCloud Drive (Container `iCloud.Maoxia-Xiang.Renewity`). Apple verarbeitet sie unter deinem Apple Account. Wir können uns nicht in dein Konto einloggen. JSON-Exporte liegen in deiner Verantwortung.
+Mit iCloud-Anmeldung synchronisiert die App deine Daten über CloudKit (Container `iCloud.Maoxia-Xiang.Renewity`). JSON-Exporte liegen in deiner Verantwortung.
 
 ## 4. Mitteilungen
 
@@ -61,7 +61,7 @@ Die App richtet sich nicht an Kinder unter 13 und erhebt wissentlich keine Daten
 
 ## 11. Aufbewahrung und Löschung
 
-Gerätedaten: Löschen in der App oder Deinstallation (außer üblichen Caches). iCloud-Backup: bis Überschreiben, Löschen in iCloud Drive oder Abschalten. Exportiertes JSON: am Speicherort.
+Gerätedaten: Löschen in der App oder Deinstallation (außer üblichen Caches). iCloud-Sync: bis Löschen der Einträge, Abschalten von iCloud oder Entfernen der App-Daten. Exportiertes JSON: am Speicherort.
 
 ## 12. Sicherheit
 
@@ -88,6 +88,6 @@ Bitte „Datenschutz“ in den Betreff.
 ## Ergänzung (20. August 2026)
 
 - Die App benötigt iOS 18 oder neuer.
-- Mit iCloud-Anmeldung können Abos, Darstellung, Erinnerungszeit und Avatar per CloudKit zwischen Geräten synchronisiert werden. Das Pro-Backup liegt zusätzlich in iCloud Drive.
+- Mit iCloud-Anmeldung können Abos, Darstellung, Erinnerungszeit und Avatar per CloudKit zwischen Geräten synchronisiert werden. Ein JSON-Export ist ebenfalls möglich.
 - Erinnerungen sind lokale Mitteilungen. Die App plant mehrere künftige Termine und aktualisiert die Warteschlange beim Öffnen. Wegen der Systemgrenze können spätere Erinnerungen ausbleiben, wenn die App lange nicht geöffnet wird.
 - Die App enthält ein Privacy Manifest und trackt nicht über andere Apps hinweg.

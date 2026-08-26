@@ -28,20 +28,14 @@ Subscriptions, categories, payment methods, notes, icon choices, display currenc
 This information is used to:
 
 - show and manage subscriptions in the App;
-- estimate monthly and yearly spend and category totals using reference exchange rates;
+- estimate monthly and annual spend and category totals using reference exchange rates;
 - schedule several upcoming local notifications for renewal and trial reminders, based on the lead times you choose;
 
-Uninstalling the App typically deletes data that exists only on the device and has not been saved somewhere you chose (such as the Files app or iCloud Drive).
+Uninstalling the App typically deletes data that exists only on the device and has not been saved somewhere you chose (such as the Files app). Data already synced to your other devices through iCloud remains with your Apple Account.
 
-## 3. iCloud sync and backup
+## 3. iCloud sync
 
 If you are signed in to iCloud, the App can sync subscriptions, custom categories, payment methods, appearance, reminder time, display currency, and your profile photo through **CloudKit’s private database** (container `iCloud.Maoxia-Xiang.Renewity`) across your devices. Apple processes this under your Apple Account. We cannot sign in to read it.
-
-If you have Pro and turn on iCloud backup, the App also writes a JSON copy to **your** iCloud Drive (same container) so you can restore manually. That file can include subscriptions, custom categories, payment methods, appearance, reminder time, and your profile photo.
-
-- It is stored under your Apple Account and handled by Apple under Apple’s iCloud policies.
-- We cannot sign in to your Apple Account to read that backup.
-- You can turn off automatic backup in the App or manage iCloud in system settings.
 
 You may also export a JSON backup to Files, a computer, or another location you choose. You are responsible for copies you export.
 
@@ -59,7 +53,7 @@ The system shows a purpose string: to unlock Renewity and protect your subscript
 
 ## 6. Purchases and Apple Account
 
-Monthly, yearly, or lifetime Pro purchases go through StoreKit / the App Store. Apple processes payment and receipts. We may learn on device whether you have an active purchase (so Pro features can unlock). We **do not** receive your full card number or Apple Account password.
+Monthly, annual, or lifetime Pro purchases go through StoreKit / the App Store. Apple processes payment and receipts. We may learn on device whether you have an active purchase (so Pro features can unlock). We **do not** receive your full card number or Apple Account password.
 
 Refunds and cancellation of auto-renewing subscriptions follow Apple’s rules.
 
@@ -85,7 +79,7 @@ A third-party app or website appearing in results is not a review, endorsement, 
 
 ### 7.3 iCloud
 
-When cloud backup is on, Apple syncs the file under Apple’s Privacy Policy.
+When you are signed in to iCloud, Apple syncs your data with CloudKit under Apple’s Privacy Policy.
 
 ## 8. Information you send us
 
@@ -106,14 +100,14 @@ The App is a personal finance recorder and is not directed at children under 13.
 ## 11. Retention, export, and deletion
 
 - **On-device data:** deleted when you delete it in the App or uninstall (apart from ordinary system caches).
-- **iCloud backup:** kept with your Apple Account until you overwrite it in the App, delete it in iCloud Drive, or turn off the relevant iCloud features.
+- **iCloud sync:** kept with your Apple Account until you delete the records, turn off iCloud, or remove this App’s iCloud data from your devices.
 - **Exported JSON:** retained wherever you saved it.
 
-You can manage data by deleting subscriptions or custom categories, restoring a backup, exporting and then uninstalling, or deleting the iCloud backup file.
+You can manage data by deleting subscriptions or custom categories, restoring from an exported file, exporting and then uninstalling, or managing iCloud in system settings.
 
 ## 12. Security
 
-We use safeguards that match this product: on-device storage by default, optional App Lock, and Apple’s purchase and iCloud channels for paid features and backup. No electronic or cloud storage is perfectly secure. Use a device passcode and protect your Apple Account.
+We use safeguards that match this product: on-device storage by default, optional App Lock, and Apple’s purchase and iCloud sync channels. No electronic or cloud storage is perfectly secure. Use a device passcode and protect your Apple Account.
 
 ## 13. Your rights
 

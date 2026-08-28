@@ -17,6 +17,10 @@ enum AppConfig {
         legalWebsiteURL.appendingPathComponent("terms/")
     }
 
+    static var supportWebsiteURL: URL {
+        legalWebsiteURL.appendingPathComponent("support/")
+    }
+
     static let instagramUsername = "yanming367"
     static let xUsername = "AidePearce89391"
 

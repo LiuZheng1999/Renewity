@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistance · Renewity</title>
+<style>
+:root { color-scheme: light dark; --bg: #f6f4f1; --card: #fff; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --accent: #0f766e; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1c1917; --card: #292524; --ink: #fafaf9; --muted: #a8a29e; --line: #44403c; --accent: #5eead4; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+header, main, footer { max-width: 760px; margin: 0 auto; padding: 24px 20px; }
+header { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: baseline; justify-content: space-between; }
+a { color: var(--accent); }
+.brand { font-weight: 700; text-decoration: none; color: inherit; font-size: 20px; }
+nav { display: flex; flex-wrap: wrap; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px 36px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin-top: 1.6em; }
+h3 { font-size: 17px; margin-top: 1.2em; }
+.muted { color: var(--muted); }
+.langs { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+.langs a { display: inline-block; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; color: inherit; font-size: 13px; }
+.langs a[aria-current="page"] { background: var(--ink); color: var(--bg); border-color: transparent; }
+ul { padding-left: 1.2em; }
+code { font-size: 0.92em; }
+.grid { display: grid; gap: 16px; }
+@media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+.tile { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; }
+.tile strong { display: block; margin-bottom: 6px; }
+footer { color: var(--muted); font-size: 14px; }
+</style>
+
+</head>
+<body>
+
+<header>
+  <a class="brand" href="../">Renewity</a>
+  <nav><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <strong>Support</strong></nav>
+</header>
+<main>
+  <div class="card">
+    <div class="langs"><a href="./zh-Hans.html">简体中文</a><a href="./zh-Hant.html">繁體中文</a><a href="./en.html">English</a><a href="./ja.html">日本語</a><a href="./ko.html">한국어</a><a href="./de.html">Deutsch</a><a href="./fr.html" aria-current="page">Français</a><a href="./es.html">Español</a><a href="./it.html">Italiano</a><a href="./pt-BR.html">Português (Brasil)</a></div>
+    <h1>Assistance</h1>
+<p><strong>Renewity</strong> est une app de suivi d’abonnements. Cette page sert à contacter l’assistance et à répondre aux questions fréquentes.</p>
+<h2>Contact</h2>
+<p>Écrivez à <strong>philiptrip1975@gmail.com</strong>.</p>
+<p>Vous pouvez aussi écrire depuis l’App : Réglages → Assistance. Indiquez si possible :</p>
+<ul>
+<li>modèle et version d’iOS</li>
+<li>version de l’App</li>
+<li>étapes pour reproduire le problème</li>
+</ul>
+<p>Web : <a href="https://liuzheng1999.github.io/Renewity/support/" rel="noopener">https://liuzheng1999.github.io/Renewity/support/</a></p>
+<h2>FAQ</h2>
+<h3>La sync iCloud ne marche pas ou est lente</h3>
+<p>Connecté au même compte Apple avec iCloud activé, CloudKit synchronise abonnements, catégories, moyens de paiement, apparence, heure de rappel et avatar. Ce n’est pas une sauvegarde iCloud Drive, ni une fonction Pro. La première sync peut prendre quelques minutes.</p>
+<h3>Sauvegarder les données</h3>
+<p>Dans Réglages → Données et sync, exportez un JSON vers Fichiers ou un autre emplacement. L’export est gratuit.</p>
+<h3>Les rappels n’apparaissent pas</h3>
+<p>Les rappels sont des notifications locales. Autorisez les notifications Renewity dans Réglages. L’App planifie plusieurs échéances et rafraîchit la file à l’ouverture. Si vous ne l’ouvrez pas longtemps, les rappels suivants peuvent s’arrêter.</p>
+<h3>Achats, résiliation, remboursement</h3>
+<p>Les achats Pro mensuels, annuels et à vie passent par Apple. Pour gérer, arrêter le renouvellement automatique ou demander un remboursement : Réglages → Compte Apple → Abonnements, ou Assistance Apple. Nous ne traitons pas les paiements App Store.</p>
+<h3>Achat unique</h3>
+<p>Un achat unique n’enregistre que la date d’expiration et n’a pas d’essai. Le montant n’entre pas dans l’aperçu ni le total du calendrier ; le service apparaît quand même le jour d’expiration.</p>
+<h2>Confidentialité et conditions</h2>
+<ul>
+<li>Confidentialité : <a href="https://liuzheng1999.github.io/Renewity/privacy/" rel="noopener">https://liuzheng1999.github.io/Renewity/privacy/</a></li>
+<li>Conditions d’utilisation : <a href="https://liuzheng1999.github.io/Renewity/terms/" rel="noopener">https://liuzheng1999.github.io/Renewity/terms/</a></li>
+</ul>
+  </div>
+</main>
+<footer>Renewity · philiptrip1975@gmail.com</footer>
+
+</body>
+</html>
